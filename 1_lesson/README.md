@@ -1,6 +1,7 @@
 # Урок 1. Основы HTML и CSS
 
 Макет: [Domeo](https://www.figma.com/file/dn6fA85Yk2bVQpH5m9xeCA/Domeo-Master?node-id=0%3A1)
+Макет: [Le Corte](https://www.figma.com/file/cMWY78AaBEhXRzfG0ajIPf/Le-corte?node-id=0%3A1) 
 
 ## Основная информация
 

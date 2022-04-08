@@ -9,17 +9,39 @@
 <body>
 
 <style>
-    div:nth-of-type(2n+3) {
-        background: red;
-    }
-</style>
-    <div>test1</div>
-    <div>test2</div>
-    <div>test3</div>
-    <div>test4</div>
-    <div>test5</div>
-    <div>test6</div>
+ main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+ }   
+ 
+ div {
+     width: 300px;
+     outline: 1px solid red;
+     text-align: center;
+     margin-right: 20px;
+ }
 
-    
+ div.f2 {
+     background:green;
+ }
+ div.f3 {
+     
+ }
+</style>
+<main>
+    <div class="f1">test1</div>
+    <div class="f2">
+        test2
+        <h2>Это какой то там текст </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolorum eius aut porro quaerat? Laboriosam placeat ad esse rem, quos recusandae molestias quasi ea delectus ut officia temporibus distinctio. Ex?</p> 
+    </div>
+    <div class="f3">test3</div>
+    <div class="f4">test4</div>
+    <div class="f5">test5</div>
+    <div class="f6">test6</div>
+
+</main>
 </body>
 </html>
