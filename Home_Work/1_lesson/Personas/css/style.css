@@ -1,0 +1,25 @@
+:root {
+    font-size: 14px;
+    line-height: 1.2;
+}
+body {
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    max-width: 900px;
+    flex:0 1 900px;
+}
+.main {
+    flex-grow: 270;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+.additional {
+    flex-basis: 0;
+    flex-grow: 630;
+    flex-shrink: 0;
+}

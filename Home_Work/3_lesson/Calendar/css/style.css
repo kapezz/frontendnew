@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    color: #FFF;
+    display: flex;
+}
+div.main {
+    display: flex;
+    justify-content: center;
+    flex-basis: 800px;
+    height: 1795px;
+    background: rgba(42, 46, 65, 0.7);
+}
+div section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 600px;
+}
+ul li {
+    list-style-type: none;
+}
+.month {
+    display: flex;
+    justify-content: space-between;
+    height: 212px;
+    align-items: center;
+    border-bottom:2px solid rgba(0,0,0,0.17);
+}
+.days {
+    border-top:2px solid rgba(255,255,255,0.13);
+    min-height: 120px;
+    padding-top: 20px;
+    align-items: center;
+    display: flex;
+}
+.days ul {
+    display: flex;
+    justify-content: space-around;
+    padding:0;
+    flex-basis: 100%;
+}
+.days ul li {
+    text-align: center;
+    font-size: 26px;
+    flex-basis: 86px;
+    color:rgba(255, 255, 255, 0.6);    
+}
+.month span {
+    font-size: 36px;
+}
+.dates {
+    /*outline: 2px solid red;*/
+    border-bottom:2px solid rgba(0,0,0,0.17);
+}
+.dates ul {
+    display: flex;
+    justify-content: space-around;
+    padding:0;
+    min-height: 130px;
+    align-items: center;
+}
+.dates ul li {
+    flex-basis: 80px;
+    text-align: center;
+    font-size: 29px;
+    min-height: 80px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dates ul li.active, .dates ul li:hover {
+    background: #3C82F9;
+    border-radius: 50%;
+} 
+.categories {
+    border-top:2px solid rgba(255,255,255,0.13);
+    padding-top: 105px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.categories span {
+    font-size: 26px;
+    width: 100%;
+    margin-bottom: 42px;
+}
+.categories button {
+    flex-basis: 285px;
+    margin-right: 20px;
+    height: 80px;
+    border:0;
+    border-radius: 12px;
+    color: #FFF;
+    font-size: 22px;
+}
+.categories button:nth-child(2) {
+    background: #8576ED;
+}
+.categories button:nth-child(3) {
+    background: #F39946;
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+.categories button:nth-child(4) {
+    background: #FF467E;
+}
+
+@media screen and (max-width: 589px) {
+    .categories button:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    .categories {
+        justify-content: center;
+    }
+    .categories button:nth-child(3) {
+        margin-right: 20px;
+    }
+    .categories span {
+        text-align: center;
+    }
+} 
