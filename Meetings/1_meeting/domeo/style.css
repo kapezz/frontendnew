@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.55;
+    color: #272727;
+}
+
+body {
+    margin: 0;
+    
+}
+.header__row {
+    display: flex;
+    margin-bottom: 46px;
+    justify-content: flex-start;
+}
+.header__logo-link {
+    flex:0 0 auto; /*расти не нужно, уменьшаться не нужно, размер автоматический*/
+    margin-right: 29px;
+}
+.header__logo-img {
+    display: block;
+}
+.header__moskow {
+    font-size: 0.7rem;
+    max-width:240px;
+    margin-right: 156px;
+}
+.header__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header__contacts a.header__tel {
+    font-weight: 700;
+    line-height: 1.35; /*соотношение размера лайн хейт к фонт сайз*/
+    display: block;
+    text-decoration: none;
+    color: #272727;
+}
+.header__contacts a.header__tel:hover {
+    color: #41B619;
+}
+.header__call {
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 0 4px;
+    margin: 0;
+    cursor: pointer;
+
+    font-size: 0.7rem;
+    line-height: 1.3571;
+    text-decoration-line: underline;
+
+}
+.header__call:hover {
+    color: #41B619;
+}
+/*container width 1649px*/
+/* empty space = 949px*/
+/* grow 3 + 2 + 2 = 7 */
+/* 1grow = 949 px / 7 = 135.57px*/
+
+
+/*вот тут указано что максимальная ширина контейнера 1160 но при этом флекс базис 100% - то есть сайт будет занимать в случае
+если маленький экран все 100% пространстрва - при этом ему растягиваться или сжиматься не нужно */
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header__wrapper {
+    max-width: 1160px;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 30px 0 40px;
+}

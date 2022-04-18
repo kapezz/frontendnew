@@ -8,79 +8,6 @@
 </head>
 <body>
 <style>
-    
-
-
-
-    /*body {
-        display: flex;
-        justify-content: center;
-        background: grey;
-        
-
-    }*/
-
-    /*
-    div.main {
-        display: flex;
-        flex-basis: 800px;
-        background: green;
-        justify-content: center;
-        height: 400px;
-        align-items: center;
-    }
-    section {
-        flex-basis:600px;
-        background: red;
-        display: flex;
-        justify-content: center;
-        height: 300px;
-        align-items: center;
-    }
-
-    div.name {
-        display: flex;
-        background: red;     
-        justify-content: center;
-    }
-    ul {
-        display: flex;
-        justify-content: space-between;
-        background: rgb(119, 165, 3);
-        padding: 0;
-        height: 200px;
-        flex-basis: 600px;
-        align-items: center;
-    }
-    ul li {        
-        flex-basis: 200px;
-        list-style-type: none;
-        border:1px solid #000;
-        display: flex;
-        justify-content: center;
-    }
-    ul li.b_2 {
-        flex-grow:4;
-        flex-shrink: 0;
-        background:yellow;
-    }
-    ul li.b_3 {
-        flex-grow: 5;
-        flex-shrink: 0;
-        background:blue;
-    }
-    ul {
-        display: flex;
-        justify-content: space-around;
-    }
-    ul li {
-        border:1px solid red;
-        flex-basis:20%;
-        display: flex;
-        justify-content: center;
-        height: 80px;
-        align-items: center;
-    }*/
   .parent {
       margin: 0 50px;
       height: 300px;
@@ -89,26 +16,19 @@
       flex-direction: row;
       padding: 0;
   }
-  
 .child {
-      /*flex-basis:25%;*/
-      -flex-grow:2;
-      flex-basis: 30%;
-      flex-shrink: 1;
-      /*width:100px;*/
+      flex-grow:2;
+      flex-basis: 100px;
       height:50px;
       border:1px solid green;
-      
   }
 .child.elem {
-    -flex-grow: 8;
-    flex-shrink: 2;
+    flex-grow: 8;
     background: red;
 }
-
 .child.element {
     background:green;
-    -flex-grow: 6;
+    flex-grow: 6;
 }
 /*
 У нас изначально 4 элемента - если у нас flex-grow:1; - ТО все 4 элемента занимают полностью все пространство в блоке 
@@ -154,18 +74,12 @@
 85.11*6 = 510.65 + 100 = 610.65 
 85.11*2 = 170.22 + 100 = 270.22
 
-
-
 5 ВАРИАНТ ДАНО FLEX-GROW
 3 ЭЛ. = 6 
 1 ЭЛ. = 8
 1532 / 14 = 109.42
 109.42*2=218.84 + 100 = 318.84
 109.42*8=875.36 + 100 = 975.36
-
-
-
-
 */
 
 </style>
@@ -176,37 +90,6 @@
     <div class="child">4</div>
 </div>
 
-<!---
-<div class="parent">
-    <ul class="child">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-    </ul>
-</div>
-->
-
-
-
-<!--<div class="main">
-    <section>
-        <div class="name">
-            <ul>
-                <li class="b_1">test1</li>
-                <li class="b_2">test2</li>
-                <li class="b_3">test3</li>
-                <li class="b_4">test4</li>
-                <li class="b_5">test5</li>
-            </ul>
-
-
-        </div>
-        <!--
-    </section>
-</div>
--->
 
 </body>
 </html>

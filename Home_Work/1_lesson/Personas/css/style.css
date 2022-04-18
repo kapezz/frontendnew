@@ -1,6 +1,8 @@
 :root {
     font-size: 14px;
     line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000;
 }
 body {
     margin: 0; 
@@ -22,4 +24,104 @@ body {
     flex-basis: 0;
     flex-grow: 630;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-size: 1.2857rem; /*14px задано в руте - как базовый размер, мы делим 18/14 и получаем число в реме*/
+    line-height: 1.6667; /* 21px / 18px тоже делим */
+    color: #000;
+    margin: 0 0 8px;
+}
+.aspirations {
+    padding: 32px 80px 39px;
+    flex:0 0 auto;
+}
+.aspirations__title {
+    margin-bottom: 0;
+}
+.aspirations__goal {
+    font-size: 1.2857rem; 
+    line-height: 1.6667; 
+    color: #666666;
+    margin: 0;
+    font-weight: bold;
+}
+.goals {
+    background: #F9F9F9;
+    padding: 36px 45px 64px 82px;
+    flex:1 0 auto;
+}
+ul {
+    margin: 8px 0 36px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9285rem; /*14/13*/
+    line-height: 1.1538; /*15/13*/
+}
+.goals ul li {
+    padding-left: 10px;
+    position: relative;
+}
+.goals ul li::before {
+    content:"•";
+    position: absolute;
+    left: 0;  
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+   
+   /*
+    background: url('../img/person_man.png');
+    background-size: cover;
+    background-position: center;*/
+
+}
+.main__background {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover; /*новое свойство примерно тоже самое что бэкграунд сайз - ковер и позишн центр*/
+}
+.main__data {
+    margin: 0;    
+    line-height: 1.2142; /*17/14*/
+    color:#FFF;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap:8px 0;
+}
+
+.main__data li {
+    flex: 0 0 auto;
+    
+}
+.main__data li:nth-child(2n) {
+    flex-basis: 70%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding-left:.3em;
+}
+.main__data li:nth-child(2n)::before{
+    content:"• ";
+}
+
+.main__title {
+    font-size: 2.1428rem; /*36/14 - соотношение к базовом шрифту*/ 
+    line-height: 1.2; /*36/30 - line height высчитываетс отношение к текущему шрифту (шрифт 30) - СООТВЕТСТВУЕТ БАЗОВОМУ*/
+    color:#FFF;
+    margin: 0 0 16px;
+
+}
+
+.main__wrapper {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    padding: 16px;
+    position: relative;
+    z-index: 2;
 }
