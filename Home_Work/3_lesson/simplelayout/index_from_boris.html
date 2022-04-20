@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body {
+        margin:0;
+        padding:0;
+        --footer-height:150px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .block {
+        text-align: center;
+        font-size: 2em;
+        text-transform: uppercase;
+        background: cornflowerblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header {
+        flex:0 0 100px;
+        height: 100px;
+        display: flex;
+        align-items:stretch; /*ЭЛЕМЕНТ РАСТЯГИВАЕТСЯ И ЗАНИМАЕТ ВСЮ ВЫСОТУ КОНТЕЙНЕРА - НО ПРИМЕНЯЕТСЯ ПО УМОЛЧАНИЮ */
+
+    }
+    .logo {
+        background:yellow;
+        flex-grow:0;
+        flex-shrink:0;
+        flex-basis:100px;
+    }
+    .menu {
+        background:tomato;
+        flex:1 1 auto;
+    }
+    .content {
+        display: flex;
+        /*height: 450px;*/
+        flex:1 0 450px;
+
+
+    }
+    .nav {
+        background:black;
+        color:#FFF;
+        flex: 35 0 0;
+        /*2 ВАРИАНТ - flex:0 0 calc(.35 * (100vw - 100px)); 35% умножаем на все видимое пространство минус 100 пикселей*/
+    }
+    .wrapper {
+        background:violet;
+        flex: 65 0 100px; /*ВОТ ТУТ МЫ 100 ПИКСЕЛЕЙ УБИРАЕМ ВО ВРАПЕР - ЧТО БЫ ОНИ НЕ МЕШАЛИ ТОЧНОСТИ*/
+        /*2 ВАРИАНТ - flex: 1 0 0 ;*/
+        display: flex;
+        flex-direction: column;
+    }
+    .main {
+        flex:1 0 0;
+        display: flex;
+    }
+    .footer {
+        flex:0 0 var(--footer-height);
+    }
+    .news {
+        background:turquoise;
+        flex: 0 0 100px;
+    }
+    .list {
+        background:yellowgreen;
+        flex: 1 0 0;
+    }
+
+
+</style>
+
+    <div class="header">
+        <div class="logo block">logo</div>
+        <div class="menu block">menu</div>
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <div class="main">
+                <div class="news block">news</div>
+                <div class="list block">list</div>
+            </div>
+            <div class="footer block">footer</div>
+        </div>
+        <div class="nav block">nav</div>
+    </div>
+    
+    
+    <!--
+    
+    <div class="wrapper">
+        
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="menu">MENU</div>
+        </div>
+        
+        <div class="main">
+            <div class="block1">
+                <div class="news">
+                    NEWS FEED
+                </div>
+                <div class="list">
+                    LIST OF SOMETHING
+                </div>
+                
+            </div>
+            <div class="footer">
+                FOOTER
+            </div>
+            <div class="nav">NAVIGATION BAR</div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+    -->
+</body>
+</html>

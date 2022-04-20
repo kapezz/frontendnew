@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleLayout</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            color:#fff;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            
+        }
+        .block__1 {
+            display: flex;
+
+        }
+        .logo {
+            background:#F0BE2E;
+            flex-basis: 100px;
+            height: 100px;
+        }
+        .menu {
+            background:#F40F0F;
+            flex-grow: 1;
+        }
+        .block__2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 70%;
+            flex-shrink: 0;
+        }
+        .block__3 {
+            /*flex-basis: 25%;*/
+            /*flex-grow: 1;*/
+            flex: 1 1 auto;
+
+        }
+        .block__3 .nav {
+            /*height: 800px;*/
+        }
+
+        .main2 {
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .news {
+            background: #AC4C4C;
+            /*flex-basis: 100px;*/
+            max-width: 100px;
+            height: 300px;
+            flex-grow: 2;
+        }
+        .list {
+            background: #45214A;
+            flex-grow: 3;
+            flex-basis: calc(70% - 100px);  
+        }
+        .footer {
+            flex-grow: 1;
+            flex-basis: 50%;
+            background: #F26800;
+        }
+
+        .nav {
+            background: #14140F;
+           
+            /*flex-basis: calc(30% - 50px);*/
+            
+            
+
+        }
+        .footer {
+           
+            /*align-self: flex-end;*/
+           
+           /* height: 100vh;*/
+           
+            
+            
+            
+        }
+    </style>
+
+
+    <div class="block__1">
+        <div class="logo">LOGO</div>
+        <div class="menu">MENU</div>
+    </div>
+
+    <div class="main2">
+        <div class="block__2">
+            <div class="news">NEWS FEED</div>
+            <div class="list">LIST OF SOMETHING</div>
+            
+            <div class="footer">FOOTER</div>
+        </div>    
+        <div class="block__3">
+            <div class="nav">NAVIGATION BAR</div>
+        </div>
+    </div>
+</body>
+</html>

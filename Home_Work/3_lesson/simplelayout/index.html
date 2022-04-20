@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Layout new</title>
+</head>
+<style>
+    body {
+        margin:0;
+        padding: 0;
+    }
+    .wrapper {
+        font-size: 30px;
+        /*display: flex;*/
+        /*justify-content: center;*/
+    }
+    .header {
+        display: flex;
+    }
+    .logo {
+        background: #F26800;
+        height: 100px;
+        flex:0 0 100px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .menu {
+        background: red;
+        flex:1 1 auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .main{
+        display: flex;
+    }
+    .block1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 6.5;
+        flex-shrink: 0;
+    }
+    .news {
+        background: brown;
+        flex:0 0 100px;
+        height: 300px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .list {
+        background: green;
+        flex: 10 0 calc(100% - 100px);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .footer {
+        background:gray;
+        flex: 1 0 100%;
+        height: 150px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .nav {
+        background:black;
+        color: #FFF;
+        flex: 3.5 0 auto;
+        height: 450px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="menu">MENU</div>
+        </div>
+        <div class="main">
+            <div class="block1">
+                <div class="news">
+                    NEWS FEED
+                </div>
+                <div class="list">
+                    LIST OF SOMETHING
+                </div>
+                <div class="footer">
+                    FOOTER
+                </div>
+            </div>
+            <div class="nav">NAVIGATION BAR</div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>
