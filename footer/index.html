@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+</head>
+<style>
+    html{
+    height: 100%;
+}
+    body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header{
+   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
+   height: 500px;
+   background:black;
+}
+.main-content{
+   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 1 0 auto;
+   background:yellow;
+   height: 200px;
+}
+footer{
+   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
+   background: red;
+   height: 300px;
+}
+
+</style>
+<body>
+    <body>
+        <header>...</header>
+        <section class="main-content">...</section>
+        <footer>...</footer>
+    </body>
+</body>
+</html>
