@@ -394,3 +394,65 @@ button {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+/**********************************************/
+.question {
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+.text-h2 {
+}
+.question .services__h2 {
+    margin-bottom: 50px;
+}
+.question__items {
+}
+.question__item {
+}
+.question_h3 {
+    text-transform: uppercase;
+    color:var(--accent-color);
+    margin-bottom: 23px;
+}
+.close {
+
+}
+
+.question_p {
+    margin-bottom: 40px;
+    color:var(--gray-color);
+    max-width: 730px;
+}
+/********добавляем иконку стрелочки*****/
+.question_h3.open::before {
+    content:"";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/arrow_item.svg);
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-right: 14px;
+    transform: rotate(90deg);
+}   
+.question_h3.close {
+    margin-bottom: 31px;
+}
+.question_h3.close::before {
+    content:"";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/arrow_item.svg);
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-right: 14px;
+}  
+/*если плюс значит учитываем что он выбирает элемент только с кешн клоуз*/
+.question_h3.close + .question_p {
+    display: none;
+}
+@media screen and (max-width:1280px) {
+    .question {
+        padding: 150px 15px 110px;
+    }
+}

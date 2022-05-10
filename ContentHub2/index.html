@@ -11,8 +11,8 @@
 </head>
 <body>
     
-        <div class="container__1920"> <!--выравниваем margin:0 auto + в нем background 2 квадрата-->
-            <div class="container__1280"> <!-- Основной контейнер -->
+        <div class="container__1920 site"> <!--выравниваем margin:0 auto + в нем background 2 квадрата-->
+            <div class="container__1280 header"> <!-- Основной контейнер -->
                 <div class="container__1200"> <!---->
                     <div class="header__wrapper">
                         <a href="" class="header__logo"><img src="img/logo.svg" alt=""></a>
@@ -26,12 +26,34 @@
                             </ul>
                         </nav>
                         <div class="header__wrapper-language">
-                            <ul>
-                                <li><a href="#">RU</a></li>
-                                <li class="hidden"><a href="#">EN</a></li>
-                                <li class="hidden"><a href="#">UA</a></li>
+                            <a class="active__language arrow2" href="#hidden_block" onclick="view('hidden_block'); return false">RU</a>
+                            
+                            <ul style="display:none;" id="hidden_block" class="language__hidden__block">
+                                <li><a class="active__language-link" href="#">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">UA</a></li>
                             </ul>
+
+                            <script>
+                            function view(n) {
+                                style = document.getElementById(n).style;
+                                style.display = (style.display == 'flex') ? 'none' : 'flex';
+                            }
+                                let block = document.querySelector('.active__language');
+                                block.addEventListener('click', ()=> {
+                                    if(block.classList.contains('arrow')) {
+                                        block.classList.add('arrow2')
+                                        block.classList.remove('arrow')
+                                    } else {
+                                        block.classList.add('arrow')
+                                        block.classList.remove('arrow2')
+                                    }
+                                }) 
+                            </script>
+
                         </div>
+
+
                         <div class="header__wrapper-authorization">
                             <a href="#">Войти</a>
                         </div>
@@ -158,7 +180,7 @@
                     
             </div><!--container__1280-->
             <div class="container__1920-bg-top"></div>
-            <div class="container__1920-second">
+            <div class="container__1920-second site-content">
                         <div class="container__1200">
                             <div class="content__wrapper">
                                 <div class="content__wrapper_title">
@@ -188,7 +210,7 @@
                        
                     </div><!--container__1280-->
             </div><!--container__1920-->
-            <div class="container__1280">
+            <div class="container__1280 footer">
                         <div class="container__1200">
                         <div class="partners__wrapper">
                             <div class="partners__wrapper-title">

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open - close</title>
+</head>
+<body>
+
+    <!--
+    <p>Нажми <a href="#hidden1" onclick="view('hidden1'); return false">эту ссылку</a></p>  
+<div id="hidden1" style="display: none;">
+<h3>Тут заголовок</h3>
+<p>А тут основной текст</p></div>
+     
+<a href="#hidden2" onclick="view('hidden2'); return false">Нажми меня!</a>
+<div id="hidden2" style="display: none;">
+<h3>Тут заголовок</h3>
+<p>А тут основной текст</p></div>
+
+
+<script>function view(n) {
+    style = document.getElementById(n).style;
+    style.display = (style.display == 'block') ? 'none' : 'block';
+}
+</script>
+-->
+
+<style>
+    .hidden {
+        display: none;
+    } 
+    .language__active {
+        text-decoration: none;
+        color:aqua;
+    }
+</style>
+
+
+
+<a href="#ul1" onclick="view('ul1'); return false">RU</a>
+<div class="header__wrapper-language">
+    <ul id="ul1" style="display: none;">
+        <li><a class="language__active" href="#">RU</a></li>
+        <li><a href="#">EN</a></li>
+        <li><a href="#">UA</a></li>
+    </ul>
+</div>
+
+<script>function view(n) {
+    style = document.getElementById(n).style;
+    style.display = (style.display == 'block') ? 'none' : 'block';
+}
+</script>
+
+
+
+
+</body>
+</html>
