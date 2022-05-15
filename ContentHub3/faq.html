@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/burgermenu.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>ContentHub - 3 - FAQ</title>
+</head>
+<body>
+    <div class="container__1920 site contacts__page"> 
+        <div class="container__1200 header"> 
+                                
+            <div class="header__wrapper">
+                <a href="" class="header__logo"><img src="img/logo.svg" alt=""></a>
+                <nav class="header__wrapper-menu">
+                    <ul>
+                        <li><a href="">Каталог СМИ</a></li>
+                        <li><a href="">Контент услуги</a></li>
+                        <li><a href="">Блог</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="header__wrapper-language">
+                    <a class="active__language arrow2" href="#hidden_block" onclick="view('hidden_block'); return false">RU</a>
+                    
+                    <ul style="display:none;" id="hidden_block" class="language__hidden__block">
+                        <li><a class="active__language-link" href="#">RU</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">UA</a></li>
+                    </ul>
+
+                    <script>
+                    function view(n) {
+                        style = document.getElementById(n).style;
+                        style.display = (style.display == 'flex') ? 'none' : 'flex';
+                    }
+                        let block = document.querySelector('.active__language');
+                        block.addEventListener('click', ()=> {
+                            if(block.classList.contains('arrow')) {
+                                block.classList.add('arrow2')
+                                block.classList.remove('arrow')
+                            } else {
+                                block.classList.add('arrow')
+                                block.classList.remove('arrow2')
+                            }
+                        }) 
+                    </script>
+
+                </div>
+
+
+                <div class="header__wrapper-authorization">
+                    <a href="#">Войти</a>
+                </div>
+                <div class="header__wrapper-registration">
+                    <a href="#">Регистрация</a>
+                </div>
+                
+                <!-- hamburger menu -->
+                
+                <section class="wrapper__burger-menu"> 
+                    <div class="burger-menu">
+                        <div class="menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu">
+                        <ul>
+                            <li><a href="">Каталог СМИ</a></li>
+                            <li><a href="">Контент услуги</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Контакты</a></li>
+                            <li><a href="">О нас</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--hamburger menu END-->
+
+            </div> <!--Header Wrapper-->
+        </div> <!--container__1200-->
+<!-------------------------------------HEADER END-------------------------------------------------->
+            <div class="container__1200 site-content">
+                <div class="pages__wrapper">
+                    <div class="pages__title">
+                        <h1>FAQ</h1>
+                    </div>
+                    
+                    <div class="container__pages_flex faq__page">
+                      
+                      <div class="faq__title">
+                        <h4 class="faq__title-h4">Основные вопросы</h4>
+                      </div>
+                      <div class="faq__subtitle">
+                        <p class="faq__subtitle-p">9 вопросов</p>
+                      </div>
+                      <div class="accordion">
+                        
+
+                        <div class="accordion-item">
+                          <button id="accordion-button-1" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Что такое Content.Hub?</span>
+                            
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="accordion-item">
+                          <button id="accordion-button-2" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Какие гарантии размещения?</span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-3" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Наши преимущества</span>
+                           
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-4" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Как начать работу с Content.Hub?</span>
+                            
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item">
+                          <button id="accordion-button-5" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Какие есть формы оплаты?</span>
+                           
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item">
+                          <button id="accordion-button-6" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Какие требования к статьям?</span>
+                           
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                          <button id="accordion-button-7" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Сколько времени занимает размещение статьи?</span>
+                           
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                          <button id="accordion-button-8" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Как оформить заказ (заказать статью, добавить статью)?</span>
+                            
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                          <button id="accordion-button-9" aria-expanded="false">
+                            <span class="icon" aria-hidden="true"></span>
+                            <span class="accordion-title">Как начать работу с Content.Hub?</span>
+                           
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Content.Hub - сервис статейного маркетинга.
+                              Мы предлагаем публикацию рекламных статей, гостевых постов, пресс релиз более чем на 3000 сайтах, а также пишем контент на 18 языках.
+                              Мы помогаем SEO специалистам, маркетологам, линкбилдерам и PR специалистам в реализации их целей.
+                              Content.Hub осуществляет всю коммуникацию с сайтом, согласовываем тематику статьи и детали публикации. Также осуществляем индивидуальный поиск доменов под ваш запрос. 
+                            </p>
+                          </div>
+                        </div>
+                        
+                        </div>
+                        
+
+                        <script src="js/accordion_faq.js"></script>
+                    </div> <!--container__pages_flex-->
+                </div> <!--pages__wrapper-->
+                </div> <!--container__1200-->
+            
+               
+<!-------------------------------------FOOTER-------------------------------------------------->
+                    <div class="container__1200 footer">
+                    <footer class="footer">
+                        <div class="footer__wrapper">
+                            <div class="footer__links">
+                                
+                                <div class="footer__logo__wrapper">
+                                    <a href="#"><img src="img/footer/footer_logo.svg" alt=""></a>
+                                    <div class="footer_social-links">
+                                        <span>Мы в соц. сетях:</span>
+                                        <a href="#"><img src="img/footer/footer_fb.svg" alt=""></a>
+                                        <a href="#"><img src="img/footer/footer_in.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            
+                         
+                                <div class="footer__menu">
+                                    <ul>
+                                        <li><a href="#">Каталог СМИ</a></li>
+                                        <li><a href="#">Контент услуги</a></li>
+                                        <li><a href="#">Категории</a></li>
+                                        <li><a href="#">Блог</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                        <li><a href="#">О нас</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                    </ul>
+                                </div>
+                               
+                
+                            </div>
+                            <div class="footer__chat">
+                                <div class="footer__wrapper-offer">
+                                    <a href="" class="public">Публичный  договор |</a>
+                                    <a href="" class="privacy__policy"> &nbsp;Политика конфиденциальности</a>
+                                    <span class="copyright">© 2019-2022 | Content.Hub | contenthub.pro</span>
+                                </div>
+                
+                
+                                    <img src="img/footer/footer_pay_new.png" class="footer_pay" alt="">
+                                
+                          
+                                   <div class="footer__chat-channels">
+                                        <div class="channel_telegram chanel">
+                                            <a href="#"><img src="img/footer/footer_telegram.svg" alt="">Телеграм чат</a>
+                                            <a href="#"><img src="img/footer/footer_watsup.svg" alt="">Whatsapp чат</a>
+                                            <a href="#"><img src="img/footer/footer_skype.svg" alt="">Skype чат</a>
+                                            <a href="#"><img src="img/footer/footer_email.svg" alt="">Электронная почта</a>
+                                        </div>
+                                    </div>
+                
+                
+                            </div>
+                        </div>        
+                    </footer>
+                </div><!--container__1200-->
+    </div><!--container__1920-->
+        
+
+    <script src="js/burger.js"></script>
+    
+</body>
+</html>
