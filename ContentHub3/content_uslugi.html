@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/burgermenu.css">
     <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/content_u.css">
     <link rel="stylesheet" href="css/faq.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
@@ -92,7 +94,7 @@
         </div> <!--container__1200-->
 <!-------------------------------------HEADER END-------------------------------------------------->
             <div class="container__1200 site-content">
-                <div class="pages__wrapper">
+                <div class="pages__wrapper wrapper__content-u">
                     <div class="pages__title">
                         <h1>Контент услуги</h1>
                     </div>
@@ -106,34 +108,64 @@
                         <div class="content__u-seo-slider-wrapper">
                             <div class="content__u-seo-left-block">
                                   <div class="content__u-seo-left-item">
-                                      <img src="img/contentU/content_u_img_item1.svg" alt="" class="content__u-seo-left-item">
-                                      <h4 class="content__u-seo-left-item-h4">
-                                        SEO тексты
-                                      </h4>
-                                      <p class="content__u-seo-left-item-p">
-                                        Уникальные SEO адаптированные тексты написанные с учетом ранжирование поисковых систем. Аналитика по Ahrefs и другая проверка по сервисам.
-                                      </p>
+                                    <div class="content__u-seo-left-item-img-wrapper">  
+                                        <img src="img/contentU/content_u_img_item1.svg" alt="">
+                                    </div>
+                                      <div class="content__u-seo-left-item-wrapper">
+                                            <h4 class="content__u-seo-left-item-h4">
+                                                SEO тексты
+                                            </h4>
+                                            <p class="content__u-seo-left-item-p">
+                                                Уникальные SEO адаптированные тексты написанные с учетом ранжирование поисковых систем. Аналитика по Ahrefs и другая проверка по сервисам.
+                                            </p>
+                                        </div>
                                   </div>
                                   <div class="content__u-seo-left-item">
-                                    <img src="img/contentU/content_u_img_item2.svg" alt="" class="content__u-seo-left-item">
-                                    <h4 class="content__u-seo-left-item-h4">
-                                      Веб контент
-                                    </h4>
-                                    <p class="content__u-seo-left-item-p">
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                                    </p>
+                                    <div class="content__u-seo-left-item-img-wrapper">
+                                        <img src="img/contentU/content_u_img_item2.svg" alt="">
+                                    </div>
+                                    <div class="content__u-seo-left-item-wrapper">
+                                        <h4 class="content__u-seo-left-item-h4">
+                                        Веб контент
+                                        </h4>
+                                        <p class="content__u-seo-left-item-p">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="content__u-seo-left-item">
-                                  <img src="img/contentU/content_u_img_item3.svg" alt="" class="content__u-seo-left-item">
-                                  <h4 class="content__u-seo-left-item-h4">
-                                    Экспертный контент
-                                  </h4>
-                                  <p class="content__u-seo-left-item-p">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                                  </p>
+                                    <div class="content__u-seo-left-item-img-wrapper">
+                                        <img src="img/contentU/content_u_img_item3.svg" alt="">
+                                    </div>
+                                  <div class="content__u-seo-left-item-wrapper">
+                                    <h4 class="content__u-seo-left-item-h4">
+                                        Экспертный контент
+                                    </h4>
+                                    <p class="content__u-seo-left-item-p">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                                    </p>
+                                </div>
                               </div>
                             </div> <!--content__u-seo-left-block-->
                             <div class="content__u-slider-right-block">
+                                <div class="slider">
+                                    <div class="item">
+                                        <img src="img/slider/1.jpg" alt="Первый слайд">
+                                    </div>
+                                
+                                    <div class="item">
+                                        <img src="img/slider/2.jpg" alt="Второй слайд">
+                                    </div>
+                                
+                                    <div class="item">
+                                        <img src="img/slider/3.jpg" alt="Третий слайд">
+                                    </div>
+                                    
+                                    <a class="prev" onclick="minusSlide()"></a>
+                                    <a class="next" onclick="plusSlide()"></a>
+
+                                    <h4 class="content__u-slider-right-block-h4">Примеры наших работ</h4>  
+                                </div>
                             </div> <!--content__u-slider-right-block-->
 
                         </div> <!-- content__u-seo-slider-wrapper--> 
@@ -149,7 +181,7 @@
                                 
                                 <div class="content__u__form-block1-wrapper">
                                   <h4 class="content__u__form-block1-title">Тип контента</h4>
-                                  <select id="types" name="types" onchange="update_calc(this.value, this.name)">
+                                  <select id="types" name="types">
                                     <option value="">Выбрать</option>
                                     <option value="286">SEO Статья</option>
                                     <option value="289">Копирайтинг</option>
@@ -159,7 +191,7 @@
 
                                 <div class="content__u__form-block1-wrapper">
                                   <h4 class="content__u__form-block1-title">Язык</h4>
-                                  <select id="lang" name="lang" onchange="update_calc(this.value, this.name)">
+                                  <select id="lang" name="lang">
                                     <option value="">Выбрать</option>
                                     <option value="11">Arab</option>
                                     <option value="210">Czech</option>
@@ -167,30 +199,38 @@
                                   </select>
                                 </div>
 
+                                <button class="content__u__form-button" onclick="view('button-content-u'); return false">
+                                    Узнать стоимость
+                                </button>
 
-                                <label class="control control--checkbox">Бонусы
-                                  <input id="category_name_5" checked="checked" type="checkbox" class="category__blog-input" name="category_name_5" value="blog_type_5"><div class="control__indicator"></div></label>
 
-
+                              </div> <!--content__u__form-block1-->
+                            
+                            <fieldset class="content__u__fieldset" id="button-content-u" style='display: none'>
+                            <h3 class="content__u__form-title-h3">Отправьте запрос на детальный просчет</h3>
+                            <hr class="content__u__form-title-h3-hr">
+                            <div class="content__u__fieldset-wrapper">
+                              <div class="content__u__form-wrapper-cost">
+                                  <p class="content__u__form-wrapper-p1">Стоимость услуги</p>
+                                  <h5>9$</h5>
+                                  <p class="content__u__form-wrapper-p2">за 100 символов</p>
                               </div>
-                            
-                            
-                            
-                            
-                            
-                            <h3 class="form__title-h3">Форма обратной связи</h3>
-                            <p class="form__p">Сообщите нам если у вас возникли дополнительные вопросы или предложения по сотрудничеству</p>
-                            <fieldset>
-                                <input placeholder="Ваше имя*" id="text-name" type="text" class="contacts__input"><br>
-                                <input placeholder="E-mail &nbsp;&nbsp;-&nbsp;&nbsp;Поле обязательное для заполнения" placeholder="" id="text-email" type="email" class="contacts__input contacts__input-required"><br>
-                                <input placeholder="Номер телефона" id="text-number" type="tel" class="contacts__input"><br>
-                                <textarea placeholder="Сообщение*" id="message" class="contacts__input"></textarea>
-                                <p class="form__p-second">* - Поля обязательные для заполнения </p>
-                                <button type="submit" id="submitForm" value="Отправить сообщение">Отправить сообщение</button>
-                                <!-- <input type="submit" id="submitForm" value="Отправить сообщение"> -->
-                                <div class="form__site-rules">
-                                    <p>Нажимая кнопку “Отправить сообщение” вы соглашаетесь с <a href="">правилами сайта</a> и <a href="">политикой конфиденциальности.</a></p>
+                                  
+                                <div class="content__u__form-wrapper-2block">
+                                    <input placeholder="Ваше имя*" id="text-name" type="text" class="content__u__input">
+                                    <input placeholder="Номер телефона" id="text-number" type="tel" class="content__u__input">
+                                    <input placeholder="E-mail*" placeholder="" id="text-email" type="email" class="content__u__input">
                                 </div>
+                              
+                                <div class="content__u__form-wrapper-3block">
+                                    <textarea placeholder="Комментарий" id="message" class="content__u__textarea"></textarea>
+                                </div>
+                                <div class="content__u__form-wrapper-4block">
+                                    <button class="content__u__button1-4block" type="file">Добавить ТЗ (файл)</button>
+                                    <input class="content__u__input-4block" placeholder="Добавить URL на ТЗ"></input>
+                                    <button class="content__u__button2-4block">Отправить запрос</button>
+                                </div>
+                            </div>
                             </fieldset>
                           </form>
     
@@ -265,6 +305,6 @@
         
 
     <script src="js/burger.js"></script>
-    
+    <script src="js/slider.js"></script>
 </body>
 </html>
