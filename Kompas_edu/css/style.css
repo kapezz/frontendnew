@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color:#000;
+    --blu-color: #48A7F2;
+    --dark-color:#000000;
+    --orange-color:#FC4B24;
+    --white-color:#FFFFFF;   
+}
+
+html {
+    box-sizing: border-box;
+  }
+body {
+    padding: 0;
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul > li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.container__1202 {
+    max-width: 1202px;
+    width: 100%;
+}
+.orange__line {
+    background-color: var(--orange-color);
+    height: 7px;
+}
+.header {
+    margin-top: 27px;
+}
+.header__logo {
+    display: flex;
+    justify-content: space-between;
+}
+.main__info {
+    margin-top: 70px;
+    display: flex;
+    border:1px solid red;
+    justify-content: space-between;
+}
+.main__info-left-h1 {
+    margin-top: 92px;
+    font-weight: 600;
+    font-size: 50px;
+    /* z-index: 999; */
+    /* position: relative; */
+    /* background:var(--blu-color); */
+}
+.main__info-left-h1 span {
+    background:var(--blu-color);
+    color:var(--white-color);
+    padding: 10px;
+    position: relative;
+    z-index: 5;
+    display: inline-block;   
+}
+.main__info-left-h1 span::before {
+    background-image:url(../img/icon_edu.png);
+    background-repeat:no-repeat;
+    content:"";
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    z-index: 0;
+  
+}

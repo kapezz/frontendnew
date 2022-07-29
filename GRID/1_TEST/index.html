@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - table</title>
+</head>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+table {
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  /* These are just initial values which are overriden using JavaScript when a column is resized */
+  grid-template-columns: 
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr);
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+th,
+td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #6c7ae0;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+  position: relative;
+}
+
+th:last-child {
+  border: 0;
+}
+
+.resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0;
+  width: 3px;
+  cursor: col-resize;
+}
+
+.resize-handle:hover,
+/* The following selector is needed so the handle is visible during resize even if the mouse isn't over the handle anymore */
+.header--being-resized .resize-handle {
+  opacity: 0.5;
+}
+
+th:hover .resize-handle {
+  opacity: 0.3;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+}
+
+tr:nth-child(even) td {
+  background: #f8f6ff;
+}
+</style>
+<body>
+
+    <table>
+        <thead>
+          <tr>
+            <th data-type="numeric">Адрес площадки <span class="resize-handle"></span></th>
+            <th data-type="text-short">Тематика <span class="resize-handle"></span></th>
+            <th data-type="text-short">Трафик <span class="resize-handle"></span></th>
+            <th data-type="text-short">DR <span class="resize-handle"></span></th>
+            <th data-type="text-long">Страна <span class="resize-handle"></span></th>
+            <th data-type="text-short">Стоимость <span class="resize-handle"></span></th>
+            <th data-type="text-long">Тип ссылки <span class="resize-handle"></span></th>
+            <th data-type="text-short">Заказать <span class="resize-handle"></span></th>
+            <th data-type="text-short">Избранное <span class="resize-handle"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic,Economy, News, Politic</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+          <tr>
+            <td>diariolavozdelchaco.com</td>
+            <td>Economy, News, Politic...</td>
+            <td>45.5 K</td>
+            <td>76</td>
+            <td>Ukraine</td>
+            <td>180$</td>
+            <td>Dofollow</td>
+            <td>BAG</td>
+            <td>HEART</td>
+          </tr>
+         
+        </tbody>
+      </table>
+   
+      
+ 
+<script src="script.js"></script>
+
+</body>
+</html>
