@@ -1,0 +1,81 @@
+:root {
+    --accent-color: #FF9100;
+    --dark-color:#3B4A51;
+    --white-color:#FFF;
+}
+.site {
+    background-image:none;
+}
+
+.pages__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container__pages_flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+} 
+.pages__title {
+    width: 100%;
+    margin-top: 17px;
+    padding-bottom: 17px;
+    margin-bottom: 32px;
+}
+.policy hr {
+    max-width: 512px;
+    width: 100%;
+    border:1px solid var(--accent-color);
+} 
+.policy h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color:var(--dark-color);
+}
+.policy-text {
+    display: flex;
+    background: #F9F9F9;
+    border-radius: 15px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 55px 69px;
+    margin-bottom: 60px;
+}
+@media (max-width: 1130px) {
+    .policy h1 {
+        font-size: 45px;
+    }
+}
+@media (max-width: 768px) {
+    .policy h1 {
+        font-size: 40px;
+        
+    }
+    .policy-text {
+        padding: 35px 49px;
+    }
+}
+@media (max-width: 542px) {
+    .policy h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .policy-text {
+        padding: 20px 30px;
+    }
+} 
+@media (max-width: 368px) {
+    .policy h1 {
+        font-size: 20px;
+    }
+    .policy-text {
+        padding: 10px 15px;
+    }
+}
