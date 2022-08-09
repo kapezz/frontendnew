@@ -51,7 +51,7 @@ a {
     justify-content: center;
 }
 .container__1440 {
-    max-width: 1440px;
+    max-width: 1600px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -87,10 +87,10 @@ a {
     background:url('../img/header/bg_center_left.png') no-repeat 444px 174px, url('../img/header/bg_center_right.png') no-repeat 550px 150px;
 }
 .bg-benefits {
-    background:url('../img/section__benefits/bg_line_left.png') no-repeat -10px 65px, 
-    url('../img/section__benefits/bg_line_right.png') no-repeat 62px 41px,
-    url('../img/section__benefits/bg_left.png') no-repeat 0 509px,
-    url('../img/section__benefits/bg_right.png') no-repeat 1306px 204px;
+    background:url('../img/section__benefits/bg_line_right.png') no-repeat 46px 65px, /*-10px 65px*/
+    url('../img/section__benefits/bg_line_right.png') no-repeat 141px 41px, /*62px 41px*/
+    url('../img/section__benefits/bg_left_svg.svg') no-repeat -76px 509px, /*0 509px*/
+    url('../img/section__benefits/bg_right_svg.svg') no-repeat 1388px 204px; /*1306px 204px*/
 }
 /******end container******/
 .header {
@@ -106,6 +106,10 @@ a {
 }
 .header__top-wrapper-left {
     display: flex;
+}
+.header__main-block-wrapper-left {
+    max-width: 505px;
+    width: 100%;
 }
 .header__top-nav {
     display: flex;
@@ -129,7 +133,6 @@ a {
     height: 52px;
     display: block;
 }
-
 .header__main-block {
     display: flex;
     margin-top: 33px;
@@ -168,43 +171,24 @@ a {
     max-width: 527px;
     width: 100%;
 }
-
-
 .header__main-block-join-form {
     display: flex;
     gap:10px;
     margin-top: 40px;
 }
 .header__main-block-join-form-wrapper {
-    width: 328px;
-    
     display: block;
     flex-grow: 1;
 }
 .header__main-block-join-form-wrapper-input {
     max-width: 328px !important;
     width: 100%;
-    /* display: inline-block; */
     height: 56px;
     background: #FFFFFF;
     border: 1px solid rgba(82, 75, 71, 0.1);   
     border-radius: 10px;
     padding:16px 20px 16px 20px ;
 }
-.header__main-block-join-form input {
-    
-    /* width: 328px; */
-    /* max-width: 328px; */
-    /* width: 100%; */
-    /* display: block; */
-    /* height: 56px; */
-    /* background: #FFFFFF; */
-    /* border: 1px solid rgba(82, 75, 71, 0.1);    */
-    /* border-radius: 10px; */
-    /* padding:16px 20px 16px 20px ; */
-}
-
-
 .header__main-block-join-form input[placeholder] {
     color:rgba(82, 75, 71, 0.4);
     font-weight: 400;
@@ -232,7 +216,7 @@ a {
     width: 100%;
     justify-content: space-between;
     gap: 30px;
-    margin-top: 153px;
+    margin-top: 157px;
     flex-wrap: wrap;
     margin-bottom: 120px;
 }
@@ -263,12 +247,13 @@ a {
     margin-bottom: 30px;
     border-radius: 30px;
     display: flex;
-    /* flex-wrap: wrap; */
 }
 .section__benefits-items > img {
     display: flex;
     max-width: 505px;
     width: 100%;
+    border-radius:30px;
+    object-fit: cover;
 }
 .section__benefits-items-wrapper {
     max-width: 545px;
@@ -276,15 +261,25 @@ a {
     height: 300px;
     display: flex;
     flex-direction: column;
-    gap:20px
-    /* align-items:center; */
-    /* justify-content: center; */
+    gap:20px;
 }
 .section__benefits-items-wrapper:nth-child(n+1) {
     padding:44px 40px 44px 60px;
 }
+.section__benefits-items-wrapper:nth-child(n+1) > img {
+    border-top-left-radius:0;
+    border-top-right-radius:30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 30px;
+}
 .section__benefits-items-wrapper:nth-child(n+2) {
     padding:44px 55px 44px 40px;
+}
+.section__benefits-items-wrapper:nth-child(n+2) > img {
+    border-top-left-radius:30px;
+    border-top-right-radius:0;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius: 0;
 }
 .section__benefits-items:last-child {
     margin-bottom: 0;
@@ -296,7 +291,6 @@ a {
     line-height: 42px;
 }
 .section__benefits-items-wrapper > p {
-    /* margin-top: 20px; */
     font-weight: 400;
     font-size: 18px;    
     line-height: 27px;
@@ -376,7 +370,9 @@ a {
 }
 .section__subscription-form {
     display: flex;
-    margin-bottom: 156px;
+    margin-bottom: 149px;
+    max-width: 505px;
+    width: 100%;
 }
 .section__subscription-h2 {
     margin-top: 156px;
@@ -427,7 +423,7 @@ button.section__subscription-form-button  {
     align-items:center;
 }
 .section__smarthunt-logo {
-    margin-top: 97px;
+    margin-top: 100px;
 }
 .section__smarthunt-logo > img {
     width: 100%;
@@ -450,7 +446,7 @@ button.section__subscription-form-button  {
 }
 /********footer**********/
 .footer {
-    margin-top: 170px;
+    margin-top: 161px;
     margin-bottom: 62px;
     display: flex;
     flex-direction: column;
@@ -470,6 +466,7 @@ button.section__subscription-form-button  {
     font-size: 14px;
     line-height: 17px;
     margin-top: 16px;
+    font-family: 'Inter', sans-serif;
     color: #524B47;
 }
 .footer__allresserved {
@@ -494,17 +491,16 @@ button.section__subscription-form-button  {
     .header__main-block-wrapper-right {
         margin-top: 20px;
     }
-    
 }
 @media (max-width: 900px) {
     .section__benefits-items > img {
-        /* object-fit: cover; */
+        object-fit: cover;
     }
     .section__benefits-items-wrapper:nth-child(n+1) {
         padding:35px 20px 22px 30px;
     }
     .section__benefits-items-wrapper:nth-child(n+2) {
-        padding:35px 26px 22px 20px;
+        padding:25px 26px 22px 20px;
     }
     .section__benefits-items-wrapper > h1 {
         font-size: 34px;
@@ -513,7 +509,6 @@ button.section__subscription-form-button  {
     .section__benefits-items-wrapper > p {
         font-size: 16px;
         line-height: 25px;
-        /* margin-top: 25px; */
     }
     .section__how-it-works-wrapper-items {
         flex-wrap: wrap;
@@ -523,9 +518,8 @@ button.section__subscription-form-button  {
     }
 }
 @media (max-width: 670px) {
-    
     .section__benefits-items-wrapper:nth-child(n+1) {
-      padding:20px 20px 22px 30px ;  
+        padding:20px 20px 22px 30px ;  
     }
     .section__benefits-items-wrapper:nth-child(n+2) {
         padding:20px 26px 22px 20px;
@@ -537,7 +531,6 @@ button.section__subscription-form-button  {
     .section__benefits-items-wrapper > p {
         font-size: 14px;
         line-height: 23px;
-        /* margin-top: 25px; */
     }
 } 
 @media (max-width: 600px) {
@@ -606,7 +599,6 @@ button.section__subscription-form-button  {
         padding: 0 15px;
     }
     .header__main-block-wrappers {
-        /* padding: 0 15px; */
         display: flex;
         flex-direction: column;
     }
@@ -625,9 +617,9 @@ button.section__subscription-form-button  {
     }
     button.section__subscription-form-button {
         width: 328px;
-        /* width: 100%; */
     }
 }
+    
 @media (max-width: 375px) {
     .container__1140, .container__1050 {
         padding: 0;
@@ -651,12 +643,12 @@ button.section__subscription-form-button  {
         margin-top: 84px;
     }
     .header__main-block-wrapper-right {
-        margin-top: 37px;
+        margin-top: 21px;
         padding: 0 0px;
     }
     .header__main-block-bottom-blocks {
         margin-top: 80px;
-        margin-bottom: 100px;
+        margin-bottom: 101px;
     }
     .header__main-block-bottom-blocks {
         gap:20px;
@@ -727,7 +719,6 @@ button.section__subscription-form-button  {
         max-width: 356px;
         width: 100%;
     }
-
     .owl-theme .owl-nav {
         margin-top: 4px !important;
     }
@@ -741,7 +732,6 @@ button.section__subscription-form-button  {
     }
     .section__how-it-works-item:nth-child(2),
     .section__how-it-works-item:nth-child(3) {
-        /* background:green; */
         height: 150px;
     }
     .section__subscription-h2 {
@@ -766,7 +756,7 @@ button.section__subscription-form-button  {
         line-height: 24px;
     }
     .section__subscription-form {
-        margin-bottom: 102px;
+        margin-bottom: 84px;
     }
     .section__smarthunt-logo > img {
         max-width: 244px;
@@ -809,10 +799,27 @@ button.section__subscription-form-button  {
         margin-top: 129px;
     }
     .bg-rhombus-header {
-        background:url('../img/header/bg_right.png') no-repeat right 70px; 
-        background-size: 45%;
+        background:url('../img/header/bg_right.png') no-repeat 205px 80px; 
+        background-size: 56%;
     }
     .bg-lines-header {
         background:url('../img/header/bg_center_left.png') no-repeat -30px 330px, url('../img/header/bg_center_right.png') no-repeat 50px 300px;
+    }
+    .item_middle > img {
+        border-radius:30px;
+    }
+}
+
+@media (max-width: 337px) {
+    .owl-dots {
+        margin-top: 0;
+    }
+    .section__smarthunt-slider > .owl-carousel > .owl-nav > .owl-prev span, .section__smarthunt-slider > .owl-carousel > .owl-nav > .owl-next span {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section__benefits-slider > .owl-carousel > .owl-nav > .owl-prev span, .section__benefits-slider > .owl-carousel > .owl-nav > .owl-next span {
+        margin-left: 0;
+        margin-right: 0;
     }
 }

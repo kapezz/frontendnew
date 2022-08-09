@@ -62,14 +62,6 @@
 .section__benefits-slider .owl-carousel .owl-dots .owl-dot.active span {
     background:#F7EFE9;
 }
-/*
-.section__benefits-slider >  .owl-carousel > .owl-nav > .owl-prev > span, 
-.section__benefits-slider >  .owl-carousel > .owl-nav > .owl-next > span {
-    font-size: 30px;
-    margin-left: 85px;
-    margin-right: 85px;
-}*/
-
 .item__wrapper {
     padding-left: 30px;
     padding-right: 45px;
@@ -104,18 +96,14 @@
 .section__smarthunt-slider .owl-carousel .owl-dots .owl-dot.active span {
     background:#1F938A;
 }
-/*
-.owl-prev > span, .owl-next > span {
-    font-size: 30px;
-    margin-left: 85px;
-    margin-right: 85px;
-}*/
-
 .owl-prev > span:hover, .owl-next > span:hover {
     background-color:none;
 }
 .owl-theme .owl-nav [class*="owl-"]:hover {
     background:none !important;
+}
+.owl-theme .owl-nav {
+    margin-top: 24px !important;
 }
 .owl-prev .slider-text-anim {
     margin-left: 20px;
