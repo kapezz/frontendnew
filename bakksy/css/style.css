@@ -81,7 +81,7 @@ a {
     justify-content:center;
 }
 .bg-rhombus-header {
-    background: url('../img/header/bg_left.png') no-repeat 0 106px, url('../img/header/bg_right.png') no-repeat right 229px;
+    background: url('../img/header/bg_left.svg') no-repeat 0 106px, url('../img/header/bg_right.svg') no-repeat right 229px;
 }
 .bg-lines-header {
     background:url('../img/header/bg_center_left.png') no-repeat 444px 174px, url('../img/header/bg_center_right.png') no-repeat 550px 150px;
@@ -534,6 +534,9 @@ button.section__subscription-form-button  {
     }
 } 
 @media (max-width: 600px) {
+    .section__how-it-works-h2 {
+        text-align: center;
+    }
     .header__main-block-h1 {
         font-size: 38px;
     }
@@ -695,8 +698,8 @@ button.section__subscription-form-button  {
     }
     .section__smarthunt-slider > .owl-carousel > .owl-nav > .owl-prev span, 
     .section__smarthunt-slider > .owl-carousel > .owl-nav > .owl-next span {
-        margin-left: 67px;
-        margin-right: 67px;
+        /* margin-left: 67px; */
+        /* margin-right: 67px; */
     }
     .header__main-block-wrapper-left,
     .header__top {

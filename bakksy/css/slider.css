@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;600;700&display=swap');
+
+
+.owl-carousel {
+    /* display: flex !important; */
+    /* flex-direction: column !important; */
+    /* align-items:center; */
+}
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    width: 100%;
+    /* background:red; */
+    margin: 0 auto !important;
+}
+
+
+
 .owl-carousel .item {
     height: 500px !important;
     max-width: 490px;
@@ -53,8 +71,8 @@
 .section__benefits-slider >  .owl-carousel > .owl-nav > .owl-next span {
     color:#F7EFE9;
     font-size: 30px;
-    margin-left: 63px;
-    margin-right: 63px;
+    /* margin-left: 75px; */
+    /* margin-right: 75px; */
 }
 .section__benefits-slider .owl-carousel .owl-dots .owl-dot span {
     background: rgba(247, 239, 233, 0.3);
@@ -87,8 +105,8 @@
 .section__smarthunt-slider > .owl-carousel > .owl-nav > .owl-next span {
     color:#1F938A;
     font-size: 30px;
-    margin-left: 85px;
-    margin-right: 85px;
+    /* margin-left: 85px; */
+    /* margin-right: 85px; */
 }
 .section__smarthunt-slider .owl-carousel .owl-dots .owl-dot span {
     background: rgba(31, 147, 138, 0.3);
