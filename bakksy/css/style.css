@@ -416,6 +416,7 @@ button.section__subscription-form-button  {
     border-radius: 10px;
     cursor: pointer;
 }
+
 /*******section__smarthunt***********/
 .section__smarthunt {
     width: 100%;
@@ -622,9 +623,13 @@ button.section__subscription-form-button  {
     button.section__subscription-form-button {
         width: 328px;
     }
+    .item__wrapper-middle > img {
+        border-bottom-left-radius: 30px !important;
+        border-bottom-right-radius: 30px !important;
+    }
 }
     
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .container__1140, .container__1050 {
         padding: 0;
     }
@@ -647,8 +652,8 @@ button.section__subscription-form-button  {
         margin-top: 84px;
     }
     .header__main-block-wrapper-right {
-        margin-top: 21px;
-        padding: 0 0px;
+        margin-top: 24px;
+        padding: 0;
     }
     .header__main-block-bottom-blocks {
         margin-top: 80px;
@@ -705,6 +710,7 @@ button.section__subscription-form-button  {
     .header__main-block-wrapper-left,
     .header__top {
         padding: 0 15px;
+        margin-bottom: -4px;
     }
     .header__main-block-wrapper-right img {
         max-width: 374px;
@@ -803,14 +809,26 @@ button.section__subscription-form-button  {
         margin-top: 129px;
     }
     .bg-rhombus-header {
-        background:url('../img/header/bg_right.png') no-repeat 205px 80px; 
-        background-size: 56%;
+        background:url('../img/header/bg_right.svg') no-repeat 215px 80px; 
+        background-size: 70%;
     }
     .bg-lines-header {
         background:url('../img/header/bg_center_left.png') no-repeat -30px 330px, url('../img/header/bg_center_right.png') no-repeat 50px 300px;
     }
     .item_middle > img {
         border-radius:30px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        margin:5px 4px 5px 4px !important;
+    }
+    .owl-theme .owl-dots .owl-dot span:first-child {
+        margin-left: 0;
+    }
+    .owl-theme .owl-dots .owl-dot span:last-child {
+        margin-right: 0;
+    }
+    .owl-nav {
+        max-width: 158px;
     }
 }
 
