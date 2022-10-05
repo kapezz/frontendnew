@@ -140,3 +140,94 @@ $(function(){
  $(function(){
     $('.mainText').append('<span>Новый блок</span>');
  });
+
+ $(function(){
+   $('.icons img').each(function(){ //выборка по каждому отдельному элементу 
+      if($(this).attr('src')=='img/icon3.png') { //выбор текущего зис = сравнение есть ли в нем срс картинка конкретная 
+         $(this).fadeOut(1000); // применение к нему (только к нему) скрытия
+      }
+   });
+});
+
+$(function(){
+   var mainText = $('.mainText').clone(); // создаем переменную передаем в нее клон
+   $('body').append(mainText); // указываем место куда поместить переменную 
+});
+
+$(function(){
+   var mainText = $('.mainText').remove(); // удаляем нужную переменную 
+   $('nav').after(mainText); // добавляем ее в другом месте 
+});
+
+// выбор и ссылок и изображений (через запятую)
+$(function(){
+   $('img, a').css('background', 'red');  
+});
+
+//при наведении на указаный блок будет какое то событие, то есть мы тут например указали алерт, но можно сказать все что угодно 
+$(function(){
+   $('.logo').mouseover(function(){ 
+      alert('событие mouseover');
+   });
+});
+
+//mouseout – если мы отвели мышку с указанного места то тогда будет происходить событие
+$(function(){
+   $('.logo').mouseout(function(){ 
+      alert('событие mouseover');
+   });
+});
+
+$(function(){
+   $('.logo').mousemove(function(){ 
+      alert('событие mouseover');
+   });
+});
+
+
+$(function(){
+   $('.arrowDown').click(function(){ //выбираем элемент, указываем событие 
+      var clone = $(this).clone(); // создаем переменную (для этого же элемента) 
+      $(this).after(clone); // помешаем этот элемент сразу после основного = дублируем 
+   });
+});
+
+//HOVER пример 1 = прямого события хавер нет, но можно его с имитировать примерно так, добавили класс при навидении мыши и потом когда мышь ушла то удаляем класс
+$(function(){
+   var link = $('menu li a');
+   link.mouseover(function(){
+      $(this).addClass('border');
+   });
+   link.mouseout(function(){
+      $(this).removeClass('border');
+   });
+});
+// HOVER = пример 2
+$(function(){
+   var link = $('menu li a');
+   link.hover(
+      function() {
+      $(this).addClass('border');
+   }, function() {
+      $(this).removeClass('border');
+   });
+});
+
+$(function(){
+   $('.mainText').click(function(e){
+      alert(e.screenX+' '+e.screenY); // отобразяться точки скрина считаться будет от начала блока  
+      alert(e.pageX+' '+e.pageY); // отобразяться точки страницы 
+      alert(e.altKey); // сработает фальс или тру в том случае если будет нажатие мыши плюс кнопка альт 
+      alert(e.ctrlKey);// сработает при нажатии контрала плюс мышка
+      alert(e.shiftKey); // сработает при нажатии на шифт плюс мышка 
+      alert(e.target); // при нажатии мышкой получим указания что это за объект 
+   })
+});
+
+// отмена стандартного поведения, то есть если были ссылки то они перекидывать не будут или первое или второй 
+$(function(){
+   $('.btn, .arrowDown').click(function(){
+      // e.preventDefault();
+      return false;
+   })
+});

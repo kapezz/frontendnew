@@ -1,0 +1,312 @@
+:root {
+    --accent-color: #FF9100;
+    --dark-color:#3B4A51;
+    --white-color:#FFF;
+}
+fieldset {
+  padding: 0;
+}
+.katalog__popup-basket {
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    background:var(--white-color);
+    padding:16px 15px 12px 15px;
+}
+.add__to-basket {
+    border-bottom: 1px solid #CFD0D1;
+}
+.add__to-basket h2 {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    margin-left: 11px;
+}
+.main__block-product-description-wrapper {
+    display: flex;
+    margin-top: 28px;
+    
+    border-bottom: 1px solid #CFD0D1;
+}
+.product__description-p {
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #3B4A51;
+
+}
+.product__description-p strong {
+    margin-right: 10px;
+}
+.product__description-line {
+    height: 107px;
+    border: 0.5px solid #CFD0D1;
+    margin-bottom: 28px;
+    /* margin-left: 48px; */
+    /* margin-right: 50px; */
+}
+.project-selection-description-line {
+    margin-top: 26px;
+    border: 0.5px solid #CFD0D1;
+    /* margin-bottom: 28px; */
+}
+.product__description-p > a {
+    color: #007AB9;
+}
+.adress--tb {
+    position: relative;
+
+}
+.new_tab {
+    position: absolute;
+    top:0px;
+}
+.product__description-span-price {
+    padding: 5px;
+    color:var(--white-color);
+    background:var(--accent-color);
+    border-radius: 3px;
+}
+.left__block-product-description-wrapper {
+    width: 424.5px;
+    /* width: 100%; */
+    /* background:green; */
+    padding-left: 20px;
+}
+.right__block-productproduct-description-wrapper {
+    width: 344.5px;
+    /* width: 100%; */
+    /* background:yellow; */
+    padding-left: 50px;
+    /* margin-bottom: 28px; */
+}
+
+.left__block-project-selection-wrapper h2 {
+    
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+}
+/* tooltip */
+.left__block-project-selection-tooltip-wrapper {
+    display: flex;
+    /* flex-direction: row; */
+    margin-top: 21px;
+    align-items: center;
+
+}
+.tooltip {
+    margin-left: 12px;
+    position: relative;
+    display: inline-block;
+    background:url(img/info_tooltip.svg) no-repeat;
+    width: 13px;
+    height: 13px;
+    /* border-bottom: 1px dotted black;  */
+    /* If you want dots under the hoverable text */
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #3B4A51;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+span.tooltiptext {
+    font-size: 12px;
+}
+/* tooltip end */
+.project__selection {
+    
+}
+
+.main__block-project__selection-wrapper {
+    display: flex;
+    /* padding-left:11px; */
+}
+.left__block-project-selection-item {
+    display: flex;
+     
+    
+}
+.left__block-project-items-wrapper {
+    margin-top: 18px;
+}
+.left__block-project-selection-item p {
+    font-family: 'Raleway';
+    /* font-style: normal; */
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+}
+.left__block-project-selection-fp {
+    border-bottom:0.5px solid #3B4A51;
+    width: 182px;
+    margin-right: 1px;
+    /* width: 100%; */
+}
+.left__block-project-selection-sp {
+    width:76px;
+    border-bottom:0.5px solid #3B4A51;
+    text-align: center;
+}
+.left__block-project-selection-button-wrapper {
+    border-bottom:0.5px solid #3B4A51;
+    margin-left: 1px;
+}
+.left__block-project-selection-item button {
+    border-radius: 5px;
+    border:none;
+    margin-bottom: 2px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    color:var(--white-color);
+    padding: 1px 4px;
+    cursor: pointer;
+    /* identical to box height, or 183% */
+}
+
+.left__block-project-selection-button-active {
+    background: #8A97A4;
+}
+.left__block-project-selection-button-not-active {
+    background: #FF9100;
+}
+.show__more-projects {
+    margin-top: 8px;
+    /* flex-direction: row; */
+}
+.show__more-projects a{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #8A97A4;
+    /* display: flex; */
+}
+span.arrow__down  {
+  
+}
+.show__more-projects a:after {
+    background-image: url('img/arrow_down.svg');
+    background-repeat: no-repeat;
+    width:10px;
+    height:5px;
+    display: inline-block;  
+    content:'';
+    margin-left: 5px;
+    margin-bottom: -1px;
+    /* display: block; */
+}
+.hidden__blocks {
+    display: flex;
+    flex-direction: column;
+}
+.left__block-project-selection-wrapper {
+    width: 423.8px;
+    padding-left: 11px;
+}
+/*
+.hidden-projects {
+    display: none;
+}*/
+.right__block-project-selection-wrapper {
+    display: flex;
+    align-items:center;
+    /* justify-content: center; */
+    width: 344.5px;
+    padding-left: 50px;
+}
+.right__block-project-selection-non-active,
+.right__block-project-selection-active {
+    background: #F9F9F9;
+    border-radius: 15px;
+    padding: 12px;
+}
+.right__block-project-selection-non-active p,
+.right__block-project-selection-active p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #CFD0D1;
+    background: #F1F2F2;
+    border-radius: 5px;
+    padding: 5px;
+}
+.right__block-project-selection-active p {
+    background: #FF9100;
+    /* font-weight: 600; */
+    /* font-size: 14px; */
+    /* font-weight: 600; */
+    font-size: 15px;
+    color:var(--white-color);
+     /* line-height: 17px; */
+/* border-radius: 5px; */
+}
+.article__selection-wrapper-non-active,
+.article__selection-wrapper-active {
+    border-top: 1px solid #CFD0D1;
+    margin-top: 21px;
+    padding-left: 11px;
+    /* margin-bottom: 21px; */
+}
+.article__selection-wrapper-non-active h2 {
+   
+    font-weight: 700;
+    font-size: 16px;    
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    /* color: #3B4A51; */
+    color:#CFD0D1;
+    /* color: #3B4A51; */
+}
+.article__selection-tooltip-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+    margin-bottom: 13px;
+}
+.article__selection-filters-wrapper button {
+    background:transparent;
+    /* border:none; */
+    opacity: 0.3;
+    border: 0.5px solid #3B4A51;
+    border-radius: 5px;
+    padding: 6px 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+}
+.article__selection-info {
+    margin-top: 47px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #3B4A51;
+    opacity: 0.3;
+    margin-bottom: 26px;
+}
