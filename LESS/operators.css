@@ -1,0 +1,12 @@
+.btn {
+  display: inline;
+  color: red;
+  background-color: blue;
+}
+.btn .btn_red,
+.button__date {
+  font-weight: bold;
+}
+.button__date {
+  border-radius: 5px;
+}

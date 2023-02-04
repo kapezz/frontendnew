@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<style>
+html {
+  box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+.popup-btn {
+  outline: none;
+  border: none;
+  background: #eee;
+  font-size: 22px;
+  font-weight: bold;
+  max-width: 200px;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin: 50px auto 0;
+  cursor: pointer;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+}
+
+.popup-btn:hover {
+  background: #ccc;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 999;
+  display: none;
+}
+
+.popup-inner {
+  max-width: 600px;
+  padding: 50px 20px;
+  background: #eee;
+  color: #333;
+  min-height: 400px;
+  position: relative;
+  margin: 50px 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  -webkit-transform: translateX(-50%) rotate(0);
+  -moz-transform: translateX(-50%) rotate(0);
+  -ms-transform: translateX(-50%) rotate(0);
+  -o-transform: translateX(-50%) rotate(0);
+}
+
+.close-popup {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-popup .bar {
+  height: 3px;
+  background: #333;
+  width: 18px;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.close-popup .bar:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+body.popup-active {
+  overflow: hidden;
+}
+
+body.popup-active .popup {
+  overflow-y: scroll;
+}
+</style>
+    
+<div class="container">
+    <button class="popup-btn">Show Popup</button>
+    
+    
+    <div class="popup">
+      <div class="popup-inner">
+      <!--  <h1>Lorem Ipsum Dolor</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam. Quidem explicabo sequi illum, soluta pariatur iste veritatis aut fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam. Quidem explicabo sequi illum, soluta pariatur iste veritatis aut fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam.</p>
+        <div class="close-popup">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>                
+      </div>-->
+    </div>
+  </div>
+
+<script>
+    $(document).ready(function() {
+  var open_btn = $('.popup-btn'),
+      popup = $('.popup'),
+      close_btn = $('.close-popup'),
+      body  = $('body');
+
+  open_btn.on('click', function() {
+    popup.fadeIn();
+    body.addClass('popup-active');
+  });
+
+  close_btn.on('click', function() {
+    popup.fadeOut();
+    body.removeClass('popup-active');
+  });
+
+  $(document).on('click', function(e) {
+    if( $(e.target).hasClass('popup') ) {
+      $(popup).fadeOut();
+      body.removeClass('popup-active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

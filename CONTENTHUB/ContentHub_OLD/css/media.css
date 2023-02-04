@@ -1,0 +1,36 @@
+@media (min-width: 1199px) and (max-width: 4000px) {
+    section > .burger-menu {
+        display: none;
+    }
+} 
+@media (min-width: 991px) and (max-width: 1199px) {
+    :root {
+        font-size: 14px;       
+    }
+    .main {
+        /* padding:0 15px; */
+    } 
+    
+    .header__wrapper-menu {
+        display: none;
+    }
+    section > .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+    .header > .header__wrapper {
+        justify-content: flex-end;
+    }
+    .header__wrapper-logo {
+        flex: 5;
+    }
+    .language__wrapper {
+        margin-right: 40px;
+    }
+    .authorization__wrapper {
+        margin-right: 40px;
+    }
+    .registration__wrapper {
+        margin-right: 40px;
+    }
+  }

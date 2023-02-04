@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="UTF-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+  <title>Пример веб-страницы</title>
+<style>
+div[data-display=none] {
+display: none;
+}
+div[data-display=block] {
+display: block;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#theid,#theid1,#thei2{
+    width: 300px;
+    border: 1px solid #afafaf;
+    padding: 10px;
+    margin: 10px;
+}
+#theid{ background: #f0f8ff54;}
+#theid1{ background:#fff0f054}
+#thei2{ background:#f1fff054;}
+</style>
+
+
+ </head>
+ <body>
+
+<button type="button"  data-openmore="theid"    id="first">показать</button>
+
+
+<!-- <button type="button"  data-openmore="theid1"   id="second">Показать еще :</button> -->
+<!-- <button type="button"  data-openmore="thei2"    id="third">Посмотреть ответ :</button> -->
+<br>
+Открывающиеся блоки :
+<br>
+<div id="theid"  data-display="none">Соедржимое 1</div>
+
+<button type="button"  data-openmore="theid1"    id="first">показать</button>
+
+
+<div id="theid1"  data-display="none">Соедржимое 2</div>
+
+
+<!-- <div id="theid1" data-display="none">Соедржимое 2 </div> -->
+<!-- <div id="thei2"  data-display="none">Соедржимое 3</div> -->
+
+<script src="dw_hide_show.js"></script>
+
+
+ </body>
+</html>

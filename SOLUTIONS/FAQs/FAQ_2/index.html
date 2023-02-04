@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .answer {
+    display:none;
+}
+
+h2 {
+    line-height:24px;
+    font-size:18px;
+    font-weight:700;
+    color:rgb(100,150,200);
+    padding-left:24px;
+  	margin: 0;
+    cursor:pointer;
+}
+
+    </style>
+</head>
+<body>
+
+    
+
+    <section id="faq-list">
+                
+        <h2>Is it true that you are a carrot?</h2>
+        <div class="answer">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat
+                volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit
+                lobortis nisl ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    
+    
+        <h2>How does one attain carrot status?</h2>
+        <div class="answer">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat
+                volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit
+                lobortis nisl ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    
+    
+        <h2>Once I attain carrot status, how can I get orange like you?</h2>
+        <div class="answer">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat
+                volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit
+                lobortis nisl ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    
+    </section>
+    
+
+ <script>
+    $(document).ready(function() {
+    $('#faq-list h2').click(function() {
+
+        $(this).next('.answer').slideToggle(400);
+        // $('h2.test').removeClass('test');
+        // $(this).addClass('test')
+       
+        
+
+    });
+}); 
+ </script>   
+
+
+
+
+
+</body>
+</html>

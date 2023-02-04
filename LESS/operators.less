@@ -1,0 +1,12 @@
+.btn {
+    display: inline;
+    color:red;
+    background-color: blue;
+    & .btn_red {
+        font-weight: bold;
+    }
+}
+.button__date {
+    &:extend(.btn .btn_red);
+    border-radius: 5px;
+}

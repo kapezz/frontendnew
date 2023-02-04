@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+ <a href="#" class="dropDawnText">нажми</a>
+
+
+<div class="toggle-dropdown" style="display:none;"> я должен открыться</div>
+
+      <script>
+        $(document).ready(function() {
+  $(".dropDawnText").click(function(event){
+   event.stopPropagation();
+    var element = $(this);
+    //Закрываем все блоки
+    $(".toggle-dropdown").removeClass('active');
+    //Открываем ту которая нам нужна 
+    element.addClass('active');
+ });
+});
+
+      </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</body>
+</html>

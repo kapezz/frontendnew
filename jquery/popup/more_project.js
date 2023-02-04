@@ -1,14 +1,19 @@
-function view(n) {
-    style = document.getElementById(n).style;
-    style.display = (style.display == 'flex') ? 'none' : 'block';
-}
-    let block = document.querySelector('.show__more-projects-a');
-    block.addEventListener('click', ()=> {
-        if(block.classList.contains('arrow')) {
-            block.classList.add('arrow2')
-            block.classList.remove('arrow')
-        } else {
-            block.classList.add('arrow')
-            block.classList.remove('arrow2')
-        }
-    }) 
+$(document).ready(function(){
+    $('.show__more-projects-a').click(function(){
+        $(this).toggleClass('active');
+        $('.hidden__blocks').slideToggle(300);      
+        return false;
+    });
+});
+
+$(document).ready(function () {
+  $(".show__more-projects-a").click( function (){
+    if($(this).hasClass("active")){
+     $(this).text("Скрыть проекты");
+    }else{
+      $(this).text("Показать еще проекты");
+    }
+  });
+});                  
+
+           

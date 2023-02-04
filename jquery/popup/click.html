@@ -11,19 +11,79 @@
     
     
 
-   <div style="display:none" class="left__block-project-selection-item" id="hidden_block">
-       <p class="left__block-project-selection-fp">Cruise-Life</p>
-       <p class="left__block-project-selection-sp">2 статьи</p>
-       <div class="left__block-project-selection-button-wrapper">   
-           <button class="left__block-project-selection-button-not-active">Выбрать</button>
-       </div>
-   </div>
-   <div class="show__more-projects">
-    <a class="show__more-projects-a arrow2" href="#hidden_block" onclick="view('hidden_block'); return false">Показать еще проекты</a> <!--<span class="arrow__down"></span> -->
+   
+    <div class="show__more-projects"> 
+        <a class="show__more-projects-a arrow2" href="#">Показать еще проекты</a> <!--<span class="arrow__down"></span> -->
+    </div>
+
+    
+<div style="display:none" class="hidden__blocks" id="hidden_blocks">
+    <div class="left__block-project-selection-item">
+        <p class="left__block-project-selection-fp">Cruise-Life-2</p>
+        <p class="left__block-project-selection-sp">2 статьи</p>
+        <div class="left__block-project-selection-button-wrapper">   
+            <button class="left__block-project-selection-button-not-active">Выбрать</button>
+        </div>
+    </div>
+    <div class="left__block-project-selection-item">
+        <p class="left__block-project-selection-fp">Cruise-Life-3</p>
+        <p class="left__block-project-selection-sp">2 статьи</p>
+        <div class="left__block-project-selection-button-wrapper">   
+            <button class="left__block-project-selection-button-not-active">Выбрать</button>
+        </div>
+    </div>
+    <div class="left__block-project-selection-item">
+        <p class="left__block-project-selection-fp">Cruise-Life-4</p>
+        <p class="left__block-project-selection-sp">2 статьи</p>
+        <div class="left__block-project-selection-button-wrapper">   
+            <button class="left__block-project-selection-button-not-active">Выбрать</button>
+        </div>
+    </div>
 </div>
-   <script src="more_project.js"></script>
 
+<script>
+$(document).ready(function(){
+    $('.show__more-articles-a').click(function(){
+        $(this).toggleClass('active-articles');
+        $('.hidden__blocks-articles').slideToggle(300);      
+        return false;
+    });
+  });
 
-
+  $(document).ready(function () {
+    $(".show__more-articles-a").click( function (){
+      if($(this).hasClass("active-articles")){
+       $(this).text("Скрыть статьи");
+      }else{
+        $(this).text("Показать еще статьи");
+      }
+    });
+  });   
+</script>    
+    <!-- <script src="more_article.js"></script>  -->
+<style>
+    .active {
+        color:red;
+    }
+</style>
+<!--
+    <a class="content_toggle" href="#">Показать текст</a>
+ 
+    <div class="content_block" style="display: none;">
+        <p>Блок скрытого текста...</p>
+    </div>
+     
+    <!-- <script src="/js/jquery.min.js"></script> -->
+   <!--
+   
+   <script>
+    $(document).ready(function(){
+        $('.content_toggle').click(function(){
+            $('.content_block').slideToggle(300);      
+            return false;
+        });
+    });
+    </script>
+-->
 </body>
 </html>

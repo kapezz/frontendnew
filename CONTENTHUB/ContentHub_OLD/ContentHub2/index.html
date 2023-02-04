@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/burgermenu.css">
+    <title>ContentHub - 2</title>
+</head>
+<body>
+    
+        <div class="container__1920 site"> <!--выравниваем margin:0 auto + в нем background 2 квадрата-->
+            <div class="container__1280 header"> <!-- Основной контейнер -->
+                <div class="container__1200"> <!---->
+                    <div class="header__wrapper">
+                        <a href="" class="header__logo"><img src="img/logo.svg" alt=""></a>
+                        <nav class="header__wrapper-menu">
+                            <ul>
+                                <li><a href="">Каталог СМИ</a></li>
+                                <li><a href="">Контент услуги</a></li>
+                                <li><a href="">Блог</a></li>
+                                <li><a href="">Контакты</a></li>
+                                <li><a href="">О нас</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__wrapper-language">
+                            <a class="active__language arrow2" href="#hidden_block" onclick="view('hidden_block'); return false">RU</a>
+                            
+                            <ul style="display:none;" id="hidden_block" class="language__hidden__block">
+                                <li><a class="active__language-link" href="#">RU</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">UA</a></li>
+                            </ul>
+
+                            <script>
+                            function view(n) {
+                                style = document.getElementById(n).style;
+                                style.display = (style.display == 'flex') ? 'none' : 'flex';
+                            }
+                                let block = document.querySelector('.active__language');
+                                block.addEventListener('click', ()=> {
+                                    if(block.classList.contains('arrow')) {
+                                        block.classList.add('arrow2')
+                                        block.classList.remove('arrow')
+                                    } else {
+                                        block.classList.add('arrow')
+                                        block.classList.remove('arrow2')
+                                    }
+                                }) 
+                            </script>
+
+                        </div>
+
+
+                        <div class="header__wrapper-authorization">
+                            <a href="#">Войти</a>
+                        </div>
+                        <div class="header__wrapper-registration">
+                            <a href="#">Регистрация</a>
+                        </div>
+                        
+                        <!-- hamburger menu -->
+                        
+                        <section class="wrapper__burger-menu"> 
+                            <div class="burger-menu">
+                                <div class="menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="">Каталог СМИ</a></li>
+                                    <li><a href="">Контент услуги</a></li>
+                                    <li><a href="">Блог</a></li>
+                                    <li><a href="">Контакты</a></li>
+                                    <li><a href="">О нас</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!--hamburger menu END-->
+
+                            </div> <!--Header Wrapper-->
+                </div> <!--container__1200-->
+
+                <div class="container__1280 container__online-store">
+                    <div class="online__store-wrapper">
+                        <h1 class="store__title">ОНЛАЙН МАГАЗИН СТАТЕЙ <br> ДЛЯ ПРОДВИЖЕНЯ БИЗНЕСА</h1>
+                        <h3 class="store__subtitle">#SEO #PR #LINKBUILDING</h3>
+                        <button class="store__button" type="button">Регистрация</button>
+                        <img class="online__store-noutbook" src="img/bg_slider_2.png" alt="">
+                    </div>
+
+                </div><!--container 1280-->
+            
+                <div class="container__1200 content">
+                    
+                    <div class="content__wrapper">
+                        
+                        <div class="content__wrapper-row">
+                            
+                            <div class="row__item-flex">
+                               <img class="row__item-img" src="img/row_item1.svg" alt="">
+                               <div class="row__item-ins">   
+                                    <span>50 стран <br> мира</span>
+                                    <p>ГЕО: США, Великобритания, Испания, Германия, Канада, Франция</p> 
+                                </div>
+                            </div>
+                            
+                            <div class="row__item-flex">
+                                <img class="row__item-img" src="img/row_item2.svg" alt="">
+                                <div class="row__item-ins">
+                                    <span>5000 <br>сайтов</span>
+                                    <p>Сайты с живой аудиторией, примерами публикаций</p>
+                                </div>
+                            </div>
+                        
+                            <div class="row__item-flex">
+                                <img class="row__item-img" src="img/row_item3.svg" alt="">
+                                <div class="row__item-ins">
+                                    <span>25 <br> языков</span>
+                                    <p>Пишем контент на 25 языках, сотруничаем только с Native Writers</p>
+                                </div>
+                            </div>
+                        </div> <!--content__wrapper-row-->
+
+                        </div> <!--Content Wrapper-->
+                        </div> <!--Container 1200-->
+                        
+                    <div class="container__1200">
+                        <div class="platforms__wrapper">
+                            <div class="platforms__wrapper-title">
+                                <h2>Статьи на качественных площадках</h2>
+                            </div>
+                            <div class="platforms__wrapper-subtitle">
+                                <span>Увеличьте посещаемость и позиции вашего сайта <br>
+                                    с помощью площадок Content.Hub</span>
+                            </div>
+                            <div class="platforms__wrapper-row">
+                                <div class="platforms__item">
+                                    <img src="img/platforms__item/item1.svg" alt="">
+                                    <h3>SEO</h3>
+                                    <span>Увеличивайте рост поискового трафика,
+                                        позиций по ключевым запросам и 
+                                        ссылочной массы.</span>
+                                </div>
+            
+                                <div class="platforms__item">
+                                    <img src="img/platforms__item/item2.svg" alt="">
+                                    <h3>LINKBUILDING</h3>
+                                    <span>Увеличение посещаемости сайта, рост
+                                        органического трафика и ссылочной 
+                                        массы.</span>
+                                </div>
+            
+                                <div class="platforms__item">
+                                    <img src="img/platforms__item/item3.svg" alt="">
+                                    <h3>PR</h3>
+                                    <span>Повышайте узнаваемость бренда и 
+                                        охват целевой аудитории, получайте 
+                                        цитируемость СМИ.</span>
+                                </div>
+                                
+                            </div>
+                            <div class="lines__button">
+                                <hr class="orange__line" />
+                                <a href="#">Присоедениться</a>
+                                <hr class="orange__line" />
+                            </div>
+                            
+                        </div> <!--platforms__wrapper-->
+
+
+                    </div><!--container__1200-->
+                    
+            </div><!--container__1280-->
+            <div class="container__1920-bg-top"></div>
+            <div class="container__1920-second site-content">
+                        <div class="container__1200">
+                            <div class="content__wrapper">
+                                <div class="content__wrapper_title">
+                                      <h3>Новые возможности продвижения статьями </h3>
+                                  </div>
+                                 
+                                  <div class="content__wrapper_list">      
+                                      <ul>
+                                          <li><img src="img/check.svg" alt="">
+                                              <span>Работаем 3+ года на рынке</span></li>
+                                          <li><img src="img/check.svg" alt="">
+                                              <span>Прямые контакты с 
+                                              <br>вебмастерами и редакторами</span></li>
+                                          <li><img src="img/check.svg" alt="">
+                                              <span>Индивидуальный поиск 
+                                              <br>доменов под тематику</span></li>
+                                          <li><img src="img/check.svg" alt="">
+                                              <span>Опубликовали более 
+                                              <br>2500 статей</span></li>
+                                          <li><img src="img/check.svg" alt="">
+                                              <span>Гарантия размещения</span></li>
+                                          <li><img src="img/check.svg" alt="">
+                                              <span>Только ручное размещение</span></li>
+                                      </ul>
+                                  </div>
+                             </div>
+                       
+                    </div><!--container__1280-->
+            </div><!--container__1920-->
+            <div class="container__1280 footer">
+                        <div class="container__1200">
+                        <div class="partners__wrapper">
+                            <div class="partners__wrapper-title">
+                                <h3>Наши партнеры</h3>
+                            </div>
+                            <div class="partners__wrapper-logo">
+                                <a href="#"><img src="img/partners_logo/item_partners1.png" alt=""></a>
+                                <a href="#"><img src="img/partners_logo/item_partners2.png" alt=""></a>
+                                <a href="#"><img src="img/partners_logo/item_partners3.png" alt=""></a>
+                                <a href="#"><img src="img/partners_logo/item_partners4.png" alt=""></a>
+                                <a href="#"><img src="img/partners_logo/item_partners5.png" alt=""></a>
+                                <a href="#"><img src="img/partners_logo/item_partners6.png" alt=""></a>
+                                <a href="#"><img src="img/partners_logo/item_partners7.png" alt=""></a>  
+                            </div>
+                            <div class="partners__wrapper_button">
+                                <a href="#">Начать сотрудничество</a>
+                            </div>
+                       </div>
+                    </div><!--container__1200--> 
+                    <div class="container__1200">
+                        <footer class="footer">
+                            <div class="footer__wrapper">
+                                <div class="footer__links">
+                                    
+                                    <div class="footer__logo__wrapper">
+                                        <a href="#"><img src="img/footer/footer_logo.svg" alt=""></a>
+                                        <div class="footer_social-links">
+                                            <span>Мы в соц. сетях:</span>
+                                            <a href="#"><img src="img/footer/footer_fb.svg" alt=""></a>
+                                            <a href="#"><img src="img/footer/footer_in.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                
+                             
+                                    <div class="footer__menu">
+                                        <ul>
+                                            <li><a href="#">Каталог СМИ</a></li>
+                                            <li><a href="#">Контент услуги</a></li>
+                                            <li><a href="#">Категории</a></li>
+                                            <li><a href="#">Блог</a></li>
+                                            <li><a href="#">Контакты</a></li>
+                                            <li><a href="#">О нас</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                   
+                    
+                                </div>
+                                <div class="footer__chat">
+                                    <div class="footer__wrapper-offer">
+                                        <a href="" class="public">Публичный  договор |</a>
+                                        <a href="" class="privacy__policy"> &nbsp;Политика конфиденциальности</a>
+                                        <span class="copyright">© 2019-2022 | Content.Hub | contenthub.pro</span>
+                                    </div>
+                    
+                    
+                                        <img src="img/footer/footer_pay_new.png" class="footer_pay" alt="">
+                                    
+                              
+                                       <div class="footer__chat-channels">
+                                            <div class="channel_telegram chanel">
+                                                <a href="#"><img src="img/footer/footer_telegram.svg" alt="">Телеграм чат</a>
+                                                <a href="#"><img src="img/footer/footer_watsup.svg" alt="">Whatsapp чат</a>
+                                                <a href="#"><img src="img/footer/footer_skype.svg" alt="">Skype чат</a>
+                                                <a href="#"><img src="img/footer/footer_email.svg" alt="">Электронная почта</a>
+                                            </div>
+                                        </div>
+                    
+                    
+                                </div>
+                            </div>        
+                        </footer>
+                    </div><!--container__1200-->
+            </div><!--container__1280-->
+        </div><!--container__1920-->
+            
+            
+    
+        <script src="js/burger.js"></script>
+</body>
+</html>

@@ -427,12 +427,23 @@
                                         </tbody>
                                       </table>
                                    -->
-                                      
+                                    
+                                      <button class="popup-btn">Show Popup-1</button>
+                                     
+
+                                      <div class="popup">
+                                        <div class="popup-inner">
+
                                       <!-- popup 1 -->
                                       <div class="katalog__popup-basket">
+                                        
+                                        
+                                        <!--
                                         <div class="add__to-basket">
                                             <h2>Добавить в корзину</h2>
                                         </div> 
+                                        -->
+                                        <!--
                                         <div class="product__description">
                                             <div class="main__block-product-description-wrapper">
                                                 <div class="left__block-product-description-wrapper">
@@ -451,6 +462,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        -->
+                                        <!--
                                         <div class="project__selection">
                                             <div class="main__block-project__selection-wrapper">
                                                 <div class="left__block-project-selection-wrapper">
@@ -485,44 +498,36 @@
                                                             </div>
                                                         </div>
 
-                                                       <div style="display:none" class="hidden__blocks" id="hidden_blocks">
-                                                            <div class="left__block-project-selection-item">
-                                                                <p class="left__block-project-selection-fp">Cruise-Life-2</p>
-                                                                <p class="left__block-project-selection-sp">2 статьи</p>
-                                                                <div class="left__block-project-selection-button-wrapper">   
-                                                                    <button class="left__block-project-selection-button-not-active">Выбрать</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="left__block-project-selection-item">
-                                                                <p class="left__block-project-selection-fp">Cruise-Life-3</p>
-                                                                <p class="left__block-project-selection-sp">2 статьи</p>
-                                                                <div class="left__block-project-selection-button-wrapper">   
-                                                                    <button class="left__block-project-selection-button-not-active">Выбрать</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="left__block-project-selection-item">
-                                                                <p class="left__block-project-selection-fp">Cruise-Life-4</p>
-                                                                <p class="left__block-project-selection-sp">2 статьи</p>
-                                                                <div class="left__block-project-selection-button-wrapper">   
-                                                                    <button class="left__block-project-selection-button-not-active">Выбрать</button>
-                                                                </div>
+                                                        <div class="left__block-project-selection-item active-project hidden__blocks" style="display:none">
+                                                            <p class="left__block-project-selection-fp">sp-studio.in.ua-2</p>
+                                                            <p class="left__block-project-selection-sp">10 статей</p>
+                                                            <div class="left__block-project-selection-button-wrapper">   
+                                                                <button class="left__block-project-selection-button-not-active">Выбрать</button>
                                                             </div>
                                                         </div>
 
+                                                        <div class="left__block-project-selection-item active-project hidden__blocks" style="display:none">
+                                                            <p class="left__block-project-selection-fp">sp-studio.in.ua-3</p>
+                                                            <p class="left__block-project-selection-sp">10 статей</p>
+                                                            <div class="left__block-project-selection-button-wrapper">   
+                                                                <button class="left__block-project-selection-button-not-active">Выбрать</button>
+                                                            </div>
+                                                        </div>
 
+                                                        <div class="left__block-project-selection-item active-project hidden__blocks" style="display:none">
+                                                            <p class="left__block-project-selection-fp">cruise-life-3</p>
+                                                            <p class="left__block-project-selection-sp">10 статей</p>
+                                                            <div class="left__block-project-selection-button-wrapper">   
+                                                                <button class="left__block-project-selection-button-not-active">Выбрать</button>
+                                                            </div>
+                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="show__more-projects">
-                                                         <a class="show__more-projects-a arrow2" href="#hidden_blocks" onclick="view('hidden_blocks'); return false">Показать все проекты</a> <!--<span class="arrow__down"></span> -->
+                                                         <a class="show__more-projects-a" href="#">Показать все проекты</a>
                                                     </div>
-<!-- 
-                                                    <div style="display:none" class="left__block-project-selection-item" id="hidden_blocks">
-                                                        <p class="left__block-project-selection-fp">Cruise-Life</p>
-                                                        <p class="left__block-project-selection-sp">2 статьи</p>
-                                                        <div class="left__block-project-selection-button-wrapper">   
-                                                            <button class="left__block-project-selection-button-not-active">Выбрать</button>
-                                                        </div>
-                                                    </div> -->
 
+                                                
                                                     <script src="more_project.js"></script>
                                                 </div>
                                                 <div class="project-selection-description-line"></div> 
@@ -539,10 +544,10 @@
                                                 </div>
                                                 
                                             </div>
-                                        </div>
-
+                                        </div> -->
+                                        <!--
                                        <div class="article__selection">
-                                            <div class="article__selection-wrapper-non-active">
+                                            <div class="article__selection-wrapper-non-active" style="display:none">
                                                 <div class="article__selection-tooltip-wrapper"> 
                                                     <h2>Выберите статью</h2>
                                                      <div class="tooltip">
@@ -559,7 +564,7 @@
                                                </div>
                                             </div>
                                             
-                                               <div class="article__selection-wrapper-active" style="display:none">
+                                               <div class="article__selection-wrapper-active" >
                                                 <div class="article__selection-tooltip-wrapper">
                                                     <h2>Выберите статью</h2>
                                                     <div class="tooltip">
@@ -575,34 +580,43 @@
                                                  <table class="table__article-selection-info">
                                                      <thead class="thead__article-selection-info">
                                                        <tr class="tr__article-selection-info">
-                                                         <th class="title__article-selection-info" data-type="numeric">#<span class="resize-handle"></span></th>
-                                                         <th class="title__article-selection-info" data-type="text-short">Заголовок<span class="resize-handle"></span></th>
-                                                         <th class="title__article-selection-info" data-type="text-short">Язык<span class="resize-handle"></span></th>
-                                                         <th class="title__article-selection-info" data-type="text-short">Формат<span class="resize-handle"></span></th>
-                                                         <th class="title__article-selection-info" data-type="text-long">Символов<span class="resize-handle"></span></th>
-                                                         <th class="title__article-selection-info" data-type="text-short">Действие <span class="resize-handle"></span></th>
+                                                         <th class="title__article-selection-info" data-type="numeric">#</span></th>
+                                                         <th class="title__article-selection-info" data-type="text-short">Заголовок</th>
+                                                         <th class="title__article-selection-info" data-type="text-short">Язык</th>
+                                                         <th class="title__article-selection-info" data-type="text-short">Формат</th>
+                                                         <th class="title__article-selection-info" data-type="text-long">Символов</th>
+                                                         <th class="title__article-selection-info" data-type="text-short">Действие</th>
                                                        </tr>
                                                      </thead>
                                                      <tbody class="tbody__article-selection-info">
-                                                       <tr class="tr__article-selection-info">
-                                                         <td class="link__article-selection-info"><a href="#">3</a></td>
-                                                         <td class="td__article-selection-main-info">Супер заголовок который не влез сюда</td>
+                                                        <tr class="tr__article-selection-info hidden__blocks-articles" style="display:none">
+                                                            <td class="td__article-selection-main-info">4</td>
+                                                            <td class="td__article-selection-main-info" title="Супер заголовок который не влез сюда">Супер заголовок который не влез сюда</td>
+                                                            <td class="td__article-selection-main-info">UA</td>
+                                                            <td class="td__article-selection-main-info">SEO Статья</td>
+                                                            <td class="td__article-selection-main-info">5000</td>
+                                                            <td class="td__article-selection-main-info"><button>Выбрать</button></td>
+                                                          </tr>
+                                                       
+                                                        <tr class="tr__article-selection-info">
+                                                         <td class="td__article-selection-main-info">3</td>
+                                                         <td class="td__article-selection-main-info" title="Супер заголовок который не влез сюда">Супер заголовок который не влез сюда</td>
                                                          <td class="td__article-selection-main-info">UA</td>
                                                          <td class="td__article-selection-main-info">SEO Статья</td>
                                                          <td class="td__article-selection-main-info">5000</td>
                                                          <td class="td__article-selection-main-info"><button>Выбрать</button></td>
                                                        </tr>
                                                        <tr class="tr__article-selection-info">
-                                                         <td class="link__article-selection-info"><a href="#">2</a></td>
-                                                         <td class="td__article-selection-main-info">Супер заголовок который не влез сюда</td>
+                                                         <td class="td__article-selection-main-info">2</td>
+                                                         <td class="td__article-selection-main-info" title="Супер заголовок который не влез сюда">Супер заголовок который не влез сюда</td>
                                                          <td class="td__article-selection-main-info">UA</td>
                                                          <td class="td__article-selection-main-info">Копирайтинг</td>
                                                          <td class="td__article-selection-main-info">3500</td>
                                                          <td class="td__article-selection-main-info"><button>Выбрать</button></td>
                                                        </tr>
                                                        <tr class="tr__article-selection-info">
-                                                         <td class="link__article-selection-info"><a href="#">1</a></td>
-                                                         <td class="td__article-selection-main-info">Супер заголовок который не влез сюда</td>
+                                                         <td class="td__article-selection-main-info">1</td>
+                                                         <td class="td__article-selection-main-info" title="Супер заголовок который не влез сюда, совсем не влез сюда">Супер заголовок который не влез сюда, совсем не влез сюда</td>
                                                          <td class="td__article-selection-main-info">UA</td>
                                                          <td class="td__article-selection-main-info">Копирайтинг</td>
                                                          <td class="td__article-selection-main-info">10000</td>
@@ -610,16 +624,97 @@
                                                        </tr>
                                                        </tbody>
                                                      </table>
+                                                     <div class="show__more-articles">
+                                                        <a class="show__more-articles-a" href="#">Показать еще статьи</a>
+                                                   </div>
+                                                   <script src="more_article.js"></script>
                                              </div>
                                          
                                         </div>
                                            
                                         
-                                      </div> <!--katalog__popup-basket-->
+                                      </div> -->
+                                      <!--
+                                      <div class="project__basket">
+                                        <h2>Корзина</h2>
+                                        <div class="project__basket-wrapper-form-non-active"  style="display:none">    
+                                            <div class="project__basket-wrapper-form-items"> 
+                                                <label for="input__selected-project">Выбранный проект:</label>
+                                                <input type="text" id="input__selected-project" name="input__selected-project" value="cruise-life.pro" disabled>
+                                            </div>    
+                                            <div class="project__basket-wrapper-form-items"> 
+                                                <label for="input__selected-article">Выбранная статья:</label>
+                                                <input type="text" id="input__selected-article" name="input__selected-article" value="" disabled>
+                                            </div>
+                                            <div class="project__basket-wrapper-form-items"> 
+                                                <label for="input__selected-site">Выбранная площадка:</label>
+                                                <input type="text" id="input__selected-site" name="input__selected-site" value="diariolavozdelchaco.com" disabled>
+                                            </div>
+                                            <button>Добавить в корзину</button>
+                                        
+                                        
+                                        </div>
+                                        
 
-                                </div>
-                               
-                               
+
+                                        <div class="project__basket-wrapper-form-active">    
+                                            <div class="project__basket-wrapper-form-items"> 
+                                                <label for="input__selected-project">Выбранный проект:</label>
+                                                <input type="text" id="input__selected-project" name="input__selected-project" value="cruise-life.pro" disabled>
+                                            </div>    
+                                            <div class="project__basket-wrapper-form-items"> 
+                                                <label for="input__selected-article">Выбранная статья:</label>
+                                                <input type="text" id="input__selected-article" name="input__selected-article" disabled value="Супер заголовок который не влез в поле">
+                                            </div>
+                                            <div class="project__basket-wrapper-form-items"> 
+                                                <label for="input__selected-site">Выбранная площадка:</label>
+                                                <input type="text" id="input__selected-site" name="input__selected-site" disabled value="diariolavozdelchaco.com">
+                                            </div>
+                                            <button>Добавить в корзину</button>
+                                        </div>
+                                        
+                                        <div class="project__basket-info">
+                                            <p>Заказ будет добавлен в корзину к выбранному проекту, после чего его можно будет оплатить</p>
+                                        </div>
+                                        
+                                      </div> -->
+
+                                </div> <!--katalog__popup-basket-->
+                                
+                                <div class="close-popup">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                  </div>         
+                            </div>
+                        </div> <!--POPUP END-->
+
+                        <script src="popup.js"></script>
+                     
+                        <button class="popup-btn-success">Show Popup-2</button>
+                        <!--POPUP SUCCESS-->
+                        
+                <div class="popup-success">
+                    <div class="popup-inner-success">
+                        <div class="popup__success-basket">
+                            <div class="popup__success-header">
+                                <div class="close-popup-success">
+                                    <span class="bar-success"></span>
+                                    <span class="bar-success"></span>
+                                  </div>
+                            </div>
+                            <div class="popup__success-wrapper">
+                                <img src="img/ready.svg" alt="">
+                                <h2>Готово</h2>
+                                <p>Заказ добавлен в корзину
+                                    <br>Перейдите в корзину для его оплаты или продолжите <br>работу с каталогом</p> 
+                                    <div class="popup__success-wrapper-a"> 
+                                        <a href="#">Перейти в корзину</a>
+                                        <a href="#">Продолжить работу с каталогом</a>
+                                    </div>    
+                            </div>  
+                        </div>
+                    </div>
+                </div>               
                                <!--
                                 <div class="blog__pagination-wrapper catalog__pagination-wrapper">
                                     <a href="" class="blog__pagination-left arrow__pagination-not-active"></a>
