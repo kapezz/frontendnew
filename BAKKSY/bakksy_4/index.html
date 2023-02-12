@@ -14,14 +14,14 @@
         href='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <link rel="stylesheet" href="css/popup.css">
-
     <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
     <meta property="og:image" content="img/logo_meta.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="630">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Bakksy logo">
-    <meta property="og:description" content="Bakksy is an app that will give you the opportunity to save, accumulate and use your funds. Start investing from €2 and have a constant access to your money.">
+    <meta property="og:description"
+        content="Bakksy is an app that will give you the opportunity to save, accumulate and use your funds. Start investing from €2 and have a constant access to your money.">
     <title>Bakksy. A Full-Fledged Financial Service | Join Waitlist</title>
 </head>
 
@@ -62,16 +62,16 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <!-- TEST POPUP -->
-                            <button class="popup-btn-success" style="display: none;">Join Waitlist </button>
                             <a href="#join_waitlist" class="anchor__join-header">Join Waitlist</a>
-                            
+
                         </div>
                     </div>
 
                     <div class="header__banner">
                         <div class="header__banner-ls">
-                            <h3>A huge Giveaway <br> is coming! 🎉<!--<img src="img/header/emoji.svg" alt="">--></h3>
+                            <h3>A huge Giveaway <br> is coming! 🎉
+                                <!--<img src="img/header/emoji.svg" alt="">-->
+                            </h3>
                             <p>We’re celebrating the upcoming Bakksy launch with a vast <br class="br__header-banner">
                                 giveaway full of prizes and
                                 free stocks for our early adopters!</p>
@@ -95,25 +95,63 @@
                                 Learn the investment basics, buy stocks and enjoy the freedom
                                 <br>of using your money.
                             </p>
-                            <form action="" class="form__subscription" >
-                                <label for="input__join">Leave your email and stay tuned</label>
+                            <form action="form__subscription" class="form__subscription">
+                                <label for="input__join">Leave your email to enroll on the waitlist and stay
+                                    updated</label>
                                 <div class="join__wrapper">
-                                    <input type="email" id="input__join" placeholder="Enter your mail">
-                                    <button class="ml-onclick-form" id="join_waitlist">Join Waitlist</button>
-                                </div>    
+                                    <div class="input__wrapper">
+                                        <input type="email" id="input__join" placeholder="Enter your mail">
+                                        <p>Joining Waitlist you’re accepting <a href="" target="_blank">Terms &
+                                                Conditions</a></p>
+                                    </div>
+                                    <button class="ml-onclick-form" id="join_waitlist">Join Early Birds</button>
+                                </div>
                             </form>
                             <div class="check__your-inbox" style="display:none">
-                                <p class="thanks__for-joining-p"> <img src="img/header/check.svg" alt="">Thank you for joining! Check your inbox.</p>
+                                <p class="thanks__for-joining-p"> <img src="img/header/check.svg" alt="">Thank you for
+                                    joining! Check your inbox.</p>
                             </div>
-                            <div class="thanks__for-joining"  style="display:none">
-                                <p class="thanks__for-joining-p"> <img src="img/header/heart.svg" alt="">You’re all set! Thanks for joining Bakksy Community!</p>
+
+                            <form action="form__subscription-confirm" class="form__subscription-confirm" style="display:none">
+                                <label for="input__join-confirm">And one last step before your member card is
+                                    ready.</label>
+                                <div class="join__wrapper-confirm">
+                                    <input type="email" id="input__join-confirm" placeholder="Enter your nickname">
+                                    <button class="ml-onclick-form" id="join_waitlist-confirm">Confirm</button>
+                                </div>
+                            </form>
+
+                            <div class="thanks__for-joining" style="display:none">
+                                <p class="thanks__for-joining-p"> <img src="img/header/heart.svg" alt="">You’re all set!
+                                    Thanks for joining Bakksy Community!</p>
                             </div>
+
+                            <div class="congratulations" style="display:none">
+                                <p class="congratulations-p1">Congratulations! You are an Early Bird member of Bakksy
+                                    Community!<br>
+                                    Here's your member card. You can download it if you want.</p>
+                                <span class="congratulations-span">Referrallinkjfjsdofs8f982389fusdj <a href=""><img
+                                            src="img/header/copy_icon.svg" alt=""></a> </span>
+                                <p class="congratulations-p2">Invite friends to double up your Early Bird benefits!</p>
+                            </div>
+
+
                         </div>
                         <div class="header__main-block-wrapper-rs">
-                            <img src="img/header/tel_card_icon_desktop.png" alt="" class="devices_desktop">
-                            <img src="img/header/tel_card_icon_mobile.png" alt="" class="devices_mobile">
-                        </div>
+                            <img src="img/header/tel_card_icon_desktop_new2.png" alt="" class="devices_desktop" >
+                            <img src="img/header/tel_card_icon_mobile_new.png" alt="" class="devices_mobile">
 
+                            <div class="congratulations_desktop" style="display:none;">
+                                <img class="desktop__img-main" src="img/header/congratulations_desktop.png" alt="">
+                                <a href=""><img class="desktop__download-icon" src="img/header/download_icon.svg" alt=""></a>
+                            </div>
+
+                            <div class="congratulations_mobile" style="display:none;">
+                                <img class="mobile__img-main" src="img/header/congratulations_mobile.png" alt="">
+                                <a href=""><img class="mobile__download-icon" src="img/header/download_icon_mobile.svg"
+                                        alt=""></a>
+                            </div>
+                        </div>
                     </div>
                     <!--header__main-block-->
 
@@ -135,8 +173,9 @@
                                     <p>Get <span>permanent access</span> to your money and buy whatever you want. Pay
                                         later, don’t stop investing.</p>
                                 </div>
-                                <img class="img__mobile-v" src="img/section_benefits/1_item_mobile2.png" alt="">
-                                <img class="img__till-mobile-v" src="img/section_benefits/1_item_desktop.png" alt="">
+                                <img class="img__mobile-v" src="img/section_benefits/1_item_mobile_new.png" alt="">
+                                <img class="img__till-mobile-v" src="img/section_benefits/1_item_desktop_new.png"
+                                    alt="">
                             </div>
 
                             <div class="section__benefits-items">
@@ -145,8 +184,9 @@
                                     <p>Invest in top American companies <span> without a trade commission.</span> You
                                         need only €2 to start your investment journey.</p>
                                 </div>
-                                <img class="img__mobile-v" src="img/section_benefits/2_item_mobile.png" alt="">
-                                <img class="img__till-mobile-v" src="img/section_benefits/2_item_desktop.png" alt="">
+                                <img class="img__mobile-v" src="img/section_benefits/2_item_mobile_new.png" alt="">
+                                <img class="img__till-mobile-v" src="img/section_benefits/2_item_desktop_new.png"
+                                    alt="">
                             </div>
 
                             <div class="section__benefits-items">
@@ -155,8 +195,9 @@
                                     <p>Get the best <span>tips and hints</span> with our perfect in-app education for
                                         creating balanced and diversified portfolio.</p>
                                 </div>
-                                <img class="img__till-mobile-v" src="img/section_benefits/3_item_desktop.png" alt="">
-                                <img class="img__mobile-v" src="img/section_benefits/3_item_mobile.png" alt="">
+                                <img class="img__till-mobile-v" src="img/section_benefits/3_item_desktop_new.png"
+                                    alt="">
+                                <img class="img__mobile-v" src="img/section_benefits/3_item_mobile_new.png" alt="">
                             </div>
 
                             <div class="section__benefits-items">
@@ -165,8 +206,9 @@
                                     <p>Get <span> detailed insights</span> into your portfolio and stay up-to-date on
                                         fundamental market changes with unique in-depth reports.</p>
                                 </div>
-                                <img class="img__till-mobile-v" src="img/section_benefits/4_item_desktop.png" alt="">
-                                <img class="img__mobile-v" src="img/section_benefits/4_item_mobile.png" alt="">
+                                <img class="img__till-mobile-v" src="img/section_benefits/4_item_desktop_new.png"
+                                    alt="">
+                                <img class="img__mobile-v" src="img/section_benefits/4_item_mobile_new.png" alt="">
                             </div>
 
                             <div class="section__benefits-items">
@@ -175,8 +217,9 @@
                                     <p>Navigate among assets easily with Finder. Just set up your parameters and get the
                                         best options of what to invest in.</p>
                                 </div>
-                                <img class="img__till-mobile-v" src="img/section_benefits/5_item_desktop.png" alt="">
-                                <img class="img__mobile-v" src="img/section_benefits/5_item_mobile.png" alt="">
+                                <img class="img__till-mobile-v" src="img/section_benefits/5_item_desktop_new.png"
+                                    alt="">
+                                <img class="img__mobile-v" src="img/section_benefits/5_item_mobile_new.png" alt="">
                             </div>
 
                             <div class="section__benefits-items last__items-sb">
@@ -203,7 +246,7 @@
                                 <p>Get <span>permanent access</span> to your money and buy whatever you want. Pay later,
                                     don’t stop investing.</p>
                             </div>
-                            <img src="img/section_benefits/1_item_desktop.png" alt="">
+                            <img src="img/section_benefits/1_item_desktop_new.png" alt="">
                         </div>
                         <div class="section__benefits-items">
                             <div class="section__benefits-items-wrapper">
@@ -211,7 +254,7 @@
                                 <p>Invest in top American companies <span> without a trade commission.</span> You need
                                     only €2 to start your investment journey.</p>
                             </div>
-                            <img src="img/section_benefits/2_item_desktop.png" alt="">
+                            <img src="img/section_benefits/2_item_desktop_new.png" alt="">
 
                         </div>
                         <div class="section__benefits-items">
@@ -220,7 +263,7 @@
                                 <p>Get the best <span>tips and hints</span> with our perfect in-app education for
                                     creating balanced and diversified portfolio.</p>
                             </div>
-                            <img src="img/section_benefits/3_item_desktop.png" alt="">
+                            <img src="img/section_benefits/3_item_desktop_new.png" alt="">
                         </div>
 
                         <div class="section__benefits-items">
@@ -229,7 +272,7 @@
                                 <p>Get <span> detailed insights</span> into your portfolio and stay up-to-date on
                                     fundamental market changes with unique in-depth reports.</p>
                             </div>
-                            <img src="img/section_benefits/4_item_desktop.png" alt="">
+                            <img src="img/section_benefits/4_item_desktop_new.png" alt="">
                         </div>
 
                         <div class="section__benefits-items">
@@ -239,7 +282,7 @@
                                     and get the
                                     best options of what to invest in.</p>
                             </div>
-                            <img src="img/section_benefits/5_item_desktop.png" alt="">
+                            <img src="img/section_benefits/5_item_desktop_new.png" alt="">
                         </div>
 
                         <div class="section__benefits-items last__items-sb">
@@ -291,19 +334,19 @@
                             <p>Get free stocks to start your portfolio</p>
                         </div>
                         <div class="win__prizes-items">
-                            <img src="img/section__win-prizes/starry_eyes_icon.png" alt="">
+                            <img src="img/section__win-prizes/hat_Icon.png" alt="">
                             <p>Learn investment in the chatbot</p>
                         </div>
                         <div class="win__prizes-items">
-                            <img src="img/section__win-prizes/starry_eyes_icon.png" alt="">
+                            <img src="img/section__win-prizes/check_icon.png" alt="">
                             <p>Get points for simple tasks</p>
                         </div>
                         <div class="win__prizes-items">
-                            <img src="img/section__win-prizes/starry_eyes_icon.png" alt="">
+                            <img src="img/section__win-prizes/present_icon.png" alt="">
                             <p>Receive gifts and again and again… but bigger!</p>
                         </div>
                         <div class="win__prizes-items">
-                            <img src="img/section__win-prizes/starry_eyes_icon.png" alt="">
+                            <img src="img/section__win-prizes/cup_icon.png" alt="">
                             <p>Be the first <br> on the Leaderboard</p>
                         </div>
                     </div>
@@ -377,7 +420,7 @@
                                     to and the more tasks you complete, the more points and prizes you will gain. </div>
                             </li>
                             <li>
-                                <h3 class="question">How to learn without your education bot?
+                                <h3 class="question">How to learn with your education bot?
                                     <div class="plus-minus-toggle collapsed"></div>
                                 </h3>
                                 <div class="answer">After you join Waitlist, you’ll have access to an educational bot.
@@ -388,9 +431,10 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <section class="container__beige">
-        <div class=".container__1800 bg__bottom">
+        <div class="container__1800 bg__bottom">
             <div class="container__1120">
                 <div class="section__freedom">
                     <div class="section__freedom-wrapper">
@@ -398,7 +442,7 @@
                             <h3>Bakksy is about your <span>freedom</span>,<br> smooth investing and <span>
                                     flexible</span><br> payments everywhere</h3>
                             <button style="display: none;">Join Waitlist</button>
-                            <a href="#join_waitlist">Join Waitlist</a>
+                            <a href="#join_waitlist">Join Early Birds</a>
                         </div>
                         <div class="freedom__wrapper-rs">
                             <img src="img/section__freedom/red_man.png" alt="">
@@ -407,6 +451,23 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="container__green">
+        <div class="container__1800 bg__bottom-green">
+            <div class="container__1120">
+                <div class="section__seed-round">
+                    <h3>Now we are raising
+                        <br>a seed round</h3>
+                    <div class="email__wrapper">
+                        <p>If you are a VC or an Angel investor and want <br> to get our investment deck, please,
+                            contact us</p>
+                        <a href="mailto:vc@bakksy.com">vc@bakksy.com <img src="img/section_seed-round/arrow-right.png"
+                                alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
     <section class="container__white">
         <div class="container__1800">
@@ -426,14 +487,13 @@
 
 
 
-    
+
 
     <script src="js/i_want_join.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js'></script>
     <script src="js/script.js"></script>
-    
+
 
 </body>
-
 </html>

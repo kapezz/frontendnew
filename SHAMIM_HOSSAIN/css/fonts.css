@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "THICCCBOI black";
+  src: url("../font/THICCCBOI-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI bold";
+  src: url("../font/THICCCBOI-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI Extra bold";
+  src: url("../font/THICCCBOI-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI Light";
+  src: url("../font/THICCCBOI-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI Mudium";
+  src: url("../font/THICCCBOI-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI Regual";
+  src: url("../font/THICCCBOI-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI Semi Bold";
+  src: url("../font/THICCCBOI-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "THICCCBOI Thin";
+  src: url("../font/THICCCBOI-Thin.woff2") format("woff2");
+}

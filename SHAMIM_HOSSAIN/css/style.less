@@ -1,0 +1,205 @@
+@import "flexbox";
+@import "normalize_old";
+@import "footer";
+@import "fonts";
+
+// variables
+@bgColorRed: #FF694B;
+@bgColorGrey: #F8F8F8;
+@bgColorBlack: #1B1C23;
+@textColorGrey:#757683;
+@textColorWhite: #FFFFFF;
+
+// mixins 
+.maxWidth(@maxWidth) {
+    max-width: (@maxWidth);
+    width: 100%;
+}
+.marginAuto() {
+    margin: 0 auto;
+}
+.btnReset() {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+body {
+    font-family: "THICCCBOI Regual", sans-serif;
+    line-height: 1.5;
+}
+html {
+    box-sizing: border-box;
+}
+.container__1520 {
+    .maxWidth(1520px);
+    .marginAuto();
+    // background:yellow;
+}
+.section__header {
+    .df;
+    .fc;
+}
+.top__header-wrapper {
+    .df;
+    .jb;
+    .vc;
+    padding-top: 40px;
+    .menu__header {
+        ul {
+            .df;
+            gap:50px;
+            font-weight: 500;
+            font-size: 18px;
+            a.active,
+            a:hover {
+                color:@bgColorRed;
+            }
+        }
+    }
+    .header__collback {
+        background:@bgColorRed;
+        box-shadow: 0px 12px 30px rgba(255, 105, 75, 0.35);
+        font-weight: 600;
+        font-size: 18px;
+        color:@textColorWhite;
+        max-width:167px;
+        width: 100%;
+        height: 60px;
+    }
+}
+
+/* FLEX
+.main__header-wrapper {
+    .df;
+    margin-top: 169px;
+    .main__wrapper-lb {
+        .df;
+        .text__block-mw {
+            .df;
+            .fc;
+            .text__block-mw-span1 {
+                .df;
+                .vc;
+                span {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 18px;
+                    .vc; 
+                    color:@bgColorRed;
+                }
+                hr {
+                    width: 50px;
+                    height: 1px;
+                    color:@bgColorRed;
+                    border: none;
+                    background:@bgColorRed;
+                    margin-right: 10px;
+                    margin-left: 0;
+                }
+            }
+            h1 {
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 92px;
+                color:@bgColorBlack;
+                font-family: "THICCCBOI bold", sans-serif;
+                margin-top: 15px;
+            }
+            p.text__block-mw-p1 {
+                margin-top: 33px;
+                border-left:  1px solid @textColorGrey;
+                padding-left: 20px;
+                color:@textColorGrey;
+                font-weight: 500;   
+                font-size: 24px;
+            }
+            .hire__me-mw {
+                .df;
+                .vc;
+                margin-top: 50px;
+                .hire__me-mw-div {
+                    width: 40px;
+                    height: 40px;
+                    background:@bgColorBlack;
+                    margin-right: 15px;
+                    border-top-right-radius: 10px;
+                    .df;
+                    .vc;
+                    .jc;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    p {
+                        font-weight: 500;
+                        font-size: 18px;
+                        color:@bgColorBlack;
+                    }
+                }
+            }
+            hr.text__block-mw-hr {
+                width:412px;
+                height: 1px;
+                margin-top: 50px;
+                color:#C8C8C8;
+                margin-left: 0;
+            }
+            .text__block-mw-span2 {
+                margin-top: 10px;
+                font-weight: 500;
+                font-size: 14px;
+                color:@textColorGrey;
+            } 
+        }
+    }
+    .main__wrapper-rb {
+        margin-left: -76px;
+        margin-top: 340px;
+        .main__wrapper-rb-our {
+            .df;
+            .vc;
+            hr {
+                width: 35px;
+                height: 1px;
+                color:@textColorGrey;
+                background:@textColorGrey;
+                border:none;
+                margin-right: 8px;
+            }
+            h4 {
+                font-weight: 500;
+                font-size: 16px;
+                text-transform: uppercase;
+                color:@textColorGrey;
+            }
+        }
+        h5 {
+            font-family: "THICCCBOI Semi Bold", sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+        }
+    }
+}*/
+
+
+.main__header-wrapper {
+    display: grid;
+    border:1px solid black;
+    grid-template-columns:
+    minmax(556px, 1fr)
+    minmax(789px, 2fr)
+    minmax(202px, 0.5fr);
+    grid-template-areas:
+            "a a ."
+            "b b ."
+            "c c c"
+            "d d ."
+            'e e .';
+}
+.main__wrapper-lb {
+    grid-area: a;
+}
