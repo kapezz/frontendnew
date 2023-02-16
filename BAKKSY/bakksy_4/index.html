@@ -62,7 +62,20 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <a href="#join_waitlist" class="anchor__join-header">Join Waitlist</a>
+                            
+                            <div class="header__wrapper-language">
+                                <a class="active__language arrow2" href="#hidden_block" onclick="view('hidden_block'); return false">EN</a>
+                                <ul style="display:none;" id="hidden_block" class="language__hidden__block">
+                                    <li><a class="active__language-link" href="#">English <span style="display: none;">EN</span></a></li>
+                                    <li><a href="#">Polska<span style="display: none;">PL</span></a></li>
+                                </ul>
+                                <script src="js/lang.js">
+                                </script>
+            
+                            </div>
+
+                            <!-- <a href="#join_waitlist" class="anchor__join-header">Join Waitlist</a> -->
+                            <a id="#button" onclick="document.querySelector('#input__join').focus()" href="#" class="anchor__join-header">Join Waitlist</a>
 
                         </div>
                     </div>
@@ -95,7 +108,7 @@
                                 Learn the investment basics, buy stocks and enjoy the freedom
                                 <br>of using your money.
                             </p>
-                            <form action="form__subscription" class="form__subscription">
+                            <form action="form__subscription" class="form__subscription" style="display:none">
                                 <label for="input__join">Leave your email to enroll on the waitlist and stay
                                     updated</label>
                                 <div class="join__wrapper">
@@ -126,11 +139,12 @@
                                     Thanks for joining Bakksy Community!</p>
                             </div>
 
-                            <div class="congratulations" style="display:none">
+                            <div class="congratulations">
                                 <p class="congratulations-p1">Congratulations! You are an Early Bird member of Bakksy
                                     Community!<br>
                                     Here's your member card. You can download it if you want.</p>
-                                <span class="congratulations-span">Referrallinkjfjsdofs8f982389fusdj <a href=""><img
+                                
+                                <span class="congratulations-span"><p class="referral__link-holder">Referrallinkjfjsdofs8f982389fusdj</p> <a href=""><img
                                             src="img/header/copy_icon.svg" alt=""></a> </span>
                                 <p class="congratulations-p2">Invite friends to double up your Early Bird benefits!</p>
                             </div>
@@ -138,19 +152,34 @@
 
                         </div>
                         <div class="header__main-block-wrapper-rs">
-                            <img src="img/header/tel_card_icon_desktop_new2.png" alt="" class="devices_desktop" >
-                            <img src="img/header/tel_card_icon_mobile_new.png" alt="" class="devices_mobile">
+                            <img src="img/header/tel_card_icon_desktop_new2.png" alt="" class="devices_desktop" style="display:none">
+                            <img src="img/header/tel_card_icon_mobile_new.png" alt="" class="devices_mobile" style="display:none">
 
-                            <div class="congratulations_desktop" style="display:none;">
-                                <img class="desktop__img-main" src="img/header/congratulations_desktop.png" alt="">
-                                <a href=""><img class="desktop__download-icon" src="img/header/download_icon.svg" alt=""></a>
+                            <div class="congratulations_desktop">
+                                
+                                <!-- <img class="desktop__img-main" src="img/header/congratulations_desktop.png" alt=""> -->
+                                <div class="congratulations_desktop-wrapper-main">
+                                    <div class="desktop-wrapper-inside">
+                                        <a class="desktop__inside-logo" href="#"> <img src="img/card/logo.svg" alt=""> </a>
+                                        <div class="wrapper-inside-bottom">
+                                            <h2 class="desktop__inside-nick">Nicknamehere</h2>
+                                            <p class="desktop__inside-community">Bakksy Community
+                                            <br>Early Bird Member</p>
+                                            <span class="desktop__inside-number">#99,999</span>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <a href="" class="desktop__download-icon-a"><img class="desktop__download-icon" src="img/header/download_icon.svg" alt=""></a>
                             </div>
 
-                            <div class="congratulations_mobile" style="display:none;">
+                            <div class="congratulations_mobile" style="display: none;">
                                 <img class="mobile__img-main" src="img/header/congratulations_mobile.png" alt="">
                                 <a href=""><img class="mobile__download-icon" src="img/header/download_icon_mobile.svg"
                                         alt=""></a>
                             </div>
+
+
                         </div>
                     </div>
                     <!--header__main-block-->
@@ -442,7 +471,8 @@
                             <h3>Bakksy is about your <span>freedom</span>,<br> smooth investing and <span>
                                     flexible</span><br> payments everywhere</h3>
                             <button style="display: none;">Join Waitlist</button>
-                            <a href="#join_waitlist">Join Early Birds</a>
+                            <!-- <a href="#join_waitlist">Join Early Birds</a> -->
+                            <a id="#button" onclick="document.querySelector('input').focus()" href="#">Join Early Birds</a>
                         </div>
                         <div class="freedom__wrapper-rs">
                             <img src="img/section__freedom/red_man.png" alt="">
@@ -492,6 +522,7 @@
     <script src="js/i_want_join.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js'></script>
+    <!-- <script src="js/owl.carousel.js"></script> -->
     <script src="js/script.js"></script>
 
 
