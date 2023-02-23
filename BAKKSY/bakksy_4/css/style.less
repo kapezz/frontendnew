@@ -281,27 +281,37 @@ a {
 .header__main-block {
     .df;
     .jb;
-    padding-bottom: 56px;
-
+    padding-bottom: 27px;
+    
     .header__main-block-wrapper-ls {
-        padding: 62px 0 0 17px;
+        padding: 62px 0 0 0;
         width: 60%;
+       
         .congratulations {
             margin-top: 32px;
             width: 100%;
             .df;
             .fc;
             p.congratulations-p1 {
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 16px;
                 line-height: 150%;
-                color:@textColorDark;
+                color:@bgBaseGreen;
             }
             p.congratulations-p2 {
+                padding: 16px;
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 16px;
                 color:@textColorDark;
-                margin-top: 5px;
+                line-height: 150%;
+                margin-top: 31px;
+                display: block;
+                border: 1px solid #524B47;
+                // width: 100%;
+                background:#F3E5DC;
+                .maxWidth(518px);
+                border-radius: 8px;
+
             }
             span.congratulations-span {
                 margin-top: 16px;
@@ -311,8 +321,9 @@ a {
                 .jb;
                 .df;
                 border-radius: 10px;
-                border: 1px solid rgba(82, 75, 71, 0.1);
+                border: 1px solid @bgBaseGreen;
                 color:@textColorDark;
+                height: 67px;
                 a {
                     margin: 0;
                     padding: 0;
@@ -415,6 +426,44 @@ a {
         }
         
     }
+    .wrapper__ls-email-verified {
+        padding: 102px 0 0 16px;
+        h1.email__verified-h1 {
+            color:@bgBaseGreen;
+        }
+        .email__verified-p {
+            span {
+                color:@textColorRed;
+                font-weight: 600;
+            }
+        }
+        .form__subscription-confirm {
+            label.email__verified-label {
+                color:@bgBaseGreen;
+                font-weight: 600;
+            }
+            .join__wrapper-confirm-email-verified {
+                input {
+                    border:1px solid @bgBaseGreen;
+                }
+            }
+        }
+    }
+    .wrapper__ls-referal-link {
+        padding: 36px 0 39px 17px;
+        .referal__link-h1 {
+            color:@bgBaseGreen;
+        }
+        .referal__link-p {
+            br {
+                display: none;
+            }
+            span {
+                color:@textColorRed;
+                font-weight: 600;
+            }
+        }
+    }
 
     .header__main-block-wrapper-rs {
         .devices_mobile,
@@ -422,14 +471,32 @@ a {
             display: none;
         }
         img {
-            margin-right: -60px;
+            margin-right: -69px;
+            margin-top: 41px;
         }
         .devices_desktop {
-            width: 568px;
+            width: 534px;
         }
         .congratulations_desktop {
+            .desktop__download-icon-a {
+                img {
+                    margin-top: 0;
+                    margin-right: 0;
+                }
+            }
+            .congratulations_desktop-wrapper-main {
+                .desktop-wrapper-inside {
+                    .desktop__inside-logo {
+                        img {
+                            margin-right:0;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+
             .df;
-            margin-top: 81px;
+            margin-top: 97px;
             width: 100%;
             margin-right: 88px;
 
@@ -1135,6 +1202,12 @@ a {
     }
 
 @media (max-width: 510px) {
+    .header__main-block {
+        .header__main-block-wrapper-ls {
+            padding: 31px 0 23px 0;
+        }
+    } 
+    
     .header__banner {
         .header__banner-ls {
             margin-top: 90px;
@@ -1310,7 +1383,7 @@ a {
         padding-bottom: 2px;
         width: 100%;
         .header__main-block-wrapper-ls {
-           
+
             padding: 24px 0 0 0;
             .vt;
             h1 {
@@ -1405,6 +1478,7 @@ a {
 
         .congratulations {
             margin-top: 0;
+            margin-bottom: -4px;
             .vt;
             p.congratulations-p1 {
                 text-align: left;
@@ -1419,15 +1493,27 @@ a {
                 font-weight: 400;
                 font-size: 16px;
                 margin-top: 8px;
-                padding: 16px 16px 16px 16px;
+                height: 56px;
+                padding: 16px;
+            }
+            p.congratulations-p2 {
+                margin-top: 24px;
+                text-align: left;
             }
         }
         
     }
+    .wrapper__ls-referal-link {
+        .referal__link-p {
+            br {
+                display: block !important;
+            }
+        }
+    }
     .header__main-block-wrapper-rs {
         .devices_mobile {
             display: block;
-            margin-top: -17px;
+            margin-top: -16px;
             width:390px;
             position: relative;
         }
@@ -1493,7 +1579,7 @@ a {
         .maxWidth(390px); 
     }
     .section__whats-inside {
-        padding: 79px 0 96px 0;
+        padding: 79px 0 95px 0;
         h2 {
             font-weight: 700;
             font-size: 36px;

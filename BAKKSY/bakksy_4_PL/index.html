@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://storage.googleapis.com/waitlist-stage/css/style.css?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125436Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=28195b838fced35ca00cbd7ac7fb2706f47d3387b06e08975a9316e8925d7feb9c763e7fae9d015c471343ea660b8ba4cf600d24a1c2d12e98a94a21c069b1074cdb7117e9d937b43aead0f9cd81dbffda5b1eb099f3dc4b7621774a9f095e2ea2746d97c7a1f6f5acccf96757c7c57cb680a2feadfd140713469b132ce37894aa574c3a8a8c5fa608fc42a2ca6cc2cfbcbd132c39b1cc835530843d926e06023ffb2ec38bd26149d5e8d5e0dd7d7fbb5383d11fbcedeb15fc52c5f5cfc98738c189c1e015f87135763c44800bd288c77c2e38a28bf0a6e1efb43d28f9491a06d2f41baf9ec0c4aa96e11a031c9cfaf3a8809f1fdf2a3b90dd0241a5ed6c8cf1"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/waitlist-stage/css/slider.css?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=6db27a5d607576e3c6a897b7827e2f9626bfeb83bd79602fc763d7fd2cc9c482b6a52ab8f658d7ab26fe0257871a1b21c7a9f05a6230c173f787b10c38bb1aaacf27b490cb577c77c6ab1a41c27bd461671687e216ddaa41dc2366dfb32b86ab67b0eff7891528c8e1d6a277407f93f5975f0a792d6a394bc6d3d745f187242050a56afc961da9277c00dc5e2e24477561e06a86eaa15c5380cc1568ddaee98d941b7a59a1f3c6a4b061e7c3faf1f4ec330004862c11891d52f72e4fb3cbf76af4093cbcb2981141ca5918a2cdecb75d8a11130eb0eac7f5ccf3bd034db87fa8c90a408218f2b2c69c20ca0965f37cadf6a566353adf53d44936ed71f0c421ac">
+    <link rel="stylesheet" href="https://storage.googleapis.com/waitlist-stage/css/faq.css?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=807b1aecb5c64dee5aa32f62bb4bbabee1313b096d8a0b5b2394f534f9d345293dd5d8b1e054770b28c91c2b6a700a27daa46eadc303fd81672704b74db256a2facbeb81dc1b0ea80f1c8b0bf7a55601701e34b964eb2b015143e6377471155985ab77bad5fd85e6151c66d47d92d03f33afc473bae5e204471f99fb41881c121d09ae999f45f6824092220c20bdae13837d63ed0097616e8510a7a4bdac1955ae1ba49c1c9c67be006d9551b2dd127e9276b2fb793f48c8ff0b51042cfe6bfe4034c0319f4b1de8452f0eb841fc174f15fd00710ba4c6b1a02ca015276faddeab35cd97f8ace3e7d2cc287874f2f45f214644566d3f7514a817cbcafa041cba">
+    <link rel="stylesheet"
+        href='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css'>
+    <link rel="stylesheet"
+        href='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/waitlist-stage/css/popup.css?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=5690893bacc59973d049adc6703f6d988c18e1a89b50d48a79369515217d16217746e305249304676c18e705d58bc4d8723e6f1ba0e3329b5fef7a22061d6fa55a9a540b586e06e47761fd9c7b3bec9ea37879cae41dc5008fe8ee846f5f6b124c37a8d5138dc281bbcf4606528389ff2dbc3438b275a67d99042b3dcef0fbc9745a5f6ed5ee8295a2cf1bc0e8508f6f6498d75fac3e808137eb17b7e4d388635695d17738c5be8dfb64b51c82813102e8612baeee6afd2bf7a0605b8c8182d7b48d4b1d42a00048146468d049037d0518e1b6e60cdf26ae0e45a572b4483b2fac24bf3f9aecfa6d653964392ae9294550138e6875d6ec3bb5abc4541e9f6db3">
+
+    <link rel="shortcut icon" href="https://storage.googleapis.com/waitlist-stage/img/Favicon.ico?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=0e4bab563f66183815f8af0b11da6e94914c5302602b585276d8a3ec117369ada3cc0cf01344341b1aaec81788fd16be71eba6a2d8fe814ec5e81817975bda6580bace6d28c70722fe55377885f98838f3c212e2dd0ba68dfd6f197a75b719ebffb43168a5ce6a37968cde371d37a5c0e3cd4a9cce35a1b5b2200503929823c561cc3c26526385dc699a52964459082b4284f5320105178b0f80969b6abf794d6eb83d54f54342c6a3d17720f66283dd8eddeef88d032509c0746049f84e756c7613adc5092584065eaf1b773c190be0f30fa974f14f3d512eba0788cb1d169c7839e5a24fc587cb9773cad07860bb4b3c46cfefb576bce930a8baaa00605d69" type="image/x-icon">
+    <meta property="og:image" content="img/logo_meta.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="630">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bakksy logo">
+    <meta property="og:description"
+        content="Bakksy is an app that will give you the opportunity to save, accumulate and use your funds. Start investing from €2 and have a constant access to your money.">
+    <title>Bakksy. A Full-Fledged Financial Service | Join Waitlist</title>
+</head>
+
+<body>
+    <section class="container__white">
+        <div class="container__1800 bg__top">
+            <div class="container__1120">
+                <header class="header">
+                    <div class="header__top-wrapper">
+                        <div class="header__wrapper-ls">
+                            <a href="#" class="header__logo"><img src="https://storage.googleapis.com/waitlist-stage/img/header/logo_header.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=482035bdd12aacd40939784b0a1f2e07d5990fd87af3100674c4639e77debdc430c942a2fe11a6adbc8fb83dfaccd832cf81f1286d2f0abe72451f71102dce8db0bae57c2a1720fd28c46656694548b9556481cb6f4ab0db4e959610fca48d5513991deb16322e50843f721c0ab595e8e55913f985193af792269c92aaf3ebdcbdeb26a692ad3414ce82d0215a1d9bd14c3ffe8431c5f238778ae6ac835038d62289b886945f5493a9447e1f4dc9509d86552a2b98861fee9f5d016fe0967c0ad5d38817f3d547a44c988512a798e5374d193fb1cb431abcb3d9459c98ae539bdd54f4950e7a930506b0ded2d376bb647e5d953093a01e0137b57c9752a44e2d" alt=""></a>
+                            <nav class="header__nav" style="display: none;">
+                                <ul class="header__nav-ul">
+                                    <li><a href="">Roadmap</a></li>
+                                    <li><a href="">About Bakksy</a></li>
+                                    <li><a href="">Waitlist</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </nav>
+                            <!-- 
+                            <div class="menu" style="">
+                                <a href="/"><img src="https://storage.googleapis.com/waitlist-stage/img/header/logo_mobile.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=2ec15e40ef26b50ca6b6947183798d7986c8a772cdb0f381b87e006907803f95cd2b6cc40227011dbc542ce28f461a25cfc53cea7d99038914f562bdc488d8b70e30dc7f476e5e764c81f649a58fb6d71f2d25c5484c649acfdc9f08dab45aba04f1bc46d7c00a8a45c6925d5a7ef98c9578da33522626675ab5e7616ed40a16c3c518319641a0fb89b89d5207e465a23e2065b7de607cc49baa7faffda1dcb62754e5736da6e191b37b99dcebf57cbf3f0e38e0fdff907abbaae633c10f2b0ca2983ca2f8ec2a0b348f867485b1d7f76bc5643ba95c53a62600c34ae3064fc7e14ca09d6cb5b4948638adb81654350aaddc3997a6336a2adef4356dd5690d67" alt=""></a>
+                                <nav>
+                                    <li><a href="#">Roadmap</a></li>
+                                    <li><a href="#">About Bakksy</a></li>
+                                    <li><a href="#">Waitlist</a></li>
+                                </nav>
+                            </div>
+                         -->
+
+
+                        </div>
+                        <div class="header__wrapper-rs">
+                            <div class="burger-menu" style="visibility: hidden;">
+                                <div class="menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="header__wrapper-language">
+                                <a class="active__language arrow2" href="#hidden_block" onclick="view('hidden_block'); return false">
+                                    PL
+                                </a>
+                                <ul style="display:none;" id="hidden_block" class="language__hidden__block">
+                                    <li>
+                                        <form id="form_change_language_to_en" action="/pl/i18n/setlang/" method="post">
+                                            <input type="hidden" name="csrfmiddlewaretoken" value="FdUbtvUvKjHGIjAImUdvXUvkIj0TyOP7VC6Lkm9iVMdnZis0irauruCRSRwVoHwU">
+                                            <a  href="javascript:;" onclick="document.getElementById('form_change_language_to_en').submit()">English <span style="display: none;">EN</span></a>
+                                            <input name="language" type="hidden" value="en" />
+                                        </form>
+                                        <form id="form_change_language_to_pl" action="/pl/i18n/setlang/" method="post">
+                                            <input type="hidden" name="csrfmiddlewaretoken" value="FdUbtvUvKjHGIjAImUdvXUvkIj0TyOP7VC6Lkm9iVMdnZis0irauruCRSRwVoHwU">
+                                            <a class="active__language-link" href="javascript:;" onclick="document.getElementById('form_change_language_to_pl').submit()">Polska <span style="display: none;">PL</span></a>
+                                            <input name="language" type="hidden" value="pl" />
+                                        </form>
+                                    </li>
+                                </ul>
+                                <script type="text/javascript" src="https://storage.googleapis.com/waitlist-stage/js/lang.js?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=0c804a6f2305accd801383116b898f986f56118165fd959b6345cac964cac8982469376a5f45baf5d1022d06b39ab62a188175b5e7938439eb3034c6595ae136626c106053a5c952c31427bfb5be4f50afa0fbf24816127d852ed5df66108d4bdfb498c9c88cb9dbf5d95cbceb73dbd7d0092e87da23b347d6bbdaad57df8d02f817dfe7e528fae4315ee8210dbac79e4e189f7185eff91d87147870200198d05d458531ec2e592d2dbb42b0b85163cc53e450eaad7729f7f6137dbbf0b6ba944c40ad09db180c026692703fee39a6757811cd688c8f472d78162024e9c3edee4e382dbfd7a4eb85d9275041aa0e43a987bbffb0641e2ac24b3b3f59dd91156d">
+                                </script>
+
+                            </div>
+
+                            <a href="/pl/#join_waitlist" class="anchor__join-header">Dołącz do Early Birds</a>
+
+                        </div>
+                    </div>
+
+                    <div class="header__banner">
+                        <div class="header__banner-ls header__banner-ls-pl">
+                            <h3>
+                                Nadchodzi wielkie <br> Rozdanie! 🎉
+                                <!--<img src="img/header/emoji.svg" alt="">-->
+                            </h3>
+                            <p>
+                                Świętujemy nadchodzącą premierę Bakksy wielkim <br class="br__header-banner">Rozdaniem pełnym nagród i darmowych akcji dla naszych pierwszych użytkowników!
+                            </p>
+                        </div>
+                        <div class="header__banner-rs header__banner-rs-pl">
+                            <h2>Wygraj nagrody!<br>Zdobądź darmowe akcje
+                            </h2>
+                        </div>
+                    </div>
+                    <!--header__banner-->
+
+                    <script id="user_email" type="application/json">""</script>
+                    <div class="header__main-block">
+
+                        <div class="header__main-block-wrapper-ls">
+                            <h1 class="main__block-h1">
+                                
+                                    Inwestuj i wydawaj
+                                    <br><span> bez ograniczeń</span>
+                                
+                            </h1>
+                            <p class="main__block-p">
+                                
+                                    Poznaj podstawy inwestowania, kupuj akcje i ciesz się wolnością
+                                    <br>korzystania z pieniędzy.
+                                
+                            </p>
+
+                            <form class="form__subscription"  >
+                                <label for="input__join">Leave your email to enroll on the waitlist and stay
+                                    updated</label>
+                                <div class="join__wrapper">
+                                    <div class="input__wrapper">
+                                        <input type="email" id="input__join" placeholder="Enter your mail">
+                                        <div id="wrong-email-alert" class="alert-danger" style="color:#FE6150;display:none">
+                                          Email is not valid or already exists.
+                                        </div>
+                                        <p>Joining Waitlist you’re accepting
+                                            <a href="https://www.notion.so/bakksy/Terms-Conditions-b1d08d75489b44e8b108b7d20fa396ca" target="_blank">
+                                                Terms & Conditions
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <button class="ml-onclick-form" id="join_waitlist">Join Early Birds</button>
+                                </div>
+                            </form>
+                            <div class="check__your-inbox" style="display:none">
+                                <p class="thanks__for-joining-p"> <img src="https://storage.googleapis.com/waitlist-stage/img/header/check.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=64be2f54091bc0c86e7d548223b273dece48ce2e29437c49a3f6dd96d879c8d4717ccae579945b48786302ba2db60cd4008b73f9c275e3715e8d3bf615de709d845a255f455b324f652c8c1ea925e629abf5d383e2824729066b14b5e1dec411466bbae244ddaa101a5c742939a9c0e755050ec835ccd5f8e1232c7b6bbad5356b442972fb71ebe2d4de751957db2aadc4c3e60fdcce35b2e09d9df3fc2cec56b452f1a85bbfcb3f812d2c83c099bbc764db9f293048e50717f06c72e0fae39cee52712f7a0e351838263b86d88ebfe38ad3004f269efa25b0af78757a407ff202d804ad0167be8ec5ff7f5e10e63298548923637ac86f326ec3539d9d4da6e4" alt="">Thank you for joining! Check your inbox.</p>
+                            </div>
+                            <form class="form__subscription-confirm"  style="display:none" >
+                                <label for="input__join-confirm">And one last step before your member card is
+                                    ready.</label>
+                                <div class="join__wrapper-confirm">
+                                    <input type="text" id="input__join-confirm" placeholder="Enter your nickname">
+                                    <div id="nickname-error-alert" class="alert-danger" style="color:#FE6150;display:none">
+                                      Oooops! Failed to update nickname.
+                                    </div>
+                                    <button class="ml-onclick-form" id="join_waitlist-confirm">Confirm</button>
+                                </div>
+                            </form>
+
+                            <div class="thanks__for-joining" style="display:none">
+                                <p class="thanks__for-joining-p"> <img src="https://storage.googleapis.com/waitlist-stage/img/header/heart.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=932ae127dc3cac932dd705c18e2092a0a987d7f9633d897fe0d9bba8e90968ab189c071e139b639c408feb04b6b8d4452517c377c32c6db8f7baafdf9b1869b4679fb75a81c2fd123cc55fed480849dbe53e0f49fc4baf6f4b85b821c07f601629dbb75281d507557cef02a205dad4bdf2c2aeb93c1f8683e86ec99baa9583722a16f5c11d54f0715c92e25aff6ddcc5b5a66c3feb3c2cb911def44b31c244e8f33ebafda0feb1e37fdba52d0109d21af1d307665abe506cfaa5f30e9a768429b0c4b8a2fa0532c014a2c53ab6a0a6cd31e82c7a644888ca0f83b33deda83b766c0375f161b34e5c400670a9c48f16800b1a82a0e943e39ec10544b76b3fc8a3" alt="">You’re all set!
+                                    Thanks for joining Bakksy Community!</p>
+                            </div>
+
+                            <div class="congratulations"  style="display:none" >
+                                <p class="congratulations-p1">Congratulations! You are an Early Bird member of Bakksy
+                                    Community!<br>
+                                    Here's your member card. You can download it if you want.</p>
+                                <span class="congratulations-span">
+                                    
+                                    <a href=""><img
+                                            src="https://storage.googleapis.com/waitlist-stage/img/header/copy_icon.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=24d24b8b2688cf7fb378c55222048152fa67d0dd6dec637ebb2a42facb16621da96375b9666d427e30f8ef1961060f01ce6e8594a543f3080d7302e382484b1b4e6cb3c7b6a8bc1f5b944e0338fded84e01fe5441cc5cf0b5e0184c8c98b7cc671586a781c907e1ef85c25ea591607ac87e464a5b09439eedf71e1318e4b4766717e4100366507d10240fc94f751d547c2a75523e3279d26531ede0222a1d2d1c7fc250e5cfdee95ec0ee6f9db7fad2328c1a800e0136062eb8a3d12fdda41f30e06170dbf581eab56c2b63901bafceb4883dc53b986e1e93f38b7599a403cc2d8bbb2a5da167fb8fef5919d3c3851f5f096f0547c029704ae6296e9e2dd395c" alt=""></a>
+                                </span>
+                                <p class="congratulations-p2">Invite friends to double up your Early Bird benefits!</p>
+                            </div>
+
+                        </div>
+                        <div class="header__main-block-wrapper-rs">
+                            
+                                <img src="https://storage.googleapis.com/waitlist-stage/img/header/tel_card_icon_desktop_new2.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=31db23d0966765586eae2c31ab233901150ff8dacb5838f64e3a395b43bfe48e398d76cf36d877bc106ccc8e51ff5f3f54d80868a9e9aabca1a443e79425982b56fa35e716e0562848e4214fedd423eb17c72756b77a4399af0aefa6c23b0f69a569f9b32e44bbaaed24c59f61a61687fc9a62425912b2db391a6b31cfcb375c43a41ef935d87d5b8b165abedee2551b4f93fd09d9c9c93ac9872a8bd8d3b0f6fcae72965819c17888bca59528dfbc960f3511aaf68ac2de371b60f9e1a6f9b8cd8422177c4468b4b39982c555e9c6c5b1fc7d92bb338d576ae68f3659ee401d636f7d4acd474de3d00db59395e169bbadc82606eeeaf2f57c6795abf961daa9" alt="" class="devices_desktop" >
+                                <img src="https://storage.googleapis.com/waitlist-stage/img/header/tel_card_icon_mobile_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=57d11007c127149eea690fb28db72b68301a0a9d0009603b2a7917a790a185ce2fda32c45cd17762c8691760e59c1841129bc437f7cbaecfe697c6840c47ac6a0f51851ecfa09c1d4006d270bd40cd344aacb6b7da4368a6d81f8d16a00fd09732f095a209823c2636c2fde3f42ff6e5392a701c2b79a389e8f4306306b92e777182567cc0df2c87c57cf042cb279ab5b950777355f8601c18d4f2d8fb99c241be2898c55e92168203371b881d8c953274a7d51209feb5f1faeb948a3344f7f9873995c5140428bedcc8ec26598f105c6caa6df922c2f59129850683ee3a0ca461b2bb4609923456bb309d270ae0de01969373c4f9cd9b634c1be3c891d2d404" alt="" class="devices_mobile">
+                            
+                            <div class="congratulations_desktop"  style="display:none" >
+                                <img class="desktop__img-main" src="https://storage.googleapis.com/waitlist-stage/img/header/congratulations_desktop.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=65b9ec98ccc78be00d1691dae14dc4b4624c26b2c50ea45433dfe0c6eb19896c78eeab8417af8001892f307700d99d2aed083369841def084b95cce25ddd2dfa06c189e49617b3d12b88e4f54251f8e90ef2cea4f8af9db71cbabfccaecdc9f7263dc28755260528273904a5e334ea4ebece32fefb95bc32ba01fe6ea816587411d63c367e847c83a7f6f2c2cdc3e7883de1f77fad2fdad2d544f654fa3c951d97403a5d03e7fb0697f9338283d1da4c0c2e8a270a7be1cec326f7a6e1a28231636f7c55173ffb171e25b5d2c1bb646c55fcda38a775101fc7f4836446db8ab951dadc7dad5034558b4e8e0271670d0d15481887ab973dc0030cc751daecb35d" alt="">
+                                <a href=""><img class="desktop__download-icon" src="https://storage.googleapis.com/waitlist-stage/img/header/download_icon.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=5ad7771a4c85ccf5f56c331091ae418b4e5925c521e428a44c62b7da601d4dfb9c49706f950f87fe9c1b96de7fd39040c170387193249ff6109c4999a9c32f4a73c56ce2918469220c99c0efef196666ca4e69751c8010fd321d1e9c20d9c00edac994cd675d963f5b93db3049eedcddadf5539a01ce0e36db4d562c0eb574b9c05c956828063b74b0fda0c9ed3fb09cefa662899363ba9cb54ae50cfd9364d8454a1cf82579f74838e2e54892ac3bd8aa01c756f21312dc0d0ec7a81d14d796f5a1a05444f70f6c6d02187ac6aef83ee754b01b4f764eb9374fde7c44444395f80be10ad3441caa9f5ce7469b24802858abe79bcfc74be780ad40027012acc9" alt=""></a>
+                            </div>
+
+                            <div class="congratulations_mobile"  style="display:none" >
+                                <img class="mobile__img-main" src="https://storage.googleapis.com/waitlist-stage/img/header/congratulations_mobile.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=2f0d1d220d875da83c7fc538275982d5449b14e3a49c817f870dacb6438bb2350f53d382db3c793aa40935abfbbe981cb910f8e0f41e6ab289a0dfab60315998f289f81fd219b469be871aa89150b157ff6f845307445f9f42dc4f79b98a41cea8e1c14591a86f0a17e7835de6fc5c590f0c13a86641157b8023fd07ca4cba2b2a858ed31a5ebb481136769e609296bfce36603d503cca688c73d911d2a2478370a7d0a1b9a75dc29dec310896969db69526333af2b678b94bc11a65a499b447771cacf3df52badc1b36ae834ecef5965fd978aa1e4898712cee7d28d0c271422c7245349aeb51276d78b6e96e59ae6392038e96ebbb3f1902dc04fca442ffdd" alt="">
+                                <a href=""><img class="mobile__download-icon" src="https://storage.googleapis.com/waitlist-stage/img/header/download_icon_mobile.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=7aa1b2f195ab28329686c874b3f10247cf974464c6b56475a1338f7521d3f5041eefa3953f482fc4fe6dd1230665c1cb0101157a6bf570cd00ec01e049e406a8963f8b585ed032d4ce4b897689e97ff2e0417acfe0cbcaad590e92994a758805d4a8564c0af4c307b70cbdf5263223b58a2df5f00fc85c6974e414bb615e8a40b50a3da6583ce38cb0d85dcde47057e2e660cdc0b2f0c1322e5aeb6936e8e7895f77bbb2ce8b101b0ec7b28049519ffb9f643e30992ab89540b40bc24b5c842271a39ccdb7cc82f6f627c4ce93eaf22d35b9371539726ee533db11896225fd21e714ef36d4d83453a61503c23aae2dfea78e16b6ce8f086b39a21d2187a92ba9"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--header__main-block-->
+
+
+                </header>
+            </div>
+        </div>
+    </section>
+    <section class="container__beige">
+        <div class="container__1800">
+            <div class="container__1120">
+                <div class="section__benefits">
+                    <div class="section__benefits-slider">
+                        <!--slider-mobile-->
+                        <div class="owl-carousel owl-theme">
+                            <div class="section__benefits-items">
+                                <div class="section__benefits-items-wrapper">
+                                    <h4 class="cards__h4-pl">Odblokuj swoje pieniądze</h4>
+                                    <p>Uzyskaj <span>stały dostęp</span> do swoich pieniędzy i kupuj co chcesz. Płać później, nie przestawaj inwestować.</p>
+                                </div>
+                                <img class="img__mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/1_item_mobile_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=46130f2035efaa60e42444dd80590b8b9a722191e2f7e5dd859f283e0f1dd6f68c589f35f6c219ec39027c9d0f113b3ba87f5bfac079f8bdd31af900f54e8dbc32fb90a5b71f1d169dc46efa769f13f5753c0ce838c62969c73221a11c683f8ed67a41a22c2ec1090489059f265f97de230122eef5a0bb6b13ba5e4f7b79e899ef1240474ecb7472e1f6ab96c0126e16c5dfd6e30ac3ab3d0ca69131b34115229037477c3725ef8b4caab9544c3c198761c647e0b9f674a60e77ba11cb45606e895c5a495f3260b201642d4121ab7383d668cce5d9c3ea41c12833165fa140166d498727588c776163c1dc7bdbd5f106379fb1fc9b63c754bc37430a4d5f5731" alt="">
+                                <img class="img__till-mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/1_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=57923be29820b2d992cb7a0ae71a1a6763f0e300be3191d8db9af4461e6334e40844436d9c4aea4719f993e677817215c9cc8d9a235f2e67291a9c577e0ebaaacad54a07db414d8303752f373ba6e9a98d661a7c26ff5f25208fd835569c0668a8b1ac26745c0bce54e34b4f32e8f883af09082d5352ff6f1441d0f71258a165fed703a6b80998c479aca1dd96f87083dc744a6ef09244dd2c2020ee4d7b258203334fbdcf9a119c7ad2deabc67cf544043767bf05b5b28196bc27c61a1d64b33d55d2684d16ec166b0a0148bb01cd2ad7615599e286490c58e3a321073c41aad8465d10cd942fccfc11d7f17ed3cd091057d4cf2169daba6089ba8d9718cec3"
+                                    alt="">
+                            </div>
+
+                            <div class="section__benefits-items">
+                                <div class="section__benefits-items-wrapper">
+                                    <h4 class="cards__h4-pl">Zero prowizji</h4>
+                                    <p>Inwestuj w najlepsze amerykańskie firmy <span> bez prowizji handlowej.</span> Potrzebujesz tylko 2€, żeby rozpocząć swoją inwestycyjną podróż.</p>
+                                </div>
+                                <img class="img__mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/2_item_mobile_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=2cd45172853491020316faf896fe26cfe0e816f9f18f541c2756c76feac6ef5fb1d5bea03652a15e20a4765a04b0399a171db6054f33c097c31d5955ffd75e37f744028228b496ff3fb48055bed81488781aa5841e4bbc326cfb1d33bcfc93c3aad4e5dd4678a9c2298025f84535dd47ef7f4030d4a1131fda95fb5082fa5304d978300553d167672a114cf70e54a7bd876bbe454555ed09f13651be3134ec0f36067f893da9017b02bd06e1d8894e09ec398da3fa2bbaa301892f4caf6605d656c89335050dfa5a2315c455590d04f6cb378fc5308388a18e9397b6d8113da32d9fdfda968d2b0af77b82af9494ad6001273df15a46997037903a6bb18b97b1" alt="">
+                                <img class="img__till-mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/2_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=1e09e0de6dac3af151e40e638f2053550e69bd6a146e58cf40632073909aaf77e61e863e3cc28cb78addc03a685f7066caf389bad97355c60a7c457dc4b51d6a5abbf45e0d16fb086ad81b9f6573517e995e372c577d89787ce886a58daa7cbd990871708a3e0a0421d234fcea68699b6217b5406867afd6004ba461273207fd644cff58c8a11492772c8ca0dd3324292c88c180e285a89135c850b00cf4e1133402e3250d829a485ade00ce62ada1ce973afa63d65aafc8a7e8cd6f79d3056a7f4da2e5565a6898dd0571cfda17a7a2649417de747c3f0d8b15258a5e2e6732cc0e3a468420f8d561c2c146eeadd02a90b2c2787e81da7d2dc64ea6c0151afd"
+                                    alt="">
+                            </div>
+
+                            <div class="section__benefits-items">
+                                <div class="section__benefits-items-wrapper">
+                                    <h4 class="cards__h4-pl">Ucz się poprzez działanie</h4>
+                                    <p>Stwórz zrównoważony i zdywersyfikowany portfel dzięki najlepszym <span>wskazówkom i podpowiedziom</span> z naszego poradnika w aplikacji.</p>
+                                </div>
+                                <img class="img__till-mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/3_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=37ca212cb9d9d612dc78e7d4cf4b423e445d5914ddcdf40f64c4539a3df3eb03f1c39bdef39388910da72d92fbec5830a07d871aa8f2a0d50597c9d9d4f81e8c013a611fb7b1830c19a8ed24bb4960cc50cea1cf018a6560c9dd7dc5e087b933852194a644d7aa670f500c9886fff50e7aa25f352c8c1b2ee325036bd96857e068b1a7b405e5980dfc9e1cea46db7700fbefce01a6985e514a67e8c065cfbb9c98d6d630b4d5f9f5e7d66f79bcb801fdce88ee15bdbfbd28f8cec3fd8eff0901fff9a9cafa4f8f0c7071521501e948d7f5e67e1c03d7d6b0a69f8f3050518daa6e177d128623fd2223c555419b60e61948c58ea03c90f3fa83981d6286142453"
+                                    alt="">
+                                <img class="img__mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/3_item_mobile_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=0880eee0acc80a5db9d28e622880437c4bf1717c15fb42061e556aedd0ada3d6ed51998a9c805c42be7e9901052203f91bd1b6f0cdde5580b57eb373e2eb9b9e29bbd2fc8b6383c5535b51178782b5e4ded00ed86ca56c06f9a8682c1484ef3aa2a3f62092a3ffe2c4a6fdda061ed5ffee1e8c7ecec891d5670621ab02d4c62cdcbb35c2659f5d697648ddb187a6a7776d930bba273784a3d3198d353de7391aa11f1148e64914dfec951deee99a49f37a8be0486fc4266d323e8a575ce09edb19c9b37bce7bce18bdada42aa3519bedeece272e367038888388ad434810d248cf7a2cc9bc341dc4595ccbd46b5b548d376fb61baa2a7294a9f2e3a7d6e06784" alt="">
+                            </div>
+
+                            <div class="section__benefits-items">
+                                <div class="section__benefits-items-wrapper">
+                                    <h4 class="cards__h4-pl">Bądź na bieżąco</h4>
+                                    <p>Uzyskaj <span> szczegółowy wgląd</span> w swój portfel i bądź na bieżąco z fundamentalnymi zmianami na rynku dzięki unikalnym, dogłębnym raportom.</p>
+                                </div>
+                                <img class="img__till-mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/4_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=0db8564eebbc066f72c99ded02977dded96da0665c451ee9fa8bd52933eb5b0cd86b7ef66db2799ace970ddf7aef69b0f57f013add89c878eacc5d301f87a7794b846e24c6a3a56f028bc8d8fed00f393b135dadb49366b72288a3996bc31bd60710e1d862b20cbcb8fcd29ef39e3fb4a16d77057039ff1aa64699f069894b35d3ecb2e894fe1b0f8c070973e7b9b4d7424ec708f74be9cb5b4a1bc03e1edac38be6921300bbefda32edf3e1092b73a922f38c5ea914e5b9c52d14a40188b33a1881cf4c4017182a50277ec252500d5cef935a339652d337a2ec527c18a7c9dd3152fd7b2369d7d04108e3368f7c67319948f8744f6c4fbbdf7699470ba1e2bd"
+                                    alt="">
+                                <img class="img__mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/4_item_mobile_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=4cde581b4ca89d1e6ac9709aa910daa3a2db13fce3378e1e471fbeb4ba6a330cfb45c6321b3078273a5a0fb8578a507fcd47c6eca0fd8699ffd33e5ba2b879554c4df4df58aafab2419dcd716718de5ab8576041f0cd3ec78bc79daaba0e2882228edb8d9c0b820161e86148614b79a686ccbee8fcc2ec04e42c58d3227b0083333b1546bcbb9ffa7a3a638170e0b6c9b18638e72a3773e69892d5fb539613d77d9ac6a573bd699758251d9fbe6a0be64b0542f9f4bac8bbab505c29e2fc9db9aee04b05f3bdd7f85ff4c15d6ca4c7b6fbd05e662c5ac649bf801b392aa7dce28fdcbc126700ef4e6a6d7d8437909757f5da318e122d4b721500a1950dbb1478" alt="">
+                            </div>
+
+                            <div class="section__benefits-items">
+                                <div class="section__benefits-items-wrapper">
+                                    <h4 class="cards__h4-pl">Wybieraj mądrze</h4>
+                                    <p>Nawiguj wśród aktywów dzięki Finderowi. Wystarczy ustawić parametry, żeby otrzymać najlepsze wskazówki w co zainwestować.</p>
+                                </div>
+                                <img class="img__till-mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/5_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=99c2fe7a514187e368b7b8e3aaeec3860af85ad97b2f482793b5f5618ce0564c3f2bce5481de0a976cc48bda3061834b6819d5254a29f6ea69a97fc7d099f14924af1edce32175b5ac54cd5387f758a4954c6779830cf51289954485e30c8cf1d87f54d9f014a3de88fd8fffa981ab2bdfca43ac022bfdb2bcce081b96e681ca166e6085bb6e7572b1ff1b34ab75317373284577bf227986326dead7e24b2b9117ea0f05828671386b749735dcebdb12799f8d9e3e8ce785d0adaf4b75305ff8ccde1499899f73e15a56f0ff5e73195baa0cc8ec3e2d7cdd3384e2f52ef328399a2159b178718c77c531a877b5a5c09224dd07f30f83f1f71a084719615f4255"
+                                    alt="">
+                                <img class="img__mobile-v" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/5_item_mobile_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=88bc40f98a580f15c24c76068ab0d66d5d27f0c2410b9db1543efabf2784e65247046ecef42182950f76abbb5978d90d91e9e9090ceb52d859b42e721eb7bfa1bf2267413da6541c7cc6035b5af5c456c75fa5b9692bad4a282bf92c13124ab538b21f3fd8a45dbb16b718e21be79dd0f40484cdd255e873f628fae22122756947d777919c6a65205c7d4b2a3025ba7d91ffbc6d321905ffe4ad1a1ca57e1147672df36689a68ec640cc7d468844430263c7982cd411d4dddfac07f99ecb5369e464ad8739a4c8f41c9ec8193eb2c90a91aa510e66e2275090d980f240ff5848f7be13b273f9ce7dd9f127a9c4f9718774b612e4b4a73f29c24cb74cc6de88da" alt="">
+                            </div>
+
+                            <div class="section__benefits-items last__items-sb">
+                                <div class="section__benefits-items-wrapper">
+                                    <h4 class="h4-gradient cards__h4-pl">Zapisz się na lepsze</h4>
+                                    <p> Podejmuj <span> pewne decyzje inwestycyjne</span> dzięki subskrypcji SmartHunt.Odkryj możliwości dopasowane do Twojego stylu inwestycyjnego w mgnieniu oka.</p>
+                                    <img class="img-last-item1" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/6_item_mobile_smarthunt.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125437Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=9e84066ff54bb4e046c34d1930903feb143ff8500d40fb0284d97e656bcad4de1c0dabd6b4693d7cdd61ebbf599e9a2e723fbd547331c1f96fe244578ba73a6f4e857f6883bd344fbd482e63ec0823e80a473360b3b8dd70642899d27fdec2fe65333d780883e37d63f31687ecbcb8dee21fe4669aa52ad97a1928db1621a5cdd8ba0a60ff5c18d6cd34b82f52a1a6552da9886dcb036e003f7bee6866430ed5ed03df666979a10f2f1ab07b4b130d3178a82b04255d4ce4fb164df532d0eab4dabd74552b401f3ad88cd46eac0b9e10472750a8994aceba30e42116450159291f8c8cad60f62add5383c6ad9ad36a5c817dd0d5a7c1cf75d42cd97d3248b303"
+                                        alt="">
+                                    <img class="img-last-item2" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/6_item_mobile_toogle.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=8bc262ca070e0ecf0b005a7234646bbdc963f09b3fa3371d9100e30843e98ce24a430df0934658978b73ed9b2dfc518d6d8daf9f491bb6bb355b43d2e116051af9320ca38c89c986688de65dd7ed1ff8ef07de543f2aea2a1c6146cf836b19499c7b3e5d11604289c81e59dfc73924f7ab76d350160832aeb2a82bd836f75dbeb8e116b4581c1ff4cff1a50b8971fd876ab39c90d047e01c1fbd6316e7ae13871ade8e5755fccff635e9c87ade4bf73c6dc64db9d286e894c3ba17b3204f480b5d40c9b012842b1b8777f5473baeb2000a4a1b997829ec1f839d1858f8a74bc13f0eb3a4f4d4dd96b27cd367e8e52b5a5880efb9ed6201159d1cd3e54bf88a38"
+                                        alt="">
+                                    <h3>Boost your investing experience</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="section__benefits-wrapper">
+                        <!-- slider-desktop-->
+                        <div class="section__benefits-items">
+                            <div class="section__benefits-items-wrapper">
+                                <h4 class="cards__h4-pl">Odblokuj swoje pieniądze</h4>
+                                <p>Uzyskaj <span>stały dostęp</span> do swoich pieniędzy i kupuj co chcesz. Płać później, nie przestawaj inwestować.</p>
+                            </div>
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/1_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=712037e24b1e9ddd6fa4493a836aca3d45ad1b4a74feba43120615084cda20984bf26673bf97659b2c42a567cb51d609cb5dc08ef87adf888eaca3dfbdd0a5aaa32963c704a6a84d9172b1e3f002ea26e33edd65beac148e5a95c5912f437e012b4844c4b19f18f34b4668e74f10fafbc76f1c680d2bc4596c4cd3f353bb0650e8ff9ef144b3fffb21545ae7676e85e9c9f189dcc2ce0ba79ed77216c2b79a64dd3e42d2d93d82c8f9907a714ccd2681c45a118617ef69e94ff0dc46b5c9a6a329ca4a1a3063246e21fbe4d9bc28a0144b57058872a5e9eca8a16cc29459cd585d4ab2590fb3f3ca166786db3bb0e46289051c3b22c1a7f4fea50ad4ecb9e65e" alt="">
+                        </div>
+                        <div class="section__benefits-items">
+                            <div class="section__benefits-items-wrapper">
+                                <h4 class="cards__h4-pl">Zero prowizji</h4>
+                                <p>Inwestuj w najlepsze amerykańskie firmy <span> bez prowizji handlowej.</span> Potrzebujesz tylko 2€, żeby rozpocząć swoją inwestycyjną podróż.</p>
+                            </div>
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/2_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=726b93bff6af23fe0c5711da56e1247fc1a0dadeae53eeae0a61ed3732dfeac6d4caa7fc2429f39f0ad2a3dab3664e1f9208350ee7d7fe25ecedc319f19aec7f2fb3b64607d2ac542d43d084f47104da40f1ef0061187ea4eab6795b37b15da6dd7896eacdaf219f7c47b8996168662bb7fd61c0d0ef4bfd7d7834b9b00109abe9a1de1b4086a7563d9ab2f82ed8c5724c7f4980cacb28b26449b4bb3be37ddf50fbf6100e9639211bd579b35d896ad652f4e3aaf3b25b25d4de4aeee8a99000c8535c8d44e4406024662010341f3dcb3dc64648500d9d04888acb8c1f85430d12abafb7800a360f2eed56b4b45d74ef93cc5c32f4f338d1f1097e2030b239fd" alt="">
+
+                        </div>
+                        <div class="section__benefits-items">
+                            <div class="section__benefits-items-wrapper">
+                                <h4 class="cards__h4-pl">Ucz się poprzez działanie</h4>
+                                <p>Stwórz zrównoważony i zdywersyfikowany portfel dzięki najlepszym <span>wskazówkom i podpowiedziom</span> z naszego poradnika w aplikacji.</p>
+                            </div>
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/3_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=3d68f2013239493d63cf09e523938a973fb4782843019dd4d62c344efeb3a80a03a3b34b4a29e3b072450f5129fc7a644755ecca0ea366e6088091a2dc46130ff61e2ba2e8b5e731ece43119eea72966947688ef877bc03459a671ff019b0a959a5ad01802f521270133ff09840db365120104e667d9f5078475584ace66a7a5b2541ad95e3b289485e33aa9de84a284bde3c5409fbb01d6577aef1c2920cad1d861169a2c2afd20583fa840856065684a7518e8b19f1d53cafb965e8004764ff3963f7b898f06132a8a927826f1930d48945a743743f1a13830460532598cc8394ddc9cb2cf8c63b2d8c2600c0373fb5fc61b0369222beb3be7d219e75a177f" alt="">
+                        </div>
+
+                        <div class="section__benefits-items">
+                            <div class="section__benefits-items-wrapper">
+                                <h4 class="cards__h4-pl">Bądź na bieżąco</h4>
+                                <p>Uzyskaj <span> szczegółowy wgląd</span> w swój portfel i bądź na bieżąco z fundamentalnymi zmianami na rynku dzięki unikalnym, dogłębnym raportom.</p>
+                            </div>
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/4_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=a09730fb96981b120f7fa4c7d10228718c836a102d3e292957ac88b9f334acccf4ceedb4735e731c8a7302ca2dabdf85cff871b5ca37fa2622b2b63ff9713b37b2ca8b91813110e53b737e9da1e39a42c081e80d6e9e6220715016cc126266f43b9b354a912f2be64fcc64ee99f0a8623cc9f0f47570f4301dbfbe9e99f40bf45cdf15badaecdf787ff3820b34af267572f66501b822983f2eb8323223171f48db56aa9907a5f5b7c1b876463eab8cd6078ebd6e4ff4c30e31d71e3099f357f857948deca8062876baff1365b90671aac73c3d98e63ca66e219b52b8ceefb76667182287dee66e39337c4e995ee803d5d2e8f40a084766125db16dce87782200" alt="">
+                        </div>
+
+                        <div class="section__benefits-items">
+                            <div class="section__benefits-items-wrapper">
+                                <h4 class="cards__h4-pl">Wybieraj mądrze</h4>
+                                <p>Navigate among assets easily with <span>Finder</span>. Just set up your parameters and get the best options of what to invest in.</p>
+                            </div>
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/5_item_desktop_new.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=5b64700dc6d57d5b89d0f23a618eae19edb5a5efa486f96dec2f634b44f717ee7d0742cde186c29d88aa0552b3be9fda8d880caa952444694d040698df13526d18d640dd2b410dfd03e402998a1c67b872e8bd95d357c0759ad921bf8f36c1fa206e39464dcf5fc1807d8e9ac1d6d66701289913c90bbad461ac491bb237a59137dd1ae01bbc7c3be66b344a10379098463d1a3bd30b89aeb8428dac482f0c36c4b416d34470194629cb9bb3f33f1f8cdfcbbfc7aea76d57f3aca12ccd65389334bcc84db22e2be3cd22ca3bbdd1de73404010744b55ecee5186ad4518a4d42f3fe20220d4caa6076d77271c0afcae6f476ffa9ef1f81cee435090b1b1d8e65a" alt="">
+                        </div>
+
+                        <div class="section__benefits-items last__items-sb">
+                            <div class="section__benefits-items-wrapper">
+                                <h4 class="h4-gradient cards__h4-pl">Zapisz się na lepsze</h4>
+                                <p> Podejmuj <span> pewne decyzje inwestycyjne</span> dzięki subskrypcji SmartHunt.Odkryj możliwości dopasowane do Twojego stylu inwestycyjnego w mgnieniu oka.</p>
+                                <img class="img-last-item1" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/6_item_desktop_smarthunt.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=1cd3c4f124cb87cb3f98b14bd5cf4051530ef658f3fd42b184d2f11e84493e1d423d4a503a9e8c059300078ccd79c3f80a1a23f2690090ff2521c99826233c617eac16e3e3b6d21c3b88185202db31f44afaa5994eeed1d38d8ca7c2d25f9e2db2e29044d582374b95e0a52380907d93be8d39b9422d033a536c2221b7d1596c50095c20080c37cf8977933c5a7f7053235d938175c84af29e6f081757f3c3332ec4529518fc50b9f240b3474a1c79037d0e34f22e2f5cce411afa98f4e16a7ea57f2bdeb627e40a9831a23d35fe32e8ac0560cfd720d3d31463b4a2a756b077bfddfa71075f8c2fbe7f193073c900eec5fbabdd20a23367aab3f87edbb6f615"
+                                    alt="">
+                                <img class="img-last-item2" src="https://storage.googleapis.com/waitlist-stage/img/section_benefits/6_item_desktop_toogle.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=6536159d30795a1dd71d5a257f4e46aec4af16279086de4fdfee6ec8a12f08bbffc3b9df3c3461b7eff795225c6de30109fb414af1b6a04f6ca84975163c6f6d18f02dbebcb67571ce561d67116f365e981c18f952109840c71e369ed6cbd709e9c0455a543ce18b89c37ff81e2e38804d7c341de04afe677b8793c0fd238a45c1743c8b8292639ef486a6738bd128431f184fdce8040718dd03d0df5bc46cd748dd46779e99679251d0442fa5cbb6348698a63f21a015d0ea4b6f72eae1b5a1c86a433155f8e0004d67167d144c48466e3e9e8411e41cc8c2c66131fc3331122c4fe4c77f7b60606c7845028b527a60da42bfa034123c5ce52ca3ee4318d948" alt="">
+                                <h3>Boost your <br> investing experience</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container__white">
+        <div class="container__1800">
+            <div class="container__1120">
+                <div class="section__bakksy-club">
+                    <h2> <span>Dołącz</span> co klubu Bakksy</h2>
+                    <h3>I Ciesz Się</h3>
+                    <div class="bc__type-selection-wrapper">
+                        <div class="bc__type-selection-item bc__type-ls">
+                            <h4>ROZDANIEM</h4>
+                            <button>Get in the Party!</button>
+                        </div>
+                        <div class="bc__type-selection-item bc__type-rs">
+                            <h4>SZKOLENIAMI Z BOTEM</h4>
+                            <button>Start Learning</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container__beige">
+        <div class="container__1800 win__prizes-bg">
+            <div class="container__1120">
+                <div class="section__win-prizes">
+                    <h2>Wygrywaj nagrody i <span>wykorzystaj czas</span> na naukę</h2>
+                    <div class="win__prizes-wrapper">
+                        <div class="win__prizes-items">
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section__win-prizes/starry_eyes_icon.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=2c9377ee614d147b88489e03703fa944c0d42cc1b54e1cff100849213d145dd8474d42967c5cfc259b0b6f9092b9390f2f95683484719f04202cce41bbe5c94da2b0b7d2efcfe3aec2723a3f39552ca2ad2ad5d940e61fdecbab22d150c090b66227a6e075b1bd601c355246b68a22352555cae3f098781f8fc2205fe88f3559b9393d23064fb3a40830f9c75a1db068a5c592ac3ed8d130ab395eaf1d0fa0cb692c2dd0550a88693eb7490846af58bbee5e4635aa351e9774cbeb87f3d1d67539dabf43a1171f49a0a6801174563d7efdd290b0f3941493a193195adb206112fb99f8b2b78c0037b6d060849de1d47e7c5f7f80ef5b8426512474b43e2d3b27" alt="">
+                            <p>Zdobądź darmowe akcje, żeby otworzyć swój portfel</p>
+                        </div>
+                        <div class="win__prizes-items">
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section__win-prizes/hat_Icon.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=2e332a3ede9eab09eb1924facff9297c0e49339fa470142f7d97986ca28b6faf8f1cf7c35ef8220dddc4ce73ed6eb788e1f1435f8a2ca3108b11ffc7c5abeecb44faaaeaa5152f419d82cc68622403545563cb1158881ad1d3d3fbf12bf45f396fb7658df6927c6e09fb4fcb0106294d004d3e2b62e09a56d64d63646f212594c1c9371d611705725b6a53a1052576f24d46b632bcdb3007bd62106e55a6f39f8e1881a2de98f43b7dae2b8f655a1e0995403d6178e19ff8e084666f7c56098a30b2e7f39c13fe24834724f613d38442540e2e7658f9da0c4d597c6d9cb639c6fe69a77904894c1aa93a5db34098761ae29992468c7d15c885f38c0b0ad82989" alt="">
+                            <p>Naucz się inwestować w chatbocie</p>
+                        </div>
+                        <div class="win__prizes-items">
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section__win-prizes/check_icon.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=a5bfb7f02837f7e525d50475cc571d18c5df3efcf525e2e94e2c2873115402cec8f929c2a56d87a9238cca43b6469c530720a1732eabec971bc952d7527767583015c164ce37ffe93d0af3b94a32aa4ac45ead9a31da68e2da6f379c9660ddc92f67249e5ba733949917ea6fb15b5eefb899ca60bc4899131b64aa9fc9a7d6bebc90a07d8be02d826035c307eca4cf9b5a51a66fd187477fccf507500e22268c6b4a1fea0e2f2468919e9faaa9e21ee442b0ecd8d589c4156a396cd2b77d2bf33813960f4ae4e9ab03654b4385ab55cb9cf8ac9dd7f5437bc58d93168118342bebf40fca1e90283e704a59f7832e1ac3b5af56f63c2903d3a5d696aef5bff4af" alt="">
+                            <p>Zdobywaj punkty za proste zadania</p>
+                        </div>
+                        <div class="win__prizes-items">
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section__win-prizes/present_icon.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=4008a6c426f6a3ba806e0957279d5d5a439a0c3c177701536bfc3281963b840ae40b35d0ee91c2c861ec52f35aa91737a2707faa0a918af33313e3eccc5a2f16d149f7afb14d90f68a52101ff0451b633e527048bc1d29f9ade80f75e7ea56fc3a292005962b995ce17b34e2c420952b131da10f79684942d4be73fe598df5f17f9dcb143678053c15e2c7e04f95b1ae28f290289ed55e1675a874d158bfcaa92bc223c5d1230f726b81e2017f99639f1f2ad739e0209129c7b19235e7322e111e655247b1ad5608ce5fdbb38234a4ba01aa009fa0970b280810f225d7f41332030fe07c0dc940eef520be3599b891d86c38738f536c99e90dbb33c6632f74e5" alt="">
+                            <p>Otrzymuj prezenty i jeszcze raz i jeszcze... ale tym razem większe!</p>
+                        </div>
+                        <div class="win__prizes-items">
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section__win-prizes/cup_icon.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=97fc96363cf8fac48796380904ea0fb4dde3cb6fea09875dadd087a5b395c4a8f669426455ef9976e22950a9ce3452dd25536fdc03e8dead3bcb8714bc33bdd360fa882f0502dadcb34f9fc90d3a4cbd88275fcc738bc465e0bca626918572b6260ee34bb9baec36f56e9b06dbeaa808d9e8454ac63dabbdff2a97ed0550c14e0ea5fa9d4b18bf8af7d5230330197ac715221be02de843e256608e18bac6cb111b1ffd74b89cd35be4cc2720d2751648aa1f0af370250c733eaebfb7141bf41e4849109c7fa1197eae1b5e5b26eb777153336df158bbbf5dd2ab033d0ae79c10f738ff408fc2e0b0415a2b591d520d9961ea15de9df443aec7d46e33fbd8b5a3" alt="">
+                            <p>Bądź pierwszy <br> na Leaderboard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container__white">
+        <div class="container__1800">
+            <div class="container__1120">
+                <div class="section__whats-inside">
+                    <h2>Co <span>znajdziesz</span> w apce Bakksy?</h2>
+
+                    <div class="whats__inside-item-wrapper">
+                        <div class="whats__inside-item1">
+                            <p>Zero prowizji od handlu</p>
+                        </div>
+                        <div class="whats__inside-item2">
+                            <p>Nauka w aplikacji</p>
+                        </div>
+                        <div class="whats__inside-item3">
+                            <p>Porady i wskazówki</p>
+                        </div>
+                        <div class="whats__inside-item4">
+                            <p>Subskrypcja Smart Hunt</p>
+                        </div>
+                        <div class="whats__inside-item5">
+                            <p>Dane rynkowe i analizy</p>
+                        </div>
+                        <div class="whats__inside-item6">
+                            <p>24/7 przyjazny zespół wsparcia</p>
+                        </div>
+                        <div class="whats__inside-item7">
+                            <p>Narzędzia wyszukiwania (Finders)</p>
+                        </div>
+                        <div class="whats__inside-item8">
+                            <p>Stały dostęp do Twoich pieniędzy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__1120">
+                <div class="section__join">
+                    <div class="parent-container">
+                        <ul class="faq">
+                            <h2>Chcę dołączyć teraz! Ale jak mam…</h2>
+                            <li>
+                                <h3 class="question">…zapisać się na listę oczekujących?
+                                    <div class="plus-minus-toggle collapsed"></div>
+                                </h3>
+                                <div class="answer">Wystarczy, że klikniesz tutaj, zostawisz swój email, potwierdzisz go i znajdziesz się wśród początkujących.</div>
+                            </li>
+                            <li>
+                                <h3 class="question">…wziąć udział w Rozdaniu?
+                                    <div class="plus-minus-toggle collapsed"></div>
+                                </h3>
+                                <div class="answer">Jeśli dołączyłeś już do listy oczekujących, musisz zweryfikować swój numer telefonu, żeby uzyskać dostęp do Rozdania. W przeciwnym razie będziesz musiał również potwierdzić swój e-mail. Kiedy już to zrobisz, możesz zacząć wykonywać zadania, udostępniać linki polecające, żeby zaprosić znajomych, zdobywać punkty i rywalizować o pierwsze miejsce i największą nagrodę.</div>
+                            </li>
+                            <li>
+                                <h3 class="question">...zdobywać nagrody?
+                                    <div class="plus-minus-toggle collapsed"></div>
+                                </h3>
+                                <div class="answer">Żeby zdobywać nagrody, będziesz musiał przesunąć się w górę tabeli liderów. A żeby to zrobić, musisz polecić Bakksy jak największej liczbie znajomych i wykonać inne zadania. Im więcej znajomych polecisz i im więcej zadań wykonasz, tym więcej punktów i nagród zdobędziesz.</div>
+                            </li>
+                            <li>
+                                <h3 class="question">...uczyć się z botem?
+                                    <div class="plus-minus-toggle collapsed"></div>
+                                </h3>
+                                <div class="answer">Po dołączeniu do Waitlist, otrzymasz dostęp do szkolenia z botem. Będziesz mógł uczyć się w komfortowym tempie, a po zdaniu testu końcowego otrzymasz więcej punktów.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container__beige">
+        <div class="container__1800 bg__bottom">
+            <div class="container__1120">
+                <div class="section__freedom">
+                    <div class="section__freedom-wrapper">
+                        <div class="freedom__wrapper-ls">
+                            <h3>Bakksy jest dla tych, którzy kochają  <span>wolność</span>.<br> Dla tych, którzy chcą zainwestować w siebie i<br> swoją przyszłość.</h3>
+                            <button style="display: none;">Dołącz do Early Birds</button>
+                            <a href="#join_waitlist">Join Early Birds</a>
+                        </div>
+                        <div class="freedom__wrapper-rs">
+                            <img src="https://storage.googleapis.com/waitlist-stage/img/section__freedom/red_man.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=3178e32ff29d7f67d8f9a8ca1f50f4aafdcf5b62f12bedf265e7231122a938b9d2b2773c0db841bb8568fdad6e30094b755e750072db399008710fb92f37f6c291c38dc5a66f17a8fab74ba4e68e0ceca93ee48460ea9a9cfa683d9a62cabe78bbeb7c12cec7799b8ecb6ee8a9ec377c6765c4e6b65dfcada6616fb511155faadb19b2ef28d7d459ac0679425848a951b6fd97ade1b6e8278c0266dd05f39512cbbfcb0cb5f8f48675058f9ae4ecc5e89d05412e87fa425b542fa6a50d6ea565c44d9c91d5c7535f9bf242195b6aa45959f734cd78b005af3c69726cbb080e62a7179fe58ff31131c4d7cd60c73faadd167c8ebd762af98a5c9da5df68cf2209" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container__green">
+        <div class="container__1800 bg__bottom-green">
+            <div class="container__1120">
+                <div class="section__seed-round">
+                    <h3>Jesteśmy na etapie <br>rozwoju</h3>
+                    <div class="email__wrapper">
+                        <p>Jeśli jesteś VC lub Angel investorem i chcesz otrzymać naszą prezentację inwestycyjną, skontaktuj się z nami</p>
+                        <a href="mailto:vc@bakksy.com">vc@bakksy.com <img src="https://storage.googleapis.com/waitlist-stage/img/section_seed-round/arrow-right.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=2f4659ff0be36bff96d906ca7ce6c09b66267fa8b3775596a42f97c489806b9b15d029a17197eb7bd3824e4ace6af4c312b6fa02e634725a4bd74ac85d54ad462fa2de3cacd914f811b800bde97db112cec13df6e7cf98cef04412691b6af1bc10459a1408a8d533553289707da495de274aa50a898360415b24ef1fd1ddfcefc7e57be73b706c637413932f17db0b9898a38db0ed1599e928945305ea99542788e607d76819ba1e85ea4adf8fce4f3421eb1ff3a6767bfed98e5cd641141a16b8f8624462328c12d214c0c6a5b5d111e24c09ffa82c5f6fef61e0098e615c0708b9c3a2410374a8c691924901676b9c3fe26818d3899843f90f72898f316932"
+                                alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container__white">
+        <div class="container__1800">
+            <div class="container__1120">
+                <footer class="footer">
+                    <a href=""><img class="footer__logo" src="https://storage.googleapis.com/waitlist-stage/img/footer_logo.svg?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=0ca49ebff79b2ffa69ca806db1e53a4ce3edac2c09ec1a3cc2fd3d841b0da6667c26282849dc7bba764abaf9b1f8643fc30d7a436eb51da8841824172455e1a95d250ad9eafc60bd79cf6c31bf076061266f606488cf8af48972f3a0632c0fda501f26e37080fb9bf010cd879ffecba1e372db5712ac89299a0d7c7b4ecd68ca87d835d25169a10be342cba808017250a21d63bc373ed7b4d722de6855a1204c0ad4aa827506527797d0233791fa840bf72899d2c1ece9e8b336728171a5c3dc9f402449f8d5faa490bc6505df2f92ad6f147477e8a94ffd68bf1ccc7ecf862269b10540f81c878a7b22d4ef4a19bcc68652bba3bf84c90d5e147a8fb5434feb" alt=""></a>
+                    <p class="footer__contact">Contact</p>
+                    <a class="footer__email" href="mailto:hello@bakksy.com">hello@bakksy.com</a>
+                    <p class="footer__allresserved">© Bakksy 2023. All rights reserved.</p>
+                    <p class="footer__adress">Bakksy is a trading name of Bakksy Finance OÜ, which is a registered in
+                        Estonia by address Tornimäe 3, Tallinn 10145 (No. 16575205).</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://storage.googleapis.com/waitlist-stage/js/i_want_join.js?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=0722b7bd330678c6d05bacd9f4b8d628ee439a10f344313ec491afa10bf8e047f9b9d6be798a7adfc3a070e6b01bd00e0c207b0e954a94bc3b8f0772c98dc781dcc1e6c42a37850c835158ba711ee0e0a698bef4a7b62e898fba7d621e6ede4d3c0bab7e9a266af6e175288085cf14802d649f0af8f5d78cdf984498d41b566352218d1e5bf40a97e84aedea737cfa9d3a0019941263f7a2a2fccc3567d826eb1de42fabe4bcd6e322c62e98501e78036ee3521f0a685b5ca0f0958589d02ae6dedc87ee4dc82bc38ea001564e9d53c1c9206c11df999379d5da3382e762e4caf03e72454b9cda592243a7b5401a49f033dbef050d8fd4437581e1f2c29bc225"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js'></script>
+    <script type="text/javascript" src="https://storage.googleapis.com/waitlist-stage/js/script.js?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=8f33eeb7475c29662922eff1e2bd0b064ad2a416f0076bb729790311b190171723fd385f1d05517d77e9c016402906a4a8b72af5958513bd05b488290362e67dda5630f2e6bac9337314ef2a5890ef391754dd3a1f68198d87e36292a489de007e5dff304839bb80fea81e1f5b291589c9c52eb7b006b56305a3a7aa3fd69f2475db3521226588ca2c0b2df028e76e17068d2344ebae11d9841b1c32f22b6433b1f8ff1bd6c5958ec56fd0790ea9c1170d1e497aeeae3f096cf6bdb783d556c310f0c8eea39513f490741f3646c2a66eee2dbe7fcec3ca2065ac60d896869e843db5dae2ca86f01d437335da12e6fcb840dc214052cf32d3808c18c49b993a58"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://storage.googleapis.com/waitlist-stage/js/main_page_actions.js?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=cload-build-gitlab%40sonorous-key-375020.iam.gserviceaccount.com%2F20230222%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230222T125438Z&amp;X-Goog-Expires=86400&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=8810a33e1927aec13479b76ac8bf51fedec33ee1be1c85db45bc2139c2db340c409e008b67517d4bc9dd0298cda7d6626bbbfda3cb3c0ad85186b4d133b8fbfec93395a1b614db72712d8e77061f6dabfde89e1cf12ac7a0e296fc3c2c9ae02b88b3dfdb202e6484e3050d74d2f69b3eb7e48f942e5384a09c69f56a08a3cfeb3519e81a7efaefdc2d9744f368f9d8d190340ef6ce68056213b9d7c5f0e21a391e549f3acc693e0f4ecb1ce57944f3fa78b4adf4c7eb3d4b78bddbdd18437fcd8c44727d98f9052c3606a0e951195173b11013e93335b01cd48234065a0b1be32e8c643a89dac0fd42a583e8cd75f13c75be29f05eede098f835237329ad2ae9"></script>
+</body>
+</html>

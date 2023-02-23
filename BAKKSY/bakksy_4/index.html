@@ -99,8 +99,9 @@
 
 
                     <div class="header__main-block">
-
-                        <div class="header__main-block-wrapper-ls">
+                       
+                        <!--header__main-block-wrapper-ls default screen --> 
+                        <div class="header__main-block-wrapper-ls" >
                             <h1 class="main__block-h1">Invest and spend
                                 <br> <span> without limits</span>
                             </h1>
@@ -108,7 +109,8 @@
                                 Learn the investment basics, buy stocks and enjoy the freedom
                                 <br>of using your money.
                             </p>
-                            <form action="form__subscription" class="form__subscription" style="display:none">
+                            
+                            <form action="form__subscription" class="form__subscription">
                                 <label for="input__join">Leave your email to enroll on the waitlist and stay
                                     updated</label>
                                 <div class="join__wrapper">
@@ -120,45 +122,52 @@
                                     <button class="ml-onclick-form" id="join_waitlist">Join Early Birds</button>
                                 </div>
                             </form>
-                            <div class="check__your-inbox" style="display:none">
-                                <p class="thanks__for-joining-p"> <img src="img/header/check.svg" alt="">Thank you for
-                                    joining! Check your inbox.</p>
-                            </div>
-
-                            <form action="form__subscription-confirm" class="form__subscription-confirm" style="display:none">
-                                <label for="input__join-confirm">And one last step before your member card is
-                                    ready.</label>
-                                <div class="join__wrapper-confirm">
+                        </div> <!--header__main-block-wrapper-ls default screen END--> 
+<!------------------------------------------------------------------------------------------------------------------------------>
+                        <!--header__main-block-wrapper-ls Your Email is verified!-->
+                        <div class="header__main-block-wrapper-ls wrapper__ls-email-verified " style="display: none;">
+                            <h1 class="main__block-h1 email__verified-h1">Your Email is verified!
+                            </h1>
+                            <p class="main__block-p email__verified-p">
+                                There are only a few steps left before you get your Bakksy <br> <span>Community Card.</span>
+                            </p>
+                            
+                            <form action="form__subscription-confirm" class="form__subscription-confirm" >
+                                <label class="email__verified-label" for="input__join-confirm">Please, enter your nickname here:</label>
+                                <div class="join__wrapper-confirm join__wrapper-confirm-email-verified">
                                     <input type="email" id="input__join-confirm" placeholder="Enter your nickname">
                                     <button class="ml-onclick-form" id="join_waitlist-confirm">Confirm</button>
                                 </div>
                             </form>
-
-                            <div class="thanks__for-joining" style="display:none">
-                                <p class="thanks__for-joining-p"> <img src="img/header/heart.svg" alt="">You’re all set!
-                                    Thanks for joining Bakksy Community!</p>
-                            </div>
-
+                        </div> <!--header__main-block-wrapper-ls Your Email is verified! END --> 
+<!----------------------------------------------------------------------------------------------------------------------------->
+                        <!--<!--header__main-block-wrapper-ls referal link-->
+                        <div class="header__main-block-wrapper-ls wrapper__ls-referal-link" style="display: none;">
+                            <h1 class="main__block-h1 referal__link-h1">Welcome to the <span> Bakksy community!</span>
+                            </h1>
+                            <p class="main__block-p referal__link-p">
+                                You are an <span>Early Bird member</span> now 😎 Congratulations!<br>
+                                <br>Here’s your card. You can download it if you <br> want.
+                            </p>
+                            
                             <div class="congratulations">
-                                <p class="congratulations-p1">Congratulations! You are an Early Bird member of Bakksy
-                                    Community!<br>
-                                    Here's your member card. You can download it if you want.</p>
+                                <p class="congratulations-p1">And here’s your personal referral link to invite friends to the community:</p>
                                 
                                 <span class="congratulations-span"><p class="referral__link-holder">Referrallinkjfjsdofs8f982389fusdj</p> <a href=""><img
                                             src="img/header/copy_icon.svg" alt=""></a> </span>
-                                <p class="congratulations-p2">Invite friends to double up your Early Bird benefits!</p>
+                                <p class="congratulations-p2">By inviting a friend, you are <b> doubling your bonuses.</b> The number of invitations is limited, 
+                                    so give a good thought about who you want to take with you to the Bakksy community :)</p>
                             </div>
-
-
-                        </div>
+                        </div> <!--<!--header__main-block-wrapper-ls referal link END-->
+<!------------------------------------------------------------------------------------------------------------------------------->
+                       
                         <div class="header__main-block-wrapper-rs">
-                            <img src="img/header/tel_card_icon_desktop_new2.png" alt="" class="devices_desktop" style="display:none">
-                            <img src="img/header/tel_card_icon_mobile_new.png" alt="" class="devices_mobile" style="display:none">
+                            <img src="img/header/tel_card_icon_desktop_new2.png" alt="" class="devices_desktop" >
+                            <img src="img/header/tel_card_icon_mobile_new.png" alt="" class="devices_mobile" >
 
-                            <div class="congratulations_desktop">
-                                
+                            <div class="congratulations_desktop" style="display: none;">       
                                 <!-- <img class="desktop__img-main" src="img/header/congratulations_desktop.png" alt=""> -->
-                                <div class="congratulations_desktop-wrapper-main">
+                                <div class="congratulations_desktop-wrapper-main" >
                                     <div class="desktop-wrapper-inside">
                                         <a class="desktop__inside-logo" href="#"> <img src="img/card/logo.svg" alt=""> </a>
                                         <div class="wrapper-inside-bottom">
@@ -173,12 +182,12 @@
                                 <a href="" class="desktop__download-icon-a"><img class="desktop__download-icon" src="img/header/download_icon.svg" alt=""></a>
                             </div>
 
-                            <div class="congratulations_mobile" style="display: none;">
+                            <!--
+                            <div class="congratulations_mobile">
                                 <img class="mobile__img-main" src="img/header/congratulations_mobile.png" alt="">
-                                <a href=""><img class="mobile__download-icon" src="img/header/download_icon_mobile.svg"
-                                        alt=""></a>
+                                <a href=""><img class="mobile__download-icon" src="img/header/download_icon_mobile.svg" alt=""></a>
                             </div>
-
+                            -->
 
                         </div>
                     </div>
