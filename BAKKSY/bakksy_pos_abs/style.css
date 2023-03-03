@@ -158,13 +158,13 @@ a {
   margin: 0 auto;
 }
 .bg__top {
-  background: url('../img/backgrounds/bg_top_left.png') no-repeat 85px 290px, url('../img/backgrounds/bg_top_right.png') no-repeat 1105px 385px;
+  background: url(https://storage.googleapis.com/bakksy-public-img/img/backgrounds/bg_top_left.png) no-repeat 85px 290px, url(https://storage.googleapis.com/bakksy-public-img/img/backgrounds/bg_top_right.png) no-repeat 1105px 385px;
 }
 .bg__bottom {
-  background: url('../img/backgrounds/bg_bottom_left.png') no-repeat 130px -120px;
+  background: url(https://storage.googleapis.com/bakksy-public-img/img/backgrounds/bg_bottom_left.png) no-repeat 130px -120px;
 }
 .bg__bottom-green {
-  background: url('../img/section_seed-round/bg_bottom_green.png') no-repeat right 5px;
+  background: url(https://storage.googleapis.com/bakksy-public-img/img/section_seed-round/bg_bottom_green.png) no-repeat right 5px;
 }
 /*containers end*/
 /*HEADER START*/
@@ -252,7 +252,7 @@ a {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background-image: url('../img/arrow_menu.svg');
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/arrow_menu.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 4px;
@@ -265,7 +265,7 @@ a {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background-image: url('../img/arrow_menu.svg');
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/arrow_menu.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 4px;
@@ -302,7 +302,7 @@ a {
   left: 34px;
 }
 .header__wrapper-rs .header__wrapper-language .language__hidden__block li a.active__language-link {
-  background: url(../img/arrow_menu_check.svg) no-repeat 0 0;
+  background: url(https://storage.googleapis.com/bakksy-public-img/img/arrow_menu_check.svg) no-repeat 0 0;
   padding: 0px 20px 0px 20px;
   position: absolute;
   left: 14px;
@@ -332,7 +332,7 @@ a {
   color: #1F938A;
 }
 .header__banner {
-  background-image: url('../img/header/header_bg_2.png');
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/header/header_bg_2.png);
   background-repeat: no-repeat;
   height: 246px;
   margin-top: 56px;
@@ -488,7 +488,7 @@ a {
   border-radius: 10px;
   font-weight: 400;
   font-size: 17px;
-  color: #524B47;
+  color: rgba(82, 75, 71, 0.4);
   outline: none;
   margin-right: 8px;
 }
@@ -511,14 +511,6 @@ a {
   font-size: 18px;
   line-height: 24px;
   color: #FBFAF6;
-  transition: all 0.5s ease-in-out;
-}
-.header__main-block .header__main-block-wrapper-ls .form__subscription .join__wrapper button:hover,
-.header__main-block .header__main-block-wrapper-ls .form__subscription-confirm .join__wrapper button:hover,
-.header__main-block .header__main-block-wrapper-ls .form__subscription .join__wrapper-confirm button:hover,
-.header__main-block .header__main-block-wrapper-ls .form__subscription-confirm .join__wrapper-confirm button:hover {
-  background-color: #A7DAA2;
-  color: #1F938A;
 }
 .header__main-block .header__main-block-wrapper-ls .form__subscription p,
 .header__main-block .header__main-block-wrapper-ls .form__subscription-confirm p {
@@ -832,14 +824,14 @@ a {
   margin-top: 19px;
 }
 .section__bakksy-club .bc__type-selection-wrapper .bc__type-ls {
-  background-image: url('../img/section__bakksy-club/style-blonde2.png');
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/section__bakksy-club/style-blonde2.png);
   background-repeat: no-repeat;
   opacity: 1;
   background-color: #b37486;
 }
 .section__bakksy-club .bc__type-selection-wrapper .bc__type-rs {
   background-color: #534d6b;
-  background-image: url('../img/section__bakksy-club/style-train2.png');
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/section__bakksy-club/style-train2.png);
   background-repeat: no-repeat;
   opacity: 1;
 }
@@ -907,7 +899,7 @@ a {
   width: 49px;
 }
 .win__prizes-bg {
-  background-image: url(../img/section__win-prizes/BG_new.png);
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/section__win-prizes/BG_new.png);
   max-width: 1600px;
   width: 100%;
   background-repeat: no-repeat;
@@ -1144,6 +1136,7 @@ a {
 }
 /* FOOTER END*/
 /* CORRECT PL*/
+/*pl correct*/
 .header__banner .header__banner-ls-pl {
   padding: 34px 0 48px 47px;
 }
@@ -1242,6 +1235,70 @@ a {
     margin-top: -28px !important;
   }
 }
+/* отмена всех !important*/
+/*
+@media (max-width: 400px) {
+    .section__freedom-wrapper-pl {
+        .freedom__wrapper-ls-pl {
+            padding: 1.4px 0 0 0;
+        }
+    } 
+    .section__freedom-wrapper-pl {
+        .freedom__wrapper-ls-pl {
+            margin-top: 0;
+            padding: 92.4px 0 91px 0; 
+        }
+    }
+    .header__banner-pl {
+        padding: 0 5px;
+    }
+    .section__freedom-wrapper-pl {
+        .fc;
+        .vc;
+        height: 100%;
+        .freedom__wrapper-ls-pl {
+            padding: 92.4px 0 0 50px;
+            .df;
+            .fc;
+            .vc;
+        }
+        .freedom__wrapper-rs-pl {
+            .df;        
+        }
+    }
+    .header__banner {
+        .header__banner-rs-pl {
+            padding: 30px 0 0px 0px;
+        }
+    } 
+    .header__banner-pl {
+        height: 100%;
+        padding: 31px 10px 31px 10px;
+        gap: 42px;
+        .header__banner-ls-pl {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        .header__banner-rs-pl {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .section__freedom-wrapper-pl {
+        .freedom__wrapper-ls-pl {
+            padding: 1.4px 0 0 0;
+        }
+    } 
+    .section__whats-inside-pl {
+        h2 {
+            text-align: center;
+        }
+    } 
+
+}
+*/
 /* MOBILE PL END*/
 @media (max-width: 1628px) {
   .win__prizes-bg {
@@ -1449,7 +1506,7 @@ a {
     margin-top: 85px;
   }
   .win__prizes-bg {
-    background: url(../img/section__win-prizes/BG.png) no-repeat center bottom;
+    background: url(https://storage.googleapis.com/bakksy-public-img/img/section__win-prizes/BG.png) no-repeat center bottom;
   }
   .section__freedom-wrapper {
     -webkit-box-pack: center;
@@ -1642,7 +1699,7 @@ a {
   .header__banner {
     border-radius: 32px;
     background-color: #1F938A;
-    background-image: url(../img/header/header_bg_mobile_new.png);
+    background-image: url(https://storage.googleapis.com/bakksy-public-img/img/header/header_bg_mobile_new.png);
     background-size: 342px;
     background-repeat: no-repeat;
     max-width: 342px;
@@ -1885,7 +1942,7 @@ a {
     margin-top: 15px;
   }
   .win__prizes-bg {
-    background: url(../img/section__win-prizes/BG_mobile.png) no-repeat top center;
+    background: url(https://storage.googleapis.com/bakksy-public-img/img/section__win-prizes/BG_mobile.png) no-repeat top center;
     max-width: 390px;
     width: 100%;
   }
@@ -2096,7 +2153,7 @@ a {
 .congratulations_desktop-wrapper-main {
   width: 240px;
   height: 375px;
-  background-image: url(../img/card/bg_card.png);
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/card/bg_card.png);
   background-repeat: no-repeat;
   background-position: 0 0;
   border-radius: 16px;
@@ -2104,7 +2161,7 @@ a {
   margin-right: 30px;
 }
 .desktop-wrapper-inside {
-  background-image: url(../img/card/bg_rombus.png);
+  background-image: url(https://storage.googleapis.com/bakksy-public-img/img/card/bg_rombus.png);
   background-color: #F3E5DC;
   background-repeat: no-repeat;
   background-position: top right;
