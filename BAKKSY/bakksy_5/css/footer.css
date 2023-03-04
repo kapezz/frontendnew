@@ -9,8 +9,6 @@ body {
 header {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 0 0 auto;
-  /* height: 500px; */
-  background: black;
 }
 .main-content {
   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
@@ -21,6 +19,5 @@ header {
 footer {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 0 0 auto;
-  background: red;
   /* height: 300px; */
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <title>Bakksy - 5</title>
 </head>
 
@@ -56,20 +57,20 @@
                                 </script>
                             </div>
 
-                            <a class="anchor__join-header">Learn Investment</a>
+                            <a class="anchor__join-header popup-btn-success">Learn Investment</a>
                         </div>
                     </div>
                     <div class="header__banner">
                         <div class="header__banner-ls">
-                            <h3>Become An Investor In <span>10 Steps</span></h3>
+                            <h3>Become An Investor <br> In <span>10 Steps</span></h3>
                             <h4>Free educational bot for novices in investing.</h4>
-                            <p>Here you’ll find <span> 100% usefulness and 0% boredom! </span>After going through all
+                            <p>Here you’ll find <span> 100% usefulness and 0% boredom! </span> After going through <br> all
                                 chapters on investment basics, you’ll get the <span> free stock </span> to start your
                                 portfolio after the Bakksy launch!</p>
                             <a href="#" class="header__banner-ls-button">Sort out investing</a>
                         </div>
                         <div class="header__banner-rs">
-                            <img src="img/header/img_investbot.png" alt="">
+                            <a href=""><img src="img/header/img_investbot.png" alt=""></a>    
                         </div>
                     </div>
                     <!--header__banner-->
@@ -88,11 +89,11 @@
                         <img src="img/education_division/phones.png" alt="">
                     </div>
                     <div class="education-division-rs">
-                        <h2>Hey, it's the Bakksy Education Division here! ✨</h2>
-                        <p class="education-division-rs-p1">We've talked with novice investors, addressed their issues, and understood that this educational bot is a burning necessity. </p>
+                        <h2>Hey, it's the Bakksy <br>Education Division here! ✨</h2>
+                        <p class="education-division-rs-p1">We've talked with novice investors, addressed their issues, and <br> understood that this educational bot is a burning necessity. </p>
                         <p class="education-division-rs-p2">Learning can be hard, we know. Especially when it comes to learning about investment.</p>
                         <span>That's why we've created this bot for you to sort out the investment in the most simple and easy-to-grasp format – an educational bot in Telegram or Facebook messenger!</span>
-                        <a href="">Open the Bot<img src="img/education_division/arrow_up.svg" alt=""></a>
+                        <a class="education-division-rs-a" href="">Open the Bot<img src="img/education_division/arrow_up.svg" alt=""></a>
                         <div class="education-division-rs-button-wrapper">
                             
                         </div>
@@ -135,7 +136,7 @@
                         <h2>What will you get? 🤩</h2>
                         <h5>The investor’s certificate!</h5>
                         <p class="certificate-rs-p1">We want you not only to learn but to act. And apply your newly acquired knowledge straight away.</p>
-                        <a href="">That’s why we give you a secret free stock!</a>
+                        <a class="certificate-rs-a" href="">That’s why we give you a secret free stock!</a>
                         <p class="certificate-rs-p2">It will become a starting point of your portfolio and path to financial freedom. You will see it in your portfolio right after the Bakksy launch.</p>
                     </div>
                 </div>
@@ -174,6 +175,31 @@
                 </div>
         </div>
     </section>
+
+<!--POPUP-->
+<div class="popup-success">
+    <div class="popup-inner-success popup__bg">
+        <div class="popup__success-basket">
+            <div class="popup__success-header">
+                <div class="close-popup-success">
+                    <span class="bar-success"></span>
+                    <span class="bar-success"></span>
+                  </div>
+            </div>
+            <div class="popup__success-wrapper">
+                <h2>Choose Your Platform</h2>
+                <h4>Start learning investment with our bot on Telegram or Messenger <br> and win the first stock for your portfolio!</h4>
+                <div class="success-button-wrapper">
+                    <a class="success-button-a1" href=""><img src="img/popup/tg_icon.svg" alt=""> Telegram <img src="img/popup/arrow_up.png" alt=""></a>
+                    <a class="success-button-a2" href=""><img src="img/popup/fb_mess_icon.svg" alt=""> Messenger <img src="img/popup/arrow_up.png" alt=""></a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>    
+
+<script src="js/popup.js"></script>         
+
     <section class="container__black container__squares">
         <div class="container__1120">
             <div class="section__thisbot">
@@ -182,7 +208,7 @@
                         <h3>You need this bot if you:</h3>
                         <div class="thisbot__items">
                             <img src="img/thisbot/check.png" alt="">
-                            <p>Want to start investing for ages but was <span> too afraid to do it</span></p>
+                            <p>Want to start investing for ages but was <span> too afraid</span> to do it</p>
                         </div>
                         <div class="thisbot__items">
                             <img src="img/thisbot/check.png" alt="">
@@ -208,7 +234,7 @@
                             <img src="img/thisbot/check.png" alt="">
                             <p>Want to <span>be confident</span>  in your investment decisions</p>
                         </div>
-                        <a href="">I’m Ready! <img src="img/thisbot/arrow_right.png" alt=""></a>
+                        <a href="" class="thisbot__ls-a">I’m Ready! <img src="img/thisbot/arrow_right.png" alt=""></a>
                     </div>
                     <div class="thisbot__rs">
                         <img src="img/thisbot/right_img_rocket.png" alt="">
@@ -218,7 +244,8 @@
             </div>
         </div>
     </section>
-    <section class="container__blue stillhave_bg">
+    <section class="container__blue">
+        <div class="container__1800 stillhave_bg">
         <div class="container__1120">
             <div class="section__stillhave">
                 <div class="stillhave__wrapper">
@@ -228,12 +255,63 @@
                         take our investment test.</p>
                     <div class="stillhave__item">
                         <h4>What is diversification?</h4>
+                        <div class="stillhave__answer-wrapper">    
+                            <a class="stillhave__answer-1"><span>1</span>It's the variability of the price on the market</a>
+                            <a class="stillhave__answer-2"><span>2</span>A price decrease</a>
+                            <a class="stillhave__answer-3"><span>3</span> Dividing the money between different assets </a>
+                        </div>
+                        <div class="stillhave__results-passed-wrapper" style="display: none;">
+                            <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade yourself as an investor with our educational bot! 😏😏😏</p>
+                        </div>
+                        <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                            <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be able to master investment even more. 😏😏😏</p>
+                        </div>
+
+                        <div class="stillhave__buttons-wrapper">
+                            <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                            <button class="button__next-answer">Next</button>
+                            <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                        </div>    
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <footer>...</footer>
+    </div>
+</section>
+<section class="container__black container__squares">
+    <div class="container__1120">
+        <div class="section__whatsbakksy">
+            <div class="whatsbakksy__wrapper">
+                <div class="whatsbakksy__ls">
+                    <h1>What’s Bakksy?</h1>
+                    <h3>Bakksy is an investment app for novices that is about to rock the world of finance and investment.</h3>
+                    <p class="whatsbakksy__ls-p1">At Bakksy, we truly believe that all people should have access to financial freedom. To do that, we have to deal with two essential tasks:</p>
+                    <ul>
+                        <li>Teach people how to invest</li>
+                         <li>Create the app with the best investment experience</li>
+                    </ul>
+                    <p class="whatsbakksy__ls-p2">Because only by making wise and conscious investment decisions can you win in the long-term and receive financial independence. So use our educational bot to get started and prepare for the greatest investment journey with Bakksy!</p>
+                    <a href="" class="whatsbakksy__ls-a">Learn investment <img src="img/whatsbakksy/arrow_up.png" alt=""></a>
+                </div>
+                <div class="whatsbakksy__rs">
+                    <img src="img/whatsbakksy/telephones.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            <!-- <img src="img/logo_footer.png" alt=""> -->
+            <a href=""><img class="footer__logo" src="img/logo_footer.svg" alt=""></a>
+            <p class="footer__contact">Contact</p>
+            <a class="footer__email" href="mailto:hello@bakksy.com">hello@bakksy.com</a>
+            <p class="footer__allresserved">© Bakksy 2023. All rights reserved.</p>
+            <p class="footer__adress">Bakksy is a trading name of Bakksy Finance OÜ, which is a registered in
+                Estonia by address Tornimäe 3, Tallinn 10145 (No. 16575205).</p>
+        </div>
+    </footer>
+</section>
+   
 </body>
 
 </html>
