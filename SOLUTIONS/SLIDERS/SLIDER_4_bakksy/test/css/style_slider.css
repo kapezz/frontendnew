@@ -1,0 +1,31 @@
+.owl-carousel .item {
+    /* height: 5rem; */
+    /* height: 500px; */
+    /* background: #4DC7A0; */
+    margin-right: 40px;
+    /* padding: 1rem; */
+}
+
+.slider-text-anim {
+    animation-name: slider-text-anim;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+}
+
+@keyframes slider-text-anim
+{
+    from
+    {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    to
+    {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}

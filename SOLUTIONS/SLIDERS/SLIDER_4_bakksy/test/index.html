@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel='stylesheet'
+        href='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css'>
+    <link rel='stylesheet'
+        href='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css'>
+    <link rel="stylesheet" href="css/style_slider.css">
+<style>
+    .owl-carousel {
+        width: 550px;
+    }
+    .owl-nav > .owl-next span {
+        background-color:green;
+        width: 200px;
+        display: block;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    .owl-nav > .owl-next span::before {
+        content:"Next";
+
+    }
+    .owl-nav > .owl-prev span {
+        background-color:red;
+        width: 200px;
+        display: block;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    .owl-nav > .owl-prev span::before {
+        content:"Back";
+
+    }
+    .item {
+        position: relative;
+    }
+    .owl-nav {
+        position: absolute;
+        bottom:12px;
+        left: 65px;
+    }
+    .owl-dots {display: none;}
+
+</style>
+</head>
+
+<body>
+
+
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="stillhave__item">
+                <form action="/action_page.php" class="form__action-stillhave">
+                    <p>What is diversification?</p>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="b1_q1" name="b1_q1" value="HTML">
+                        <label for="b1_q1"><span>1 </span>It's the variability of the price on the market</label><br>
+                    </div>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="b1_q2" name="b1_q2" value="CSS">
+                        <label for="css"><span>2 </span>A price decrease</label><br>
+                    </div>
+                    <div class="form_radio_btn correct">
+                        <input type="radio" id="b1_q3" name="b1_q3" value="JavaScript">
+                        <label for="b1_q3"><span>3 </span>Dividing the money between different assets</label>
+                    </div>
+                </form>
+
+                <div class="stillhave__buttons-wrapper">
+                    <!-- <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button> -->
+                    <!-- <button class="button__next-answer" style="cursor: pointer;">Next</button> -->
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+
+
+<!-- 
+                <div class="stillhave__results-passed-wrapper" style="display: none;">
+                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade
+                        yourself as an investor with our educational bot! 😏😏😏</p>
+                </div>
+                <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be
+                        able to master investment even more. 😏😏😏</p>
+                </div> -->
+
+                <!--
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                    <button class="button__next-answer">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+                -->
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="stillhave__item">
+                <form action="/action_page.php" class="form__action-stillhave">
+                    <p>What is diversification?</p>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html"><span>1 </span>It's the variability of the price on the market</label><br>
+                    </div>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css"><span>2 </span>A price decrease</label><br>
+                    </div>
+                    <div class="form_radio_btn correct">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript"><span>3 </span>Dividing the money between different assets</label>
+                    </div>
+                </form>
+
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button>
+                    <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+
+
+<!-- 
+                <div class="stillhave__results-passed-wrapper" style="display: none;">
+                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade
+                        yourself as an investor with our educational bot! 😏😏😏</p>
+                </div>
+                <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be
+                        able to master investment even more. 😏😏😏</p>
+                </div> -->
+
+                <!--
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                    <button class="button__next-answer">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+                -->
+            </div>
+        </div>
+        <div class="item">
+            <div class="stillhave__item">
+                <form action="/action_page.php" class="form__action-stillhave">
+                    <p>What is diversification?</p>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html"><span>1 </span>It's the variability of the price on the market</label><br>
+                    </div>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css"><span>2 </span>A price decrease</label><br>
+                    </div>
+                    <div class="form_radio_btn correct">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript"><span>3 </span>Dividing the money between different assets</label>
+                    </div>
+                </form>
+
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button>
+                    <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+
+
+<!-- 
+                <div class="stillhave__results-passed-wrapper" style="display: none;">
+                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade
+                        yourself as an investor with our educational bot! 😏😏😏</p>
+                </div>
+                <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be
+                        able to master investment even more. 😏😏😏</p>
+                </div> -->
+
+                <!--
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                    <button class="button__next-answer">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+                -->
+            </div>
+        </div>
+        <div class="item">
+            <div class="stillhave__item">
+                <form action="/action_page.php" class="form__action-stillhave">
+                    <p>What is diversification?</p>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html"><span>1 </span>It's the variability of the price on the market</label><br>
+                    </div>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css"><span>2 </span>A price decrease</label><br>
+                    </div>
+                    <div class="form_radio_btn correct">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript"><span>3 </span>Dividing the money between different assets</label>
+                    </div>
+                </form>
+
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button>
+                    <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+
+
+<!-- 
+                <div class="stillhave__results-passed-wrapper" style="display: none;">
+                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade
+                        yourself as an investor with our educational bot! 😏😏😏</p>
+                </div>
+                <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be
+                        able to master investment even more. 😏😏😏</p>
+                </div> -->
+
+                <!--
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                    <button class="button__next-answer">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+                -->
+            </div>
+        </div>
+        <div class="item">
+            <div class="stillhave__item">
+                <form action="/action_page.php" class="form__action-stillhave">
+                    <p>What is diversification?</p>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html"><span>1 </span>It's the variability of the price on the market</label><br>
+                    </div>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css"><span>2 </span>A price decrease</label><br>
+                    </div>
+                    <div class="form_radio_btn correct">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript"><span>3 </span>Dividing the money between different assets</label>
+                    </div>
+                </form>
+
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button>
+                    <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+
+
+<!-- 
+                <div class="stillhave__results-passed-wrapper" style="display: none;">
+                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade
+                        yourself as an investor with our educational bot! 😏😏😏</p>
+                </div>
+                <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be
+                        able to master investment even more. 😏😏😏</p>
+                </div> -->
+
+                <!--
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                    <button class="button__next-answer">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+                -->
+            </div>
+        </div>
+        <div class="item">
+            <div class="stillhave__item">
+                <form action="/action_page.php" class="form__action-stillhave">
+                    <p>What is diversification?</p>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html"><span>1 </span>It's the variability of the price on the market</label><br>
+                    </div>
+                    <div class="form_radio_btn not__correct">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css"><span>2 </span>A price decrease</label><br>
+                    </div>
+                    <div class="form_radio_btn correct">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript"><span>3 </span>Dividing the money between different assets</label>
+                    </div>
+                </form>
+
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button>
+                    <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+
+
+<!-- 
+                <div class="stillhave__results-passed-wrapper" style="display: none;">
+                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade
+                        yourself as an investor with our educational bot! 😏😏😏</p>
+                </div>
+                <div class="stillhave__results-stuff-wrapper" style="display: none;">
+                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be
+                        able to master investment even more. 😏😏😏</p>
+                </div> -->
+
+                <!--
+                <div class="stillhave__buttons-wrapper">
+                    <button class="button__back-answer" style="visibility:hidden;">Back</button>
+                    <button class="button__next-answer">Next</button>
+                    <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                </div>
+                -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!--     
+    <div class="stillhave__item">
+        <form action="/action_page.php" class="form__action-stillhave">
+            <p>What is diversification?</p>
+            <div class="form_radio_btn not__correct">
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html"><span>1 </span>It's the variability of the price on the market</label><br>
+            </div>
+            <div class="form_radio_btn not__correct">
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css"><span>2 </span>A price decrease</label><br>
+            </div>
+            <div class="form_radio_btn correct">
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript"><span>3 </span>Dividing the money between different assets</label>
+            </div>
+        </form>
+
+        <div class="stillhave__buttons-wrapper">
+            <button class="button__back-answer" style="visibility:hidden;cursor: pointer;">Back</button>
+            <button class="button__next-answer" style="cursor: pointer;">Next</button>
+            <a style="display: none;" class="button__getstarted-answer">Get started <img
+                    src="img/stillhave/arrow_right_up.png" alt=""> </a>
+        </div>
+
+
+
+        <div class="stillhave__results-passed-wrapper" style="display: none;">
+            <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade yourself as
+                an investor with our educational bot! 😏😏😏</p>
+        </div>
+        <div class="stillhave__results-stuff-wrapper" style="display: none;">
+            <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be able to
+                master investment even more. 😏😏😏</p>
+        </div> -->
+
+        <!--
+        <div class="stillhave__buttons-wrapper">
+            <button class="button__back-answer" style="visibility:hidden;">Back</button>
+            <button class="button__next-answer">Next</button>
+            <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+        </div>
+        -->
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js'></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

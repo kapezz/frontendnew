@@ -1,0 +1,138 @@
+@import url(button.css);
+/*.section__stillhave {
+    padding: 64px 0;
+  }
+  .stillhave__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .stillhave__wrapper h3 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+  }
+  .stillhave__wrapper p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    margin-top: 17px;
+  }*/
+  .stillhave__item {
+    height: 260px;
+
+    background-color: #FBFAF6;
+    background-image: url(../img/stillhave/bg_squares_item.png);
+    background-repeat: no-repeat;
+    border: 2px solid #363DC4;
+    box-shadow: -4px 5px 0px #363DC4;
+    border-radius: 16px;
+    padding: 23px;
+    margin-top: 40px;
+    max-width: 500px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #202020;
+  }
+  .stillhave__item h4 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 24px;
+  }
+  .stillhave__item .stillhave__answer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+  .stillhave__item .stillhave__answer-wrapper a {
+    background: #FFFFFF;
+    padding: 15px 16px 15px 15px;
+    margin-bottom: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 452px;
+    width: 100%;
+    display: block;
+  }
+  .stillhave__item .stillhave__answer-wrapper a span {
+    color: #5058F6;
+    margin-right: 16px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .stillhave__item .stillhave__answer-wrapper a:last-child {
+    margin-bottom: 0;
+  }
+  .stillhave__item .stillhave__answer-wrapper a.stillhave__answer-1 {
+    border-radius: 16px 16px 2px 2px;
+  }
+  .stillhave__item .stillhave__answer-wrapper a.stillhave__answer-2 {
+    border-radius: 2px;
+  }
+  .stillhave__item .stillhave__answer-wrapper a.stillhave__answer-3 {
+    border-radius: 2px 2px 16px 16px;
+  }
+  .stillhave__item .stillhave__buttons-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 24px;
+    max-width: 452px;
+    width: 100%;
+  }
+  .stillhave__item .stillhave__buttons-wrapper button {
+    height: 48px;
+    max-width: 124px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .stillhave__item .stillhave__buttons-wrapper button.button__next-answer {
+    background: #5058F6;
+    color: #FBFAF6;
+    transition: all 0.5s ease-in-out;
+  }
+  .stillhave__item .stillhave__buttons-wrapper button.button__next-answer:hover {
+    background: #9962F6;
+  }
+  .stillhave__item .stillhave__buttons-wrapper button.button__back-answer {
+    border: 2px solid #5058F6;
+    color: #5058F6;
+  }
+  
+  
+.form__action-stillhave {
+    display: flex;
+    flex-direction: column;
+  }

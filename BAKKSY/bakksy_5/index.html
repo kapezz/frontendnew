@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>Bakksy - 5</title>
 </head>
 
@@ -67,7 +69,7 @@
                             <p>Here you’ll find <span> 100% usefulness and 0% boredom! </span> After going through <br> all
                                 chapters on investment basics, you’ll get the <span> free stock </span> to start your
                                 portfolio after the Bakksy launch!</p>
-                            <a href="#" class="header__banner-ls-button">Sort out investing</a>
+                            <a href="#" class="header__banner-ls-button popup-btn-success">Sort out investing</a>
                         </div>
                         <div class="header__banner-rs">
                             <a href=""><img src="img/header/img_investbot.png" alt=""></a>    
@@ -124,16 +126,17 @@
         </div>
 
     </section>
-    <section class="container__only-black">
+    <section class="container__only-black bg__certificate-mobile">
         <div class="container__1440 bg__certificate">
             <div class="container__1120">
             <div class="section__certificate">
                 <div class="certificate__wrapper">
                     <div class="certificate-ls">
-                        <img src="img/sertificate/sertificate_desktop.png" alt="">
+                        <img src="img/sertificate/sertificate_desktop.png" alt="" class="certificate-ls-img-desktop">
+                        <img src="img/sertificate/sertificate_mobile.png" alt="" class="certificate-ls-img-mobile">
                     </div>
                     <div class="certificate-rs">
-                        <h2>What will you get? 🤩</h2>
+                        <h2>What will you get?🤩</h2>
                         <h5>The investor’s certificate!</h5>
                         <p class="certificate-rs-p1">We want you not only to learn but to act. And apply your newly acquired knowledge straight away.</p>
                         <a class="certificate-rs-a" href="">That’s why we give you a secret free stock!</a>
@@ -150,7 +153,7 @@
                 <div class="section__getready">
                     <div class="getready__wrapper">
                         <h2>Get ready for your investment journey!</h2>
-                        <p class="getready__wrapper-p">with our education bot that splits complex investment knowledge into small <br>
+                        <p class="getready__wrapper-p">with our education bot that splits complex <br class="br__mobile"> investment knowledge into small <br class="br__desktop">
                             pithy pieces for novices and skilled investors.</p>
                         <div class="getready__wraper-items">
                             <div class="getready__item">
@@ -253,26 +256,134 @@
                         whether you need this?</h3>
                     <p>If you think that you already know everything you need,<br>
                         take our investment test.</p>
-                    <div class="stillhave__item">
-                        <h4>What is diversification?</h4>
-                        <div class="stillhave__answer-wrapper">    
-                            <a class="stillhave__answer-1"><span>1</span>It's the variability of the price on the market</a>
-                            <a class="stillhave__answer-2"><span>2</span>A price decrease</a>
-                            <a class="stillhave__answer-3"><span>3</span> Dividing the money between different assets </a>
-                        </div>
-                        <div class="stillhave__results-passed-wrapper" style="display: none;">
-                            <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade yourself as an investor with our educational bot! 😏😏😏</p>
-                        </div>
-                        <div class="stillhave__results-stuff-wrapper" style="display: none;">
-                            <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be able to master investment even more. 😏😏😏</p>
-                        </div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item swiper-no-swiping" >
+                                    <form action="/action_page.php" class="form__action-stillhave" name="form">
+                                        <p class="form__p">What is diversification?</p>
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-1_1" type="radio" name="radio" value="1_1">
+                                            <label class="form__label-1" for="radio-1_1"><span>1 </span>It's the variability of the price on the market</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-1_2" type="radio" name="radio" value="1_2">
+                                            <label class="form__label-2" for="radio-1_2"><span>2 </span>A price decrease</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__correct">
+                                            <input id="radio-1_3" type="radio" name="radio" value="1_3">
+                                            <label class="form__label-3" for="radio-1_3"><span>3 </span>Dividing the money between different assets</label>
+                                        </div>
+                                    </form>
+                                    
+                                    <!-- <div class="swiper-button-prev"><button>Back</button> </div> -->
+                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                </div>
 
-                        <div class="stillhave__buttons-wrapper">
-                            <button class="button__back-answer" style="visibility:hidden;">Back</button>
-                            <button class="button__next-answer">Next</button>
-                            <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
-                        </div>    
-                    </div>
+                                <div class="swiper-slide item swiper-no-swiping" >
+                                    <form action="/action_page.php" class="form__action-stillhave" name="form">
+                                        <p class="form__p">Which asset has the lowest risk?</p>
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-2_1" type="radio" name="radio" value="2_1">
+                                            <label class="form__label-1" for="radio-2_1"><span>1 </span>Corporate bonds</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__correct">
+                                            <input id="radio-2_2" type="radio" name="radio" value="2_2">
+                                            <label class="form__label-2" for="radio-2_2"><span>2 </span>State bond ETF</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-2_3" type="radio" name="radio" value="2_3">
+                                            <label class="form__label-3" for="radio-2_3"><span>3 </span>Shares</label>
+                                        </div>
+                                    </form>
+                                    <div class="swiper-button-prev"><button>Back</button> </div>
+                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                </div>
+
+                                <div class="swiper-slide item swiper-no-swiping" >
+                                    <form action="/action_page.php" class="form__action-stillhave" name="form">
+                                        <p class="form__p">ETF is</p>
+                                        <div class="form_radio_btn answer__correct">
+                                            <input id="radio-3_1" type="radio" name="radio" value="3_1">
+                                            <label class="form__label-1" for="radio-3_1"><span>1 </span>An investment fund which is traded on the market</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-3_2" type="radio" name="radio" value="3_2">
+                                            <label class="form__label-2" for="radio-3_2"><span>2 </span>A company share which is traded on the market</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-3_3" type="radio" name="radio" value="3_3">
+                                            <label class="form__label-3" for="radio-3_3"><span>3 </span>An indicator of the condition of the stock exchange</label>
+                                        </div>
+                                    </form>
+                                    <div class="swiper-button-prev"><button>Back</button> </div>
+                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                </div>
+
+                                <div class="swiper-slide item swiper-no-swiping" >
+                                    <form action="/action_page.php" class="form__action-stillhave" name="form">
+                                        <p class="form__p">What is a bond?</p>
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-4_1" type="radio" name="radio" value="4_1">
+                                            <label class="form__label-1" for="radio-4_1"><span>1 </span>A company share which is traded on the market</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__correct">
+                                            <input id="radio-4_2" type="radio" name="radio" value="4_2">
+                                            <label class="form__label-2" for="radio-4_2"><span>2 </span>A debt obligation which is traded on the market</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-4_3" type="radio" name="radio" value="4_3">
+                                            <label class="form__label-3" for="radio-4_3"><span>3 </span>It is profit which the investor gets from rising stock prices</label>
+                                        </div>
+                                    </form>
+                                    <div class="swiper-button-prev"><button>Back</button> </div>
+                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                </div>
+
+                                <div class="swiper-slide item swiper-no-swiping" >
+                                    <form action="/action_page.php" class="form__action-stillhave" name="form">
+                                        <p class="form__p">What is a ticker?</p>
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-5_1" type="radio" name="radio" value="5_1">
+                                            <label class="form__label-1" for="radio-5_1"><span>1 </span>The current market price</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__not-correct">
+                                            <input id="radio-5_2" type="radio" name="radio" value="5_2">
+                                            <label class="form__label-2" for="radio-5_2"><span>2 </span>A company’s full name</label>
+                                        </div>
+                                         
+                                        <div class="form_radio_btn answer__correct">
+                                            <input id="radio-5_3" type="radio" name="radio" value="5_3">
+                                            <label class="form__label-3" for="radio-5_3"><span>3 </span>A  company’s short name</label>
+                                        </div>
+                                    </form>
+                                  
+                                    <div class="swiper-button-prev"><button>Back</button> </div>
+                                    <div class="swiper-button-next"><button>Finish</button> </div>
+                                </div>
+
+                                
+                                <div class="swiper-slide item swiper-no-swiping successful__test">
+                                    <p class="answer-results-p">You <span> haven’t passed </span>the test, so it’s time to upgrade yourself as an investor with our educational bot! 😏😏😏</p>
+                                    <a class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                                </div>
+
+                                <div class="swiper-slide item swiper-no-swiping failed__test">
+                                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be able to master investment even more. 😏😏😏</p>
+                                    <a class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                                </div>
+                                <!-- clear form -->
+                                <script>  $('form[name=form]').trigger('reset');</script>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -314,7 +425,18 @@
     </footer>
     </div>
 </section>
-   
+  
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+    const swiper = new Swiper('.swiper', {
+    speed: 400,
+    spaceBetween: 100,
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+}  
+});
+  </script>
 </body>
 
 </html>

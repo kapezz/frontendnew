@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_slider.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<style>
+    .swiper-slide:first-child {
+        background:red;
+    }
+    .swiper-slide:last-child {
+        background:green;
+    }
+    .swiper-slide {
+        background:grey;
+    }
+
+</style>
+</head>
+
+<body>
+
+    <!-- Slider main container -->
+<div class="swiper" style="width:600px;background:grey;" >
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+
+        <div class="stillhave__item">
+            <form action="/action_page.php" class="form__action-stillhave">
+                <p>What is diversification?</p>
+                <div class="form_radio_btn answer__correct">
+                    <input id="radio-1" type="radio" name="radio" value="1">
+                    <label for="radio-1"><span>2 </span>A price decrease</label>
+                </div>
+                 
+                <div class="form_radio_btn answer__not-correct">
+                    <input id="radio-2" type="radio" name="radio" value="2">
+                    <label for="radio-2"><span>1 </span>It's the variability of the price on the market</label>
+                </div>
+                 
+                <div class="form_radio_btn answer__not-correct">
+                    <input id="radio-3" type="radio" name="radio" value="3">
+                    <label for="radio-3"><span>3 </span>Dividing the money between different assets</label>
+                </div>
+    
+               
+            </form>
+            <div class="swiper-button-prev"><button> BACK</button> </div>
+            <div class="swiper-button-next"> <button>NEXT</button> </div>
+    
+            <!-- <div class="stillhave__buttons-wrapper">
+                <button class="button__back-answer" style="cursor: pointer;">Back</button>
+                <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+            </div> -->
+
+
+        </div>
+
+      </div>
+      <div class="swiper-slide">Slide 2
+        <div class="stillhave__item">
+            <form action="/action_page.php" class="form__action-stillhave">
+                <p>What is diversification?</p>
+                <div class="form_radio_btn answer__correct">
+                    <input id="radio-1_1" type="radio" name="radio" value="1_1">
+                    <label for="radio-1_1"><span>2 </span>A price decrease</label>
+                </div>
+                 
+                <div class="form_radio_btn answer__not-correct">
+                    <input id="radio-2_1" type="radio" name="radio" value="2_1">
+                    <label for="radio-2_1"><span>1 </span>It's the variability of the price on the market</label>
+                </div>
+                 
+                <div class="form_radio_btn answer__not-correct">
+                    <input id="radio-3_1" type="radio" name="radio" value="3_1">
+                    <label for="radio-3_1"><span>3 </span>Dividing the money between different assets</label>
+                </div>
+    
+               
+            </form>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"><button> BACK</button> </div>
+              <div class="swiper-button-next"> <button>NEXT</button> </div>
+    
+            <!-- <div class="stillhave__buttons-wrapper">
+                <button class="button__back-answer" style="cursor: pointer;">Back</button>
+                <button class="button__next-answer" style="cursor: pointer;">Next</button>
+                <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+            </div> -->
+
+
+        </div>
+      </div>
+      <div class="swiper-slide">Slide 3
+
+      </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+  
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <!--  
+  <div class="stillhave__item">
+        <form action="/action_page.php" class="form__action-stillhave">
+            <p>What is diversification?</p>
+            <div class="form_radio_btn answer__correct">
+                <input id="radio-1" type="radio" name="radio" value="1" checked>
+                <label for="radio-1"><span>2 </span>A price decrease</label>
+            </div>
+             
+            <div class="form_radio_btn answer__not-correct">
+                <input id="radio-2" type="radio" name="radio" value="2">
+                <label for="radio-2"><span>1 </span>It's the variability of the price on the market</label>
+            </div>
+             
+            <div class="form_radio_btn answer__not-correct">
+                <input id="radio-3" type="radio" name="radio" value="3">
+                <label for="radio-3"><span>3 </span>Dividing the money between different assets</label>
+            </div>
+
+           
+        </form>
+
+        <div class="stillhave__buttons-wrapper">
+            <button class="button__back-answer" style="cursor: pointer;">Back</button>
+            <button class="button__next-answer" style="cursor: pointer;">Next</button>
+            <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+        </div>
+    </div>
+-->
+
+
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        
+        
+    }  
+   
+    });
+      </script>
+    
+   
+
+        <!-- <div class="stillhave__buttons-wrapper">
+            <button class="button__back-answer" style="cursor: pointer;">Back</button>
+            <button class="button__next-answer" style="cursor: pointer;">Next</button>
+            <a style="display: none;" class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+        </div> -->
+
+
+    </div>
+</body>
+</html>
