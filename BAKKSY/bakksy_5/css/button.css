@@ -16,14 +16,7 @@
 	width: 100%;
 	background:#FFF;
 }
- 
-
-/* Checked .not__correct  .correct*/
-
-/*.form_radio_btn input[type=radio]:checked + label {
-	background: #FE6150;
-}*/
-
+/* Checked*/
 .answer__correct input[type=radio]:checked + label {
 	background: #A7DAA2;
 	color:#202020;
@@ -32,11 +25,10 @@
 	background: #FE6150;
 	color:#202020;
 }
-/*
-.correct input[type=radio]:checked + label {
-	background: #A7DAA2;
-}*/
-
+.answer__not-correct input[type=radio]:checked + label span,
+.answer__correct input[type=radio]:checked + label span {
+	color:#202020 !important;
+} 
  
 /* Hover */
 /*
