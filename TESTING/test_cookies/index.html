@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>cookies</title>
+<style>
+    body {
+        background:grey;
+    }
+    .close-popup-cookies {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .bar-success-cookies {
+        height: 3px;
+        background: #333;
+        width: 18px;
+        transform: rotate(45deg);
+        position: absolute;
+    }
+    .bar-success-cookies:nth-child(1) {
+        transform: rotate(-45deg);
+    }
+    .cookies__wrapper {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="cookies__wrapper">
+        <div class="cookies__wrapper-ls">
+            <div class="cookies__wrapper-img">
+                <img src="img/last/cookie.svg" alt="">
+            </div>
+            <span>We use third-party cookies in order to personalise your experience
+                &nbsp;<span>Read our</span><a href="" target="_blank"> Cookie Policy.</a></span>
+        </div>
+        <div class="cookies__buttons-wrapper">
+            <button class="decline close">Decline</button>
+            <button class="allow cookie_btn" id="cookie_close">Allow</button>    
+        </div>
+        <div class="close-popup-cookies">
+            <span class="bar-success-cookies"></span>
+            <span class="bar-success-cookies"></span>
+        </div>
+    </div>
+
+ 
+
+    <script>
+        jQuery(document).ready(function($) {
+        $('.close-popup-cookies, .close').click(function () {
+        $('.cookies__wrapper').hide();
+        });
+        })
+    </script>
+
+<script>
+    // функция возвращает cookie с именем name, если есть, если нет, то undefined    
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+let cookiecook = getCookie("cookiecook"),
+cookiewin = document.getElementsByClassName('cookies__wrapper')[0];    
+// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+if (cookiecook != "no") {
+    // показываем    
+    cookiewin.style.display="block"; 
+    // закрываем по клику
+    document.getElementById("cookie_close").addEventListener("click", function(){
+        cookiewin.style.display="none";    
+        // записываем cookie на 1 день, с которой мы не показываем окно
+        let date = new Date;
+        date.setDate(date.getDate() + 1);    
+        document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
+    });
+}
+</script>
+
+</body>
+</html>

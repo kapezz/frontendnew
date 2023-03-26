@@ -1,0 +1,29 @@
+.close-popup-cookies {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 23px;
+    right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.bar-success-cookies {
+    height: 3px;
+    background: #FBFAF6;
+    width: 18px;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.bar-success-cookies:nth-child(1) {
+    transform: rotate(-45deg);
+}
+.cookies__wrapper {
+    display: none;
+}
+@media (max-width: 410.99px) {
+    .close-popup-cookies {
+        top: 15px;
+    }
+}

@@ -9,7 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <title>Bakksy - 5</title>
+    <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
+    <meta property="og:image" content="img/logo_meta.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="630">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bakksy logo">
+    <meta property="og:description"
+        content="Bakksy is an app that will give you the opportunity to save, accumulate and use your funds. Start investing from €2 and have a constant access to your money.">
+    <title>Bakksy. A Full-Fledged Financial Service | Join Waitlist</title>
 </head>
 
 <body>
@@ -20,24 +28,36 @@
                     <div class="header__top-wrapper">
                         <div class="header__wrapper-ls">
                             <a href="#" class="header__logo"><img src="img/header/logo_header.svg" alt=""></a>
-                            <nav class="header__nav" style="display: none;">
+                            <nav class="header__nav">
                                 <ul class="header__nav-ul">
-                                    <li><a href="">Roadmap</a></li>
-                                    <li><a href="">About Bakksy</a></li>
-                                    <li><a href="">Waitlist</a></li>
+                                    <li><a href="">Giveaway</a></li>
+                                    <li><a href="">Education Bot</a></li>
                                     <li><a href="">FAQ</a></li>
                                 </ul>
                             </nav>
-                            <!-- 
-                                <div class="menu" style="">
-                                    <a href="/"><img src="img/header/logo_mobile.svg" alt=""></a> 
+                             
+                                <div class="menu">
+                                    <!-- <a href="/"><img src="img/header/logo_mobile.svg" alt=""></a>  -->
                                     <nav>
-                                        <li><a href="#">Roadmap</a></li>
-                                        <li><a href="#">About Bakksy</a></li>
-                                        <li><a href="#">Waitlist</a></li>
+                                        <li><a href="#">Giveaway <img src="img/header/arrow_right_burger_menu.svg" alt=""></a></li>
+                                        <li><a class="burger__menu-a-active" href="#">Education Bot<img src="img/header/arrow_right_burger_menu.svg" alt=""></a></li>
+                                        <li><a href="#">FAQ<img src="img/header/arrow_right_burger_menu.svg" alt=""></a></li>
                                     </nav>
+                                    
+                                    <div class="menu__bottom-wrapper-fixed">
+                                        <div class="menu__bottom-wrapper">
+                                        <span>Stay up to date</span>
+                                        <div class="menu__bottom-social">
+                                            <a href=""><img src="img/header/insta.svg" alt=""></a>
+                                            <a href=""><img src="img/header/linkedin.svg" alt=""></a>
+                                            <a href=""><img src="img/header/face.svg" alt=""></a>
+                                            <a href=""><img src="img/header/twitter.svg" alt=""></a>
+                                            <a href=""><img src="img/header/carbon.svg" alt=""></a>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                -->
+                             
                         </div>
                         <div class="header__wrapper-rs">
                             <div class="burger-menu" style="display: none;"> <!--visibility: hidden;-->
@@ -276,9 +296,13 @@
                                             <label class="form__label-3" for="radio-1_3"><span>3 </span>Dividing the money between different assets</label>
                                         </div>
                                     </form>
-                                    
-                                    <!-- <div class="swiper-button-prev"><button>Back</button> </div> -->
-                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                    <div class="buttons__wrapper first__buttons-wrapper">    
+                                        <!-- swiper-button-not-active <div class="swiper-button-prev"><button>Back</button> </div> -->
+                                        <div class="swiper-button-next">
+                                            <button disabled>Next</button>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="swiper-slide item swiper-no-swiping" >
@@ -299,8 +323,10 @@
                                             <label class="form__label-3" for="radio-2_3"><span>3 </span>Shares</label>
                                         </div>
                                     </form>
-                                    <div class="swiper-button-prev"><button>Back</button> </div>
-                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                    <div class="buttons__wrapper">
+                                        <div class="swiper-button-prev"><button>Back</button> </div>
+                                        <div class="swiper-button-next"><button disabled>Next</button> </div>
+                                    </div>
                                 </div>
 
                                 <div class="swiper-slide item swiper-no-swiping" >
@@ -321,8 +347,10 @@
                                             <label class="form__label-3" for="radio-3_3"><span>3 </span>An indicator of the condition of the stock exchange</label>
                                         </div>
                                     </form>
-                                    <div class="swiper-button-prev"><button>Back</button> </div>
-                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                    <div class="buttons__wrapper">
+                                        <div class="swiper-button-prev"><button>Back</button> </div>
+                                        <div class="swiper-button-next"><button disabled>Next</button> </div>
+                                    </div>
                                 </div>
 
                                 <div class="swiper-slide item swiper-no-swiping" >
@@ -343,8 +371,10 @@
                                             <label class="form__label-3" for="radio-4_3"><span>3 </span>It is profit which the investor gets from rising stock prices</label>
                                         </div>
                                     </form>
-                                    <div class="swiper-button-prev"><button>Back</button> </div>
-                                    <div class="swiper-button-next"><button>Next</button> </div>
+                                    <div class="buttons__wrapper">
+                                        <div class="swiper-button-prev"><button>Back</button> </div>
+                                        <div class="swiper-button-next"><button disabled>Next</button> </div>
+                                    </div>
                                 </div>
 
                                 <div class="swiper-slide item swiper-no-swiping" >
@@ -365,27 +395,29 @@
                                             <label class="form__label-3" for="radio-5_3"><span>3 </span>A  company’s short name</label>
                                         </div>
                                     </form>
-                                  
-                                    <div class="swiper-button-prev"><button>Back</button> </div>
-                                    <div class="swiper-button-next"><button>Finish</button> </div>
+                                    <div class="buttons__wrapper">
+                                        <div class="swiper-button-prev"><button>Back</button> </div>
+                                        <div class="swiper-button-next"><button disabled id="finish">Finish</button> </div>
+                                    </div>
                                 </div>
 
                                 
-                                <div class="swiper-slide item swiper-no-swiping failed__test" >
-                                    <h4>Test result</h4>
-                                    <p class="answer-results-p">You <span> haven’t passed </span> the test, so it’s time to upgrade yourself as an investor with our educational bot! 😏😏😏</p>
-                                    <a class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
-                                </div>
-
-                                <div class="swiper-slide item swiper-no-swiping successful__test" style="display: none;">
-                                    <h4>Test result</h4>
-                                    <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be able to master investment even more. 😏😏😏</p>
-                                    <a class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                                <div class="swiper-slide item swiper-no-swiping" >
+                                    <div class="failed__test">
+                                        <h4>Test result</h4>
+                                        <p class="answer-results-p">You <span> haven’t passed </span> the test, so it’s time to upgrade yourself as an investor with our educational bot! 😏😏😏</p>
+                                        <a class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                                    </div>
+                                    <div class="successful__test">
+                                        <h4>Test result</h4>
+                                        <p class="answer-results-p"><span> You do know stuff!</span> But with our educational bot you’ll be able to master investment even more. 😏😏😏</p>
+                                        <a class="button__getstarted-answer">Get started <img src="img/stillhave/arrow_right_up.png" alt=""> </a>
+                                    </div>
                                 </div>
                                 <!-- clear form -->
                                 <script>  $('form[name=form]').trigger('reset');</script>
                             </div>
-                        </div>
+                        </div> <!--swiper-->
                 </div>
             </div>
         </div>
@@ -416,29 +448,100 @@
     <div class="container__1120">
     <footer>
         <div class="footer__wrapper">
-            <!-- <img src="img/logo_footer.png" alt=""> -->
-            <a href=""><img class="footer__logo" src="img/logo_footer.svg" alt=""></a>
-            <p class="footer__contact">Contact</p>
-            <a class="footer__email" href="mailto:hello@bakksy.com">hello@bakksy.com</a>
-            <p class="footer__allresserved">© Bakksy 2023. All rights reserved.</p>
-            <p class="footer__adress">Bakksy is a trading name of Bakksy Finance OÜ, which is a registered in
-                Estonia by address Tornimäe 3, Tallinn 10145 (No. 16575205).</p>
+            <div class="footer__wrapper-top">
+                <div class="wrapper__top-ls">
+                    <a href=""><img class="footer__logo" src="img/logo_footer.svg" alt=""></a>
+                    <ul class="footer__menu">
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Giveaway</a></li>
+                        <li><a href="">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper__top-rs">
+                    <span>Stay up to date</span>
+                    <div class="top-rs-wrapper-social">
+                        <a href=""><img src="img/footer/instagram.svg" alt=""></a>
+                        <a href=""><img src="img/footer/in.svg" alt=""></a>
+                        <a href=""><img src="img/footer/face.svg" alt=""></a>
+                        <a href=""><img src="img/footer/twitter.svg" alt=""></a>
+                        <a href=""><img src="img/footer/carbon.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__wrapper-bottom">
+                <div class="wrapper-bottom-ls">
+                    <p class="footer__allresserved">© Bakksy 2023. All rights reserved.</p>
+                    <p class="footer__adress">Bakksy is a trading name of Bakksy Finance OÜ, which is a registered in
+                        Estonia <br> by address Tornimäe 3, Tallinn 10145 (No. 16575205).</p>
+                </div>
+                <ul class="wrapper-bottom-rs">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Cookies</a></li>
+                </ul> 
+                </div>
+            </div>
+        </footer>
         </div>
-    </footer>
-    </div>
+   
+    
 </section>
   
+<script src="js/burger.js"></script> 
 <script type="module">
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
-    const swiper = new Swiper('.swiper', {
-    speed: 400,
-    spaceBetween: 100,
-    navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-}  
-});
-  </script>
-</body>
+    var sw;
+    function initswiper() {
+        sw = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        }
+        });
 
+        $('.swiper-button-next').addClass('swiper-button-disabled');
+
+    }
+
+    initswiper();
+    var count_radio = 0;
+    $(document).ready(function () {
+        $('form .form_radio_btn').click(function(){
+
+            if($(this).hasClass('answer__not-correct')){
+                $(this).closest('.swiper-slide').find('.answer__correct').addClass('answer__correct-active');
+                $(this).closest('.swiper-slide').find('.swiper-button-next button').prop('disabled', false);
+                $(this).closest('.swiper-slide').find('.swiper-button-next').removeClass('swiper-button-disabled');
+            }else{
+                $(this).closest('.swiper-slide').find('.swiper-button-next button').prop('disabled', false);
+                $(this).closest('.swiper-slide').find('.swiper-button-next').removeClass('swiper-button-disabled');
+            }
+
+            $('.swiper-button-next').click(function(){
+                $('.swiper-button-next').addClass('swiper-button-disabled');
+            });
+            
+        });
+        $('#finish').click(function () {
+            $.each($('.stillhave__wrapper').find('form input[type=radio]:checked'), function (k, v) {
+                if($(this).closest('div').attr('class') == 'form_radio_btn answer__correct') {
+                    count_radio++;
+                }
+            });
+            if(count_radio == 5){
+                $('.successful__test').show();
+                $('.failed__test').hide();
+            }
+            else{
+                $('.successful__test').hide();
+                $('.failed__test').show();
+            }
+        });
+    });
+  </script>
+
+</body>
 </html>

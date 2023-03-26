@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .modal-overlay * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+     
+}
+ 
+.modal-overlay *:before,
+.modal-overlay *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    overflow: auto;
+    z-index: 999;
+    transition: .4s all;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+ 
+.modal-overlay_visible {
+    opacity: 1;
+    visibility: visible;
+}
+ 
+.modal-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+ 
+.modal-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 15px;
+}
+ 
+.modal {
+    transition: .4s all;
+    display: inline-block;
+    padding: 18px 44px 20px 30px;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .25);
+    color: #333;
+    text-align: left;
+    font-family: Arial;
+    margin: 30px 0;
+    transform: translate(0, 20%);
+    position: relative;
+    border-radius: 4px 6px 4px 4px;
+    cursor: auto;
+    font-size: 16px;
+}
+ 
+.modal-overlay_visible .modal {
+    transform: translate(0);
+}
+ 
+.modal__header {
+    font-size: 22px;
+    font-weight: 400;
+    padding: 0 0 30px 0;
+}
+ 
+.modal__close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    background: #00bff3;
+    width: 25px;
+    height: 25px;
+    border-radius: 0 0 4px 4px;
+    transition: .4s all;
+}
+ 
+.modal__close:hover {
+    background: #ed5f55;
+    cursor: pointer;
+}
+ 
+.modal__close:before,
+.modal__close:after {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 2px;
+    transform: rotate(45deg);
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+ 
+.modal__close:after {
+    transform: rotate(-45deg);
+}
+ 
+.modal__content label {
+    font-size:13px;
+    color:#777;
+    margin:0;
+}
+ 
+.item {
+    position: relative;
+}
+ 
+.item label.error {
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    bottom: 0px;
+    color: #fff;
+    background-color: rgba(220,93,107,0.6);
+    border-radius: 2px;
+    padding: 0px 6px;
+    line-height: 17px;
+}
+.modal-link {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    background: #00bff3;
+    border-radius: 2px;
+    padding: 4px 9px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 auto;
+}
+ 
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select, .form-control {
+    border: none;
+    height: 40px;
+    border: 1px solid #e6e4e4;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+ 
+.theme_buttons a, .theme_button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 30px 15px;
+    margin-bottom: 4px;
+    line-height: 1;
+    display: inline-block;
+    min-width: 8.5em;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    background-color: #00bff3;
+    border-radius: 0px;
+    position: relative;
+    -webkit-transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+}
+ 
+label {
+    display: inline-block;
+    max-width: 100%;
+}
+ 
+.red, .required {
+    color: #fa5c5d;
+}
+
+    </style>
+</head>
+<body>
+    <a href="javascript: void(0);" class="modal-link" data-modal-id="1">Открыть адаптивное всплывающее окно</a>
+ 
+<div class="modal-overlay" data-modal-id="1">
+ 
+    <div class="modal-table">
+ 
+        <div class="modal-table-cell">
+ 
+            <form class="modal" id="callback-form" method="post" enctype="multipart/form-data" autocomplete="off">
+                <div class="modal__close"></div>
+                <div class="modal__header">Заказ обратного звонка</div>
+                <div class="modal__content">
+                 
+                        <p class="contact-form-name item">
+                            <label for="name">Имя
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" value="" name="firstname" id="firstname" class="form-control">
+                        </p>
+                        <p class="contact-form-email item">
+                            <label for="email">Телефон
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" size="30" value="" name="phone" id="phone" class="form-control">
+                        </p>
+                        <p class="contact-form-submit text-center topmargin_30">
+                            <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color1">Отправить</button>
+                        </p>
+                </div>
+            </form>
+ 
+        </div>
+ 
+    </div>
+ 
+</div>
+
+    <script type="text/javascript">
+$(document).ready(function () {
+     
+    $(".modal-link").on("click", function() {
+        $('.modal-overlay[data-modal-id="'+$(this).data('modal-id')+'"]').addClass("modal-overlay_visible");
+    });
+ 
+    $(".modal__close").on("click", function() {
+        $(".modal-overlay").removeClass("modal-overlay_visible");
+    });
+         
+    $(document).on("click", function(e) {
+        if(!$(e.target).closest(".modal").length && !$(e.target).closest(".modal-link").length) {
+            $(".modal-overlay").removeClass("modal-overlay_visible");
+        }
+    });
+});
+</script>
+</body>
+</html>

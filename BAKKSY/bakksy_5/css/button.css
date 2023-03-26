@@ -1,6 +1,6 @@
 .form_radio_btn {
 	display: inline-block;
-	margin-right: 10px;
+	/* margin-right: 10px; */
 }
 .form_radio_btn input[type=radio] {
 	display: none;
@@ -17,10 +17,12 @@
 	background:#FFF;
 }
 /* Checked*/
+
 .answer__correct input[type=radio]:checked + label {
 	background: #A7DAA2;
 	color:#202020;
 }
+
 .answer__not-correct input[type=radio]:checked + label {
 	background: #FE6150;
 	color:#202020;
@@ -29,7 +31,11 @@
 .answer__correct input[type=radio]:checked + label span {
 	color:#202020 !important;
 } 
- 
+
+.answer__correct-active input[type=radio] + label{
+	background: #A7DAA2;
+	color:#202020;
+} 
 /* Hover */
 /*
 .form_radio_btn label:hover {

@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color:#eeeeee;
+}
+
+#search_tour td.type_price {
+	width: 75px;
+    white-space: pre-line;
+}
+#search_tour .prgt, #search_stat .prgt {
+	background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+	width: 120px;
+	height: 20px;
+}
+#search_tour .cost {
+    width: 65px;
+}
+
+/*Бондарев 17/12/2019*/
+.popup_cont {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.4);
+    z-index: 10000;
+}
+.popup_cont .popup {
+    position: fixed;
+    width: 400px;
+    height: 500px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -250px;
+    border-radius: 5px;
+    text-align: left;
+    padding:15px;
+    z-index: 100;
+}
+.popup_cont .close {
+    background-image:url(/close_svg.svg);
+    background-size: 40px;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.popup_mini_cont {
+    display: none;
+    z-index: 10000;
+}
+.popup_mini_cont .popup {
+    position: fixed;
+    z-index: 100;
+    background: #eaf4fc;
+    text-align: left;
+    width: 300px;
+    height: 200px;
+    bottom: 100px;
+    right: 50px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.popup_mini_cont .close {
+    background-image:url(/close-svg2.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 12px;
+    float: right;
+    cursor: pointer;
+}
+.popup_mini_cont .title {
+    background: #d4eafc;
+    padding:15px 15px 15px 60px;
+    background-image:url(/favorite_svg.svg);
+    background-size: 30px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    color:#0079BA;
+    font-size: 18px;
+    font-weight: bold;
+}
+.popup_mini_cont .body {
+    padding:15px;
+}
+
+
+/*Бондарев*/
+nobr a.sale {
+    display:none;
+}
+#search_tour .std {
+    width: 1200px;
+}
+#search_tour .direction {
+	width: 1200px;
+}
+#search_tour .user_info {
+    width: 1200px;
+}
+#search_tour .hotels_container {
+    width: 1200px;
+}
+#search_tour .control_stars {
+    width: 265px;
+}
+#search_tour .control_hotels {
+    width: 375px;
+}
+
+#search_tour .TOWNS {
+    width: 243px!important;
+}
+
+#search_tour .w380 {
+    width: 560px;
+}
+.TOURINC_chosen, .PROGRAMGROUPINC_chosen {
+    max-width: 650px;
+}
+#search_tour .user_info .empty {
+    width: 0px;
+}
+.user_info .col .panel {
+    width: 100%;
+}
+#search_tour .direction .vt.width50p:nth-child(1) {
+    width: 20%!important;
+}
+#search_tour .user_info .col {
+    width:600px;
+}
+#check_confirm .frm-input {
+    padding: 5px 15px;
+    height: auto;
+    width: auto;
+}
+#check_confirm .load {
+    font-size: 13px;
+    padding: 18px 30px 17px 30px;
+    cursor: pointer;
+    background:#11A8F0;
+    background-color: rgb(17, 168, 240);
+    border: none;
+    color:#fff;
+    border-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    line-height: 0px;
+    font-weight: bold;
+}
+#check_confirm .container {
+    width: auto;
+}
+#check_confirm .frm-input.CLAIM {
+    width:200px;
+}
+@media screen and (max-width: 600px) {
+    .popup_cont, .popup_mini_cont {
+        display: none!important;
+    }
+
+}
+
+/*Бондарев*/
+/*#93071 Закоментировал СТАС*/
+/*
+#tickets .resultset {
+    width: auto;
+}
+
+#tickets .resultset .flight .info-block.left, #tickets .resultset .flight .info-block.right {
+    width: 45%;
+}
+
+#tickets .resultset .flight .src-name, #tickets .resultset .flight .trg-name {
+    max-width: 190px;
+}*/
+/*#93071*/
+
+/* добавил стас 08.02.2023*/
+#header .high-menu .logo {
+	margin-top:7px;
+}
+#header > .popup_cont,
+#header > .popup_mini_cont {
+	/*display:none !important;*/
+}
+.samo_container .note:not(tr) {
+	text-align:center !important;
+}
+
+#header a, .samo_container a, .samo_container .link {
+	text-decoration: none !important;
+}
+.sp-layer > a {
+	color:#FFF !important;
+}
+.chosen-container > a {
+	color:#222222 !important;
+}
+/* stas design changes 13.03.2023*/
+.samo_container .panel, #modalContainer div.modalTitle, #logonContainer div.modalTitle {
+    background-color:#FFF;
+}
+.samo_container .searchmodes .searchmode_button {
+    background-color:#11A8F0;
+}
+.samo_container .searchmodes .searchmode_selected {
+    color:#11A8F0;
+    background-color:#FFF;
+}
+.samo_container,
+#header .bottom-menu {
+    background-color:#eeeeee !important;
+}
+.searchmodes > .searchmode_selected {
+    background-color:#FFF;
+}
+.samo_container .searchmodes .searchmode_button {
+    background-color:#11A8F0 !important;
+}
+/* 
+#header a, .samo_container a, .samo_container .link {
+    color:#FFF !important;
+} */
+.searchmodes > .searchmode_not_selected > a {
+    color:#FFF !important;
+}
+.samo_container .searchmodes .searchmode, .samo_container .searchmodes .searchmode-custom {
+    border-radius:0 !important;
+    margin: 0 3px 0 0 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.samo_container .note-panel {
+    background-color:#FFF !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.samo_container .note:not(tr) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#EEE;
+}
+.samo_container table.res thead th {
+    background-color:#11A8F0 !important;
+}
+.samo_container .note-panel {
+    padding: 15px 10px !important;
+}
+.direction .panel {
+    font-family: 'Montserrat', sans-serif;
+} 
+.samo_container .note-panel + .panel {
+    border-radius:0 !important;
+    background:#FFF;
+    box-shadow:none !important;
+}
+.chosen-container-single .chosen-single {
+    border-radius:0 !important;
+}
+.user_info,
+.HOTELSCONTAINER {
+    font-family: 'Montserrat', sans-serif;
+}
+.samo_container .panel {
+    border-radius:0 !important;
+    background-color:#FFF !important;
+}
+.samo_container input.frm-input {
+    border-radius:0 !important;
+}
+.samo_container button.load {
+    background-color:#11A8F0 !important;
+    border-radius:0 !important;
+}
+.Zebra_DatePicker_Icon .Zebra_DatePicker_Icon_Inside {
+    background-color:transparent !important;
+}
+.bottom-menu > .menu > .nav {
+    font-family: 'Montserrat', sans-serif;
+}
+.panel,
+.high-menu,
+.price_legend,
+.filters-panel {
+    font-family: 'Montserrat', sans-serif;
+}
+#header .menu li a {
+    color:#11A8F0;
+}
+.note-panel > .note > p > big > b > a {
+    color:#919395;
+}
+.samo_container a {
+    color:#919395 !important;
+}
+#header .menu li:hover ul {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eee;
+}

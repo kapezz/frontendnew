@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+                    Поиск тура
+            </title>
+                <link rel="stylesheet" type="text/css" href="css/common.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/icons.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/search_tour.css"/>
+        <link rel="stylesheet" type="text/css" href="css/customer.css"/>
+
+    </head>
+<body>
+<div id="header">
+            
+                                <div class="high-menu">
+            <div class="logo">
+                                                				<script>
+					var url = location.href;
+					var com_ua = url.search(/com/i);
+					if (com_ua > 0) {
+						document.write("<a href='https://kompastour.com' target='_blank'>");
+					} else {
+					document.write("<a href='https://kompastour.com' target='_blank'>");
+					}
+				</script>
+				<img src="https://online.kompastour.com.ua/public/pict/kompas.gif?rev=3755451519"  class="logo" alt="Kompas"/>
+
+				</a>
+    
+            </div>
+                        <div class="note-header">
+                
+            </div>
+        </div>
+        <div class="bottom-menu">
+        <div class="menu">
+            <nav class="nav">
+                <ul class="nav-center">
+                                                                        <li class="selected">
+                                                <a class="menu-caret" href="#">Поиск</a>
+                        <ul>
+                                                                                <li class="menu-search_tour selected oc5"><a href="https://online.kompastour.com.ua/search_tour">Поиск тура</a> </li>
+                                                                                                            <li class="menu-search_hotel oc7"><a href="https://online.kompastour.com.ua/search_hotel">Отели</a> </li>
+                                                                                                            <li class="menu-tickets oc101"><a href="https://online.kompastour.com.ua/tickets">Билеты</a> </li>
+                                                                                                            <li class="menu-search_excursion oc108"><a href="https://online.kompastour.com.ua/search_excursion">Экскурсионные туры</a> </li>
+                                                                                                                                </ul>
+                                            </li>
+                                                                            <li class="auth menu-cl_refer_person oc62">
+                                                <a href="https://online.kompastour.com.ua/cl_refer_person">Туристам</a>
+                                            </li>
+                                                                            <li class="auth menu-cl_refer oc16">
+                                                <a href="https://online.kompastour.com.ua/cl_refer">Заявки</a>
+                                            </li>
+                                                                            <li class="">
+                                                <a class="menu-caret" href="#">Агентство</a>
+                        <ul>
+                                                                                <li class="auth menu-edit_agency oc22"><a href="https://online.kompastour.com.ua/edit_agency">Данные агентства</a> </li>
+                                                                                                            <li class="auth menu-agreement oc39"><a href="https://online.kompastour.com.ua/agreement">Печать договора</a> </li>
+                                                                            </ul>
+                                            </li>
+                                                                            <li class="">
+                                                <a class="menu-caret" href="#">Информация</a>
+                        <ul>
+                                                                                <li class="menu-hotel_stopsale oc9"><a href="https://online.kompastour.com.ua/hotel_stopsale">Остановки продаж в гостиницах</a> </li>
+                                                                                                            <li class="menu-freight_monitor oc10"><a href="https://online.kompastour.com.ua/freight_monitor">Места на рейсах</a> </li>
+                                                                                                            <li class="menu-freight_changes oc74"><a href="https://online.kompastour.com.ua/freight_changes">Изменения в расписании рейсов</a> </li>
+                                                                            </ul>
+                                            </li>
+                                                                            <li class="">
+                                                <a class="menu-caret" href="#">Регистрация</a>
+                        <ul>
+                                                                                <li class="menu-registration oc21"><a href="https://online.kompastour.com.ua/registration">Новый пользователь</a> </li>
+                                                                                                            <li class="menu-register_agency oc36"><a href="https://online.kompastour.com.ua/register_agency">Новое агентство</a> </li>
+                                                                            </ul>
+                                            </li>
+                                                                                                                <li class="sign-in auth">
+                            <a class="login-action" href="https://online.kompastour.com.ua/search_tour?samo_action=check_auth">Вход</a>
+                        </li>
+                                                    </ul>
+        </nav>
+    </div>
+</div>
+
+        <style>
+        .samo_banners {
+            margin: 0px auto;
+            padding-top: 20px;
+            width: 1200px;
+        }
+        .sp-button {
+            border: 2px solid #D0DFED!important;
+        }
+        .sp-selected-button {
+            background-color: #D4EAFC!important;
+        }
+        .samo_banners .btn a {
+            display: block;
+            border:1px solid #fff;
+            font-size: 13px;
+            font-family: Tahoma, Geneva, sans-serif;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 15px 30px;
+            color:#fff;
+            margin-top: 220px;
+            margin-left: 1000px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+    </style>
+    <script type="text/javascript" src="https://kompastour.com/js/jquery-1.7.2.min.js"></script>
+    <!--Слайдер фото-->
+        <link rel="stylesheet" type="text/css" href="https://kompastour.com/slider-pro-master/css/slider-pro.min.css" media="screen"/>
+        <script type="text/javascript" src="https://kompastour.com/slider-pro-master/js/jquery.sliderPro.js"></script>
+    <!--Слайдер фото-->
+    <script>
+        $(document).ready(function() {
+            $("#index_slider").sliderPro({
+                width: "100%",
+                height: 300,
+                imageScaleMode: "cover",
+                fade: false,
+                arrows: true,
+                buttons: true,
+                fullScreen: false,
+                shuffle: false,
+                thumbnailPointer : true,
+                thumbnailsPosition: 'bottom',
+                thumbnailArrows: true,
+                thumbnailWidth : 100,
+                autoplay: true,
+                autoplayDelay : 5000,
+                responsive : true,
+                breakpoints: {
+                    800: {
+                        width: "100%",
+                        height: 350
+                    }
+                }
+            });
+        });
+    </script>
+    <div class="samo_banners">
+        <div class="slider-pro" id="index_slider">
+            <div class="sp-slides">
+                                <div class="sp-slide">
+                    <img class="sp-image" src="https://kompastour.com/useruploads/samo_banners/main_ee8f3fa747.jpg"/>
+                                        <div class="sp-layer btn" data-show-transition="right" data-show-delay="300" data-hide-transition="right">
+                        <a href="https://online.kompastour.com.ua/search_hotel?STATEINC=10&CHECKIN_BEG=20221014&NIGHTS_FROM=3&CHECKIN_END=20221016&NIGHTS_TILL=15&ADULT=2&CHILD=0" target="_blank">ПОШУК</a>
+                    </div>
+                                    </div>
+                                <div class="sp-slide">
+                    <img class="sp-image" src="https://kompastour.com/useruploads/samo_banners/main_d333d48dbc.jpg"/>
+                                        <div class="sp-layer btn" data-show-transition="right" data-show-delay="300" data-hide-transition="right">
+                        <a href="https://kompastour.com/ua/ukr/country/maldives/dhaalu_atoll/kandima_maldives/" target="_blank">ДЕТАЛЬНІШЕ</a>
+                    </div>
+                                    </div>
+                                <div class="sp-slide">
+                    <img class="sp-image" src="https://kompastour.com/useruploads/samo_banners/main_b1a320d22b.jpg"/>
+                                        <div class="sp-layer btn" data-show-transition="right" data-show-delay="300" data-hide-transition="right">
+                        <a href="https://online.kompastour.com.ua/search_hotel?STATEINC=10&TOURINC=917&CHECKIN_BEG=20221014&NIGHTS_FROM=3&CHECKIN_END=20221016&NIGHTS_TILL=15&ADULT=2&CHILD=0" target="_blank">ПОШУК</a>
+                    </div>
+                                    </div>
+                            </div>
+        </div>
+    </div>
+    
+    
+<script>
+    if ('ontouchstart' in window) {
+        document.querySelectorAll(".popup_cont").forEach(el => el.remove());
+    }
+</script>
+
+
+
+
+
+<div class="samo_container search_tour" data-csrf-token="89816fa3eacf0a3dfa34f30303e6f308">
+    <div class="eraser"></div>
+<div id="outdated-browser-alert" style="display: none">
+        <div style="width: 40%; margin-left: 30%; background: #e74c3c; color: white; padding: 10px; font-weight: bold; border-radius: .25rem">
+                <strong>Your web browser is out of date.</strong> Please, update your browser.
+        </div>
+        <script>
+            // detect IE 10 and 11
+            if (navigator.appVersion.indexOf('MSIE 10') !== -1 || (navigator.userAgent.indexOf('Trident') !== -1 && navigator.userAgent.indexOf('rv:11') !== -1)) {
+                    document.getElementById('outdated-browser-alert').style.display = 'block';
+            }
+        </script>
+</div><link rel="stylesheet" type="text/css" href="/data/search_tour/markers.css?rev=3755451519"/>
+
+<div id="search_tour">
+    <div class="std container">
+        
+
+
+
+
+
+
+    <div class="searchmodes">
+                                <div class="panel searchmode searchmode_search_tour searchmode_selected" data-searchmode="search_tour">
+                                    Поиск тура
+                            </div>
+                                            <div class="panel searchmode searchmode_search_hotel searchmode_not_selected" data-searchmode="search_hotel">
+                                    <a class="searchmode_button" href="https://online.kompastour.com.ua/search_hotel">Отели</a>
+                            </div>
+                                            <div class="panel searchmode searchmode_tickets searchmode_not_selected" data-searchmode="tickets">
+                                    <a class="searchmode_button" href="https://online.kompastour.com.ua/tickets">Билеты</a>
+                            </div>
+                                            <div class="panel searchmode searchmode_search_excursion searchmode_not_selected" data-searchmode="search_excursion">
+                                    <a class="searchmode_button" href="https://online.kompastour.com.ua/search_excursion">Экскурсионные туры</a>
+                            </div>
+                                            </div>
+        <div class="note-panel "><div class="note"><p style="text-align: center;"><big><b><a href="http://kompastour.com" target="_blank">Вернуться на сайт</a></b></big>&nbsp;<span style="font-family: Tahoma, Geneva, sans-serif; font-size: small;"><br />
+</span></p>
+<p align="center" style="font-size: 18px; background-color: #ffffff; font-family: GothamPro-Medium;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: small;"><strong><font color="#e2001a">ВАЖНО!&nbsp;</font></strong></span><strong style="color: #404040; font-family: Tahoma, Geneva, sans-serif; font-size: small;">Обращаем внимание на изменения в условиях оплаты для украинских агентств!</strong><br />
+<strong style="font-family: Tahoma, Geneva, sans-serif; font-size: small; color: #404040;">Уважаемые коллеги, при подборе тура просим ориентироваться исключительно на гривневую сумму.&nbsp;</strong><br />
+<strong style="font-family: Tahoma, Geneva, sans-serif; font-size: small; color: #404040;">Отображения цен в поиске тура и в самой заявке в валюте не актуальны для рынка Украины.<br />
+<a href="https://kompastour.com/ua/rus/agentam/payment/" target="_blank">Подробнее</a></strong></p></div></div>
+        <table class="direction panel">
+            <tr>
+                <td class="vt width50p">
+                    <table class="width100p">
+                        
+                        <tr class="townfrom_filter">
+                            <td class="direction_left">город отправления</td>
+                            <td class="direction_right">
+                                
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <select name="TOWNFROMINC" class="TOWNFROMINC" autocomplete="off" >
+                                                <optgroup label="Азербайджан">
+                                    <option value="1411" data-search-string="Баку BAKU">Баку</option>
+                                                    <option value="1512" data-search-string="Гянджа Гянджа">Гянджа</option>
+                                                </optgroup>
+                        <optgroup label="Беларусь">
+                                    <option value="873" data-search-string="Минск MINSK">Минск</option>
+                                                </optgroup>
+                        <optgroup label="Венгрия">
+                                    <option value="919" data-search-string="Будапешт BUDAPEST">Будапешт</option>
+                                                </optgroup>
+                        <optgroup label="Германия">
+                                    <option value="1471" data-search-string="Франкфурт-на-Майне Франкфурт-на-Майне">Франкфурт-на-Майне</option>
+                                                </optgroup>
+                        <optgroup label="Испания">
+                                    <option value="792" data-search-string="Мадрид Мадрид">Мадрид</option>
+                                                </optgroup>
+                        <optgroup label="Казахстан">
+                                    <option value="109" data-search-string="Актау AKTAU">Актау</option>
+                                                    <option value="105" data-search-string="Актобе AKTOBE">Актобе</option>
+                                                    <option value="9" data-search-string="Алматы ALMATY">Алматы</option>
+                                                    <option value="12" data-search-string="Астана ASTANA" selected>Астана</option>
+                                                    <option value="115" data-search-string="Атырау ATYRAU">Атырау</option>
+                                                    <option value="103" data-search-string="Караганда KARAGANDA">Караганда</option>
+                                                    <option value="15" data-search-string="Костанай KOSTANAY">Костанай</option>
+                                                    <option value="16" data-search-string="Кызылорда KYZYLORDA">Кызылорда</option>
+                                                    <option value="13" data-search-string="Павлодар PAVLODAR">Павлодар</option>
+                                                    <option value="107" data-search-string="Семей Семей">Семей</option>
+                                                    <option value="112" data-search-string="Туркестан Turkestan">Туркестан</option>
+                                                    <option value="178" data-search-string="Усть-Каменогорск UST-KAMENOGORSK">Усть-Каменогорск</option>
+                                                    <option value="17" data-search-string="Шымкент SHYMKENT">Шымкент</option>
+                                                </optgroup>
+                        <optgroup label="Кыргызстан">
+                                    <option value="912" data-search-string="Бишкек BISHKEK">Бишкек</option>
+                                                    <option value="2116" data-search-string="Ош Osh">Ош</option>
+                                                </optgroup>
+                        <optgroup label="Польша">
+                                    <option value="1447" data-search-string="Варшава Warsaw">Варшава</option>
+                                                    <option value="2262" data-search-string="Краков Krakow">Краков</option>
+                                                </optgroup>
+                        <optgroup label="Таджикистан">
+                                    <option value="136" data-search-string="Душанбе DUSHANBE">Душанбе</option>
+                                                </optgroup>
+                        <optgroup label="Узбекистан">
+                                    <option value="913" data-search-string="Бухара Бухара">Бухара</option>
+                                                    <option value="917" data-search-string="Самарканд Самарканд">Самарканд</option>
+                                                    <option value="26" data-search-string="Ташкент Ташкент">Ташкент</option>
+                                                    <option value="2071" data-search-string="Ургенч Ургенч">Ургенч</option>
+                                                    <option value="1819" data-search-string="Фергана Фергана">Фергана</option>
+                                                </optgroup>
+                        <optgroup label="Украина">
+                                    <option value="911" data-search-string="Киев KYIV">Киев</option>
+                                                    <option value="1640" data-search-string="Луцк LUTSK">Луцк</option>
+                                                    <option value="888" data-search-string="Львов LVIV">Львов</option>
+                                                </optgroup>
+                        <optgroup label="Франция">
+                                    <option value="310" data-search-string="Париж PARIS">Париж</option>
+                                </optgroup>
+            </select>
+
+
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr class="stateto_filter">
+                            <td class="direction_left">страна</td>
+                            <td class="direction_right">
+                                
+
+    <select name="STATEINC" class="STATEINC" autocomplete="off">
+                                <option value="61" data-search-string="Азербайджан Azerbaijan"
+                    >Азербайджан</option>
+                    <option value="65" data-search-string="Венгрия Hungary"
+                    >Венгрия</option>
+                    <option value="30" data-search-string="Грузия Georgia"
+                    >Грузия</option>
+                    <option value="37" data-search-string="Египет Egypt"
+                    >Египет</option>
+                    <option value="6" data-search-string="Индия India"
+                    selected>Индия</option>
+                    <option value="7" data-search-string="Казахстан Kazakhstan"
+                    >Казахстан</option>
+                    <option value="86" data-search-string="Маврикий Mauritius"
+                    >Маврикий</option>
+                    <option value="12" data-search-string="Малайзия Malaysia"
+                    >Малайзия</option>
+                    <option value="40" data-search-string="Мальдивы Maldives"
+                    >Мальдивы</option>
+                    <option value="23" data-search-string="ОАЭ UAE"
+                    >ОАЭ</option>
+                    <option value="77" data-search-string="Сейшельские Острова Republic of Seychelles"
+                    >Сейшельские Острова</option>
+                    <option value="33" data-search-string="Сингапур Singapore"
+                    >Сингапур</option>
+                    <option value="55" data-search-string="Словения Slovenia"
+                    >Словения</option>
+                    <option value="28" data-search-string="Таиланд Thailand"
+                    >Таиланд</option>
+                    <option value="17" data-search-string="Турция Turkey"
+                    >Турция</option>
+                    <option value="14" data-search-string="Узбекистан Uzbekistan"
+                    >Узбекистан</option>
+                    <option value="16" data-search-string="Черногория Montenegro"
+                    >Черногория</option>
+                    <option value="27" data-search-string="Шри-Ланка Sri Lanka"
+                    >Шри-Ланка</option>
+                        </select>
+
+
+
+
+
+                            </td>
+                        </tr>
+                        
+                        
+                                                
+                        
+                                                    
+                    </table>
+                </td>
+                <td class="vt width50p">
+                    <table class="width100p">
+                        
+                                                
+                        
+                        <tr class="tour_filter">
+                            <td class="tour_left">тур</td>
+                            <td class="tour_right">
+                                <select name="TOURINC" class="TOURINC" autocomplete="off">
+                                                                            <option value="0" data-search-string="---- "
+                                                 >----</option>
+                                                                            <option value="5974" data-search-string="IND: Керала из Астаны прилет в Кочи - Аюрведические туры (GDS) IND: Керала из Астаны прилет в Кочи - Аюрведические туры (GDS)"
+                                                 class="gds transport">IND: Керала из Астаны прилет в Кочи - Аюрведические туры (GDS)</option>
+                                                                            <option value="5973" data-search-string="IND: Керала из Астаны прилет в Тривандрум - Аюрведические туры (GDS) IND: Керала из Астаны прилет в Тривандрум - Аюрведические туры (GDS)"
+                                                 class="gds transport">IND: Керала из Астаны прилет в Тривандрум - Аюрведические туры (GDS)</option>
+                                                                    </select>
+                            </td>
+                        </tr>
+                        
+                        
+                                                    <tr class="ptype_group_filter">
+                                <td class="tour_left">тип программы</td>
+                                <td class="tour_right">
+                                    <select name="PROGRAMGROUPINC" class="PROGRAMGROUPINC width100p"
+                                            autocomplete="off">
+                                                                                    <option value="0"
+                                                    data-search-string="---- ----"
+                                                    >----</option>
+                                                                                    <option value="253"
+                                                    data-search-string="Standard Standard"
+                                                    >Standard</option>
+                                                                            </select>
+                                </td>
+                            </tr>
+                                                
+                        
+                                                
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="note_container"><p style="text-align: justify;"><span style="color: #333333; font-family: robotolight, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">Для просмотра состава туристического пакета - выберите, пожалуйста, тур.</span></p>
+<p>&nbsp;</p></td>
+            </tr>
+        </table>
+
+        <table class="user_info">
+            <tr>
+                <td class="col">
+                    <table class="panel">
+                        <tr class="paramsFrom">
+                            <td class="description">вылет от</td>
+                            <td class="calendar"><input type="text" name="CHECKIN_BEG"
+                                                        class="frm-input date CHECKIN_BEG"
+                                                        autocomplete="off"  data-calendar='{"valid":"55555555555","start":"13.03.2023"}'  value="13.03.2023"/></td>
+                            <td class="description2">ночей от</td>
+                            <td class="nights">
+                                <select name="NIGHTS_FROM" class="NIGHTS_FROM spin nights"
+                                        autocomplete="off">                                        <option value="8"
+                                                selected class="yesplace">8</option>                                        <option value="9"
+                                                 class="yesplace">9</option>                                        <option value="10"
+                                                 class="yesplace">10</option>                                        <option value="11"
+                                                 class="yesplace">11</option>                                        <option value="12"
+                                                 class="yesplace">12</option>                                        <option value="13"
+                                                 class="yesplace">13</option>                                        <option value="14"
+                                                 class="yesplace">14</option>                                        <option value="15"
+                                                 class="yesplace">15</option>                                        <option value="16"
+                                                 class="yesplace">16</option>                                        <option value="17"
+                                                 class="yesplace">17</option>                                        <option value="18"
+                                                 class="yesplace">18</option>                                </select>
+                            </td>
+                        </tr>
+                        <tr class="paramsTill">
+                            <td class="description">до</td>
+                            <td class="calendar"><input type="text" class="frm-input date CHECKIN_END"
+                                                        autocomplete="off"
+                                                        name="CHECKIN_END"  data-calendar='{"valid":"55555555555","start":"13.03.2023"}'  value="14.03.2023"/></td>
+                            <td class="description2">до</td>
+                            <td class="nights">
+                                <select name="NIGHTS_TILL" class="NIGHTS_TILL spin nights"
+                                        autocomplete="off">                                        <option value="8"
+                                                 class="yesplace">8</option>                                        <option value="9"
+                                                 class="yesplace">9</option>                                        <option value="10"
+                                                 class="yesplace">10</option>                                        <option value="11"
+                                                 class="yesplace">11</option>                                        <option value="12"
+                                                 class="yesplace">12</option>                                        <option value="13"
+                                                 class="yesplace">13</option>                                        <option value="14"
+                                                 class="yesplace">14</option>                                        <option value="15"
+                                                 class="yesplace">15</option>                                        <option value="16"
+                                                 class="yesplace">16</option>                                        <option value="17"
+                                                 class="yesplace">17</option>                                        <option value="18"
+                                                selected class="yesplace">18</option>                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                <td class="empty">&nbsp;</td>
+                <td class="col">
+                    <table class="panel">
+                        <tr>
+                            <td class="description3">взрослых</td>
+                            <td class="tourists"><select name="ADULT" class="ADULT spin"
+                                                         autocomplete="off">                                        <option value="1"
+                                                >1</option>                                        <option value="2"
+                                                selected>2</option>                                        <option value="3"
+                                                >3</option>                                        <option value="4"
+                                                >4</option>                                        <option value="5"
+                                                >5</option>                                        <option value="6"
+                                                >6</option>                                        <option value="7"
+                                                >7</option>                                        <option value="8"
+                                                >8</option>                                        <option value="9"
+                                                >9</option>                                </select></td>
+                            <td class="description4"><span class="currency_label">цена</span>
+                            </td>
+                            <td class="cost"><select class="CURRENCY" name="CURRENCY"
+                                                     autocomplete="off">                                        <option value="11"
+                                                selected>UAH</option>                                </select></td>
+                            <td class="from">от</td>
+                            <td class="count"><input type="text" data-currency="11" name="COSTMIN"
+                                                     value="" class="frm-input price COSTMIN"
+                                                     data-value="" autocomplete="off"></td>
+                        </tr>
+                        <tr>
+                            <td class="description3">детей/возраст</td>
+                            <td class="tourists"><select name="CHILD" class="CHILD spin"
+                                                         autocomplete="off">                                        <option value="0"
+                                                selected>0</option>                                        <option value="1"
+                                                >1</option>                                        <option value="2"
+                                                >2</option>                                        <option value="3"
+                                                >3</option>                                </select></td>
+                            <td colspan="2" class="child_ages_container">
+                                <div class="child_ages">
+                                    <select name="AGE1" class="age age_1" autocomplete="off">
+                                                                                    <option value="0"
+                                                    >0</option>                                            <option value="1"
+                                                    >1</option>                                            <option value="2"
+                                                    >2</option>                                            <option value="3"
+                                                    >3</option>                                            <option value="4"
+                                                    selected="selected">4</option>                                            <option value="5"
+                                                    >5</option>                                            <option value="6"
+                                                    >6</option>                                            <option value="7"
+                                                    >7</option>                                            <option value="8"
+                                                    >8</option>                                            <option value="9"
+                                                    >9</option>                                            <option value="10"
+                                                    >10</option>                                            <option value="11"
+                                                    >11</option>                                            <option value="12"
+                                                    >12</option>                                            <option value="13"
+                                                    >13</option>                                            <option value="14"
+                                                    >14</option>                                            <option value="15"
+                                                    >15</option>                                            <option value="16"
+                                                    >16</option>                                            <option value="17"
+                                                    >17</option>                                            <option value="18"
+                                                    >18</option>                                    </select>
+                                    <select name="AGE2" class="age age_2" autocomplete="off">
+                                                                                    <option value="0"
+                                                    >0</option>                                            <option value="1"
+                                                    >1</option>                                            <option value="2"
+                                                    >2</option>                                            <option value="3"
+                                                    >3</option>                                            <option value="4"
+                                                    >4</option>                                            <option value="5"
+                                                    >5</option>                                            <option value="6"
+                                                    selected="selected">6</option>                                            <option value="7"
+                                                    >7</option>                                            <option value="8"
+                                                    >8</option>                                            <option value="9"
+                                                    >9</option>                                            <option value="10"
+                                                    >10</option>                                            <option value="11"
+                                                    >11</option>                                            <option value="12"
+                                                    >12</option>                                            <option value="13"
+                                                    >13</option>                                            <option value="14"
+                                                    >14</option>                                            <option value="15"
+                                                    >15</option>                                            <option value="16"
+                                                    >16</option>                                            <option value="17"
+                                                    >17</option>                                            <option value="18"
+                                                    >18</option>                                    </select>
+                                    <select name="AGE3" class="age age_3" autocomplete="off">
+                                                                                    <option value="0"
+                                                    >0</option>                                            <option value="1"
+                                                    >1</option>                                            <option value="2"
+                                                    >2</option>                                            <option value="3"
+                                                    >3</option>                                            <option value="4"
+                                                    >4</option>                                            <option value="5"
+                                                    >5</option>                                            <option value="6"
+                                                    >6</option>                                            <option value="7"
+                                                    >7</option>                                            <option value="8"
+                                                    selected="selected">8</option>                                            <option value="9"
+                                                    >9</option>                                            <option value="10"
+                                                    >10</option>                                            <option value="11"
+                                                    >11</option>                                            <option value="12"
+                                                    >12</option>                                            <option value="13"
+                                                    >13</option>                                            <option value="14"
+                                                    >14</option>                                            <option value="15"
+                                                    >15</option>                                            <option value="16"
+                                                    >16</option>                                            <option value="17"
+                                                    >17</option>                                            <option value="18"
+                                                    >18</option>                                    </select>
+                                </div>
+                            </td>
+                            <td class="from">до</td>
+                            <td class="count"><input type="text" data-currency="11" data-value=""
+                                                     name="COSTMAX" autocomplete="off" value=""
+                                                     class="frm-input price COSTMAX"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table class="hotels_container panel">
+            
+            <tr class="HOTELSCONTAINER">
+
+                <td class="control_townto">
+                    <div class="header">
+                        <span class="left">город</span><span class="right"><label><input
+                                        type="checkbox" name="TOWNS_ANY" class="TOWNS_ANY" checked="checked">любой</label></span>
+                    </div>
+
+                    <div class="checklistbox TOWNS"
+                         name="TOWNS">                                                                <div class="groupbox">
+                <label class="groupname"><input type="checkbox" class="group"
+                                                 />Аюрведа
+                </label>
+                                        <label class=" hidden">
+                        <input type="checkbox"   value="756"/>
+                            Niramaya
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="385"/>
+                            Антистресс
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="391"/>
+                            Артрит
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="749"/>
+                            Аюверда
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="728"/>
+                            Восстановление здоровья
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="732"/>
+                            Иммунитет
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="726"/>
+                            Йога
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="725"/>
+                            Очищение
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="727"/>
+                            Панчакарма
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="753"/>
+                            Панчакарма+Расаяна
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="392"/>
+                            Позвоночник
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="393"/>
+                            Похудение
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="390"/>
+                            Программа красоты
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="730"/>
+                            Программа против старения
+                                    </label>
+                                            <label class=" hidden">
+                        <input type="checkbox"   value="401"/>
+                            Псориаз
+                                    </label>
+                                        </div>
+            </div>
+
+                </td>
+
+
+                <td class="control_stars">
+                    <div class="header">
+                        <span class="left">категория</span><span class="right"><label><input
+                                        type="checkbox" name="STARS_ANY" class="STARS_ANY" checked="checked">любая</label></span>
+                    </div>
+
+                    <div class="checklistbox STARS"
+                         name="STARS">                                                        <label class="star">
+            <span class="c-icon icon hp hp_10006">            <input type="checkbox" class="star"  value="10006"/>
+                            3*
+                        </span>            </label>
+                                            <label class="star">
+            <span class="c-icon icon hp hp_10002">            <input type="checkbox" class="star"  value="10002"/>
+                            4*
+                        </span>            </label>
+                                            <label class="star">
+            <span class="c-icon icon hp hp_10001">            <input type="checkbox" class="star"  value="10001"/>
+                            5*
+                        </span>            </label>
+                                        </div>
+                </td>
+
+
+                <td class="control_hotels">
+                    <div class="header">
+                        <span class="left">гостиница <input type="search" name="hotelsearch"
+                                                                         autocomplete="off" class="hotelsearch"> <label><input
+                                        type="checkbox" name="HOTELS_SEL" class="HOTELS_SEL" autocomplete="off"> выбранные</label></span><span
+                                class="right"><label><input type="checkbox" name="HOTELS_ANY" class="HOTELS_ANY"
+                                                            checked="checked">любая</label></span>
+                    </div>
+                                        <div class="checklistbox HOTELS w380" name="HOTELS">
+                                                <label><input type="checkbox" data-town="753" data-group-star="10006" data-type=""  value="11502" />Abad Harmonia - Ayurveda Detoxification and Rejuvenation(Panchakarma and Rasayana) 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="11642" />Abad Harmonia - Body Slimming (Sthoulya Nirharana) 3*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10006" data-type=""  value="5709" />Abad Harmonia - Spine Care & Neck Care (Prishta Raksha) 3*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10006" data-type=""  value="11618" />Abad Harmonia - Stress & Burn out Relief (Mana Svaasthya) 3*</label>
+                    <label><input type="checkbox" data-town="756" data-group-star="10006" data-type=""  value="11619" />Abad Harmonia - Therapeutic and Curative (Niramaya) 3*</label>
+                    <label><input type="checkbox" data-town="753" data-group-star="10006" data-type=""  value="11501" />Abad Turtle - Ayurveda Detoxification and Rejuvenation (Panchakarma and Rasayana) 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="11643" />Abad Turtle - Body Slimming (Sthoulya Nirharana) 3*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10006" data-type=""  value="5713" />Abad Turtle - Spine Care & Neck Care (Prishta Raksha) 3*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10006" data-type=""  value="11617" />Abad Turtle - Stress & Burn out Relief (Mana Svaasthya) 3*</label>
+                    <label><input type="checkbox" data-town="756" data-group-star="10006" data-type=""  value="11644" />Abad Turtle - Therapeutic and Curative(Niramaya) 3*</label>
+                    <label><input type="checkbox" data-town="753" data-group-star="10006" data-type=""  value="11512" />Abad Whispering - Ayurveda Detoxification and Rejuvenation(Panchakarma and Rasayana) 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="11641" />Abad Whispering - Body Slimming (Sthoulya Nirharana) 3*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10006" data-type=""  value="11538" />Abad Whispering - Spine Care & Neck Care (Prishta Raksha) 3*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10006" data-type=""  value="11622" />Abad Whispering - Stress & Burn out Relief (Mana Svaasthya) 3*</label>
+                    <label><input type="checkbox" data-town="756" data-group-star="10006" data-type=""  value="39332" />Abad Whispering - Therapeutic and Curative (Niramaya) 3*</label>
+                    <label><input type="checkbox" data-town="730" data-group-star="10002" data-type=""  value="30480" />Ayursoma Ayurveda Royal Retreat - ANTI-AGEING 4*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10002" data-type=""  value="39337" />Ayursoma Ayurveda Royal Retreat - BEAUTY CARE 4*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10002" data-type=""  value="30515" />Ayursoma Ayurveda Royal Retreat - BODY PURIFICATION 4*</label>
+                    <label><input type="checkbox" data-town="401" data-group-star="10002" data-type=""  value="30476" />Ayursoma Ayurveda Royal Retreat - PSORIASIS 4*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10002" data-type=""  value="39338" />Ayursoma Ayurveda Royal Retreat - REJUVENATION 4*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10002" data-type=""  value="30477" />Ayursoma Ayurveda Royal Retreat - SLIMMING 4*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10002" data-type=""  value="30478" />Ayursoma Ayurveda Royal Retreat - SPINE & NECK 4*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10002" data-type=""  value="30479" />Ayursoma Ayurveda Royal Retreat - STRESS MANAGEMENT 4*</label>
+                    <label><input type="checkbox" data-town="726" data-group-star="10002" data-type=""  value="39339" />Ayursoma Yoga - AYUR YOGA RETREAT(INCLUDING AYURVEDA) 4*</label>
+                    <label><input type="checkbox" data-town="726" data-group-star="10002" data-type=""  value="39340" />Ayursoma Yoga - SHANTI YOGA RETREAT(EXCLUDING AYURVEDA) 4*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10006" data-type=""  value="11452" />Beach and Lake Ayurvedic Resort - BEAUTY PROGRAM 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10006" data-type=""  value="11434" />Beach and Lake Ayurvedic Resort - BODY PURIFICATION 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="5136" />Beach and Lake Ayurvedic Resort - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="5138" />Beach and Lake Ayurvedic Resort - SLIMMING 3*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10006" data-type=""  value="11455" />Beach and Lake Ayurvedic Resort - STRESS MANAGEMENT 3*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10002" data-type=""  value="11258" />Bethsaida Hermitage - BODY BEAUTIFUL 4*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10002" data-type=""  value="11239" />Bethsaida Hermitage - BODY DETOX 4*</label>
+                    <label><input type="checkbox" data-town="730" data-group-star="10002" data-type=""  value="17261" />Bethsaida Hermitage - LIVE LONG, LIVE YOUNG 4*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10002" data-type=""  value="11231" />Bethsaida Hermitage - REJUVENATION 4*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10002" data-type=""  value="11274" />Bethsaida Hermitage - WEIGHT LOSS 4*</label>
+                    <label><input type="checkbox" data-town="730" data-group-star="10001" data-type=""  value="30426" />Carnoustie Beach Resort - ANTI-AGEING 5*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10001" data-type=""  value="40700" />Carnoustie Beach Resort - BODY PURIFICATION / DETOX 5*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10001" data-type=""  value="30428" />Carnoustie Beach Resort - REJUVENATION 5*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10001" data-type=""  value="30502" />Carnoustie Beach Resort - SLIMMING 5*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10001" data-type=""  value="30429" />Carnoustie Beach Resort - STRESS MANAGEMENT 5*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10006" data-type=""  value="11469" />Chakra Ayurveda Resort - BEAUTY CARE 3*</label>
+                    <label><input type="checkbox" data-town="732" data-group-star="10006" data-type=""  value="11467" />Chakra Ayurveda Resort - BODY IMMUNIZATION / LONGEVITY 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10006" data-type=""  value="11466" />Chakra Ayurveda Resort - BODY PURIFICATION 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="11465" />Chakra Ayurveda Resort - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="11468" />Chakra Ayurveda Resort - SLIMMING 3*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10006" data-type=""  value="11470" />Chakra Ayurveda Resort - SPINE & NECK CARE 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10001" data-type=""  value="23825" />Coconut Lagoon - BODY PURIFICATION 5*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10001" data-type=""  value="5020" />Coconut Lagoon - REJUVENATION 5*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10006" data-type=""  value="11245" />Dr. Franklin Panchakarma - BEAUTY CARE 3*</label>
+                    <label><input type="checkbox" data-town="732" data-group-star="10006" data-type=""  value="30482" />Dr. Franklin Panchakarma - BODY IMMUNIZATION / LONGEVITY 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10006" data-type=""  value="11268" />Dr. Franklin Panchakarma - BODY PURIFICATION 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="11232" />Dr. Franklin Panchakarma - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="11275" />Dr. Franklin Panchakarma - SLIMMING 3*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10006" data-type=""  value="11270" />Dr. Franklin Panchakarma - SPINE & NECK CARE 3*</label>
+                    <label><input type="checkbox" data-town="749" data-group-star="10002" data-type=""  value="30484" />Isola Di Cocco Beach Resort - AYURVEDA 4*</label>
+                    <label><input type="checkbox" data-town="727" data-group-star="10006" data-type=""  value="5745" />Krishnatheeram - PANCHAKARMA 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="11522" />Krishnatheeram - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="391" data-group-star="10006" data-type=""  value="39347" />Malika Ayurveda Beach Resort - ARTHIRITIS 3*</label>
+                    <label><input type="checkbox" data-town="401" data-group-star="10006" data-type=""  value="39346" />Malika Ayurveda Beach Resort - PSORIASIS 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="39341" />Malika Ayurveda Beach Resort - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="730" data-group-star="10006" data-type=""  value="39343" />Malika Ayurveda Beach Resort - REJUVENATION FOR OLD AGE DISORDERS 3*</label>
+                    <label><input type="checkbox" data-town="727" data-group-star="10006" data-type=""  value="39342" />Malika Ayurveda Beach Resort - REJUVENATION WITH PANCHAKARMA AND DAILY REGIMENS 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="39344" />Malika Ayurveda Beach Resort - SLIMMING 3*</label>
+                    <label><input type="checkbox" data-town="392" data-group-star="10006" data-type=""  value="39345" />Malika Ayurveda Beach Resort - SPINE AND NECK CARE 3*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10006" data-type=""  value="11259" />Manaltheeram Ayurveda Beach Village - BEAUTY CARE 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10006" data-type=""  value="11240" />Manaltheeram Ayurveda Beach Village - BODY PURIFICATION 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10002" data-type=""  value="30518" />Manaltheeram Ayurveda Beach Village - INTENSIVE BODY DETOX & REBUILDING 4*</label>
+                    <label><input type="checkbox" data-town="732" data-group-star="10006" data-type=""  value="11293" />Manaltheeram Ayurveda Beach Village - INTENSIVE IMMUNIZATION 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="11234" />Manaltheeram Ayurveda Beach Village - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="393" data-group-star="10006" data-type=""  value="11262" />Manaltheeram Ayurveda Beach Village - SLIMMING 3*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10002" data-type=""  value="30519" />Manaltheeram Ayurveda Beach Village - STRESS MANAGEMENT 4*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10002" data-type=""  value="11513" />Marari Beach Resort - REJUVENATION 4*+</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10002" data-type=""  value="5106" />Poovar Island Resort - REJUVENATION & REGENERATION 4*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10002" data-type=""  value="5107" />Poovar Island Resort - STRESS MANAGEMENT 4*</label>
+                    <label><input type="checkbox" data-town="749" data-group-star="" data-type=""  value="30507" />Prakriti Shakti - AYURVEDA No Category</label>
+                    <label><input type="checkbox" data-town="749" data-group-star="10006" data-type=""  value="11524" />Rajah Beach - AYURVEDA 3*</label>
+                    <label><input type="checkbox" data-town="749" data-group-star="10002" data-type=""  value="30413" />Rajah Eco Beach - AYURVEDA 4*</label>
+                    <label><input type="checkbox" data-town="749" data-group-star="10002" data-type=""  value="30412" />Rajah Healthy Acres - AYURVEDA 4*</label>
+                    <label><input type="checkbox" data-town="749" data-group-star="10002" data-type=""  value="30411" />Rajah Island - AYURVEDA 4*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10002" data-type=""  value="39336" />Rockholm Beach Resort - BODY PURIFICATION 4*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10002" data-type=""  value="39335" />Rockholm Beach Resort - REJUVENATION 4*</label>
+                    <label><input type="checkbox" data-town="727" data-group-star="10002" data-type=""  value="11257" />Sitaram Ayurveda - PANCHAKARMA 4*</label>
+                    <label><input type="checkbox" data-town="730" data-group-star="10006" data-type=""  value="30530" />Soma Palmshore - AYURVEDA ANTI-AGEING 3*</label>
+                    <label><input type="checkbox" data-town="390" data-group-star="10006" data-type=""  value="11454" />Soma Palmshore - BEAUTY CARE 3*</label>
+                    <label><input type="checkbox" data-town="725" data-group-star="10006" data-type=""  value="11449" />Soma Palmshore - BODY PURIFICATION 3*</label>
+                    <label><input type="checkbox" data-town="728" data-group-star="10006" data-type=""  value="14237" />Soma Palmshore - REJUVENATION 3*</label>
+                    <label><input type="checkbox" data-town="385" data-group-star="10006" data-type=""  value="14239" />Soma Palmshore - STRESS MANAGEMENT (MANASHANTHY - BODY, MIND & SOUL) 3*</label>
+            
+
+
+
+
+
+
+                    </div>
+                </td>
+
+
+                <td class="control_meal">
+                    <div class="header">
+                        <span class="left">питание</span><span class="right"><label><input type="checkbox"
+                                                                                                        name="MEALS_ANY"
+                                                                                                        class="MEALS_ANY"
+                                                                                                        checked="checked">любое</label></span>
+                    </div>
+
+                    <div class="checklistbox MEALS "
+                         name="MEALS">                                            <label class="">
+                        <input type="checkbox"   value="10014"/>
+                            FB
+                                    </label>
+                                </div>
+
+
+                                    </td>
+
+            </tr>
+            
+            <tr class="filters-panel">
+                <td colspan="2">
+                    <div class="header">
+                        <span class="left">Фильтры</span>
+                    </div>
+                    <div class="checklistbox">
+                                              
+                            <label class="left "><input type="checkbox" class="FREIGHT" name="FREIGHT"
+                                                         autocomplete="off">
+                                есть места на рейсы</label>
+                                                   
+                       
+                        <label class="left"><input type="checkbox" class="FILTER" name="FILTER"
+                                                    autocomplete="off">
+                            нет остановки продажи</label>
+                       
+                        <label class="left"><input type="checkbox" class="MOMENT_CONFIRM" name="MOMENT_CONFIRM"
+                                                    autocomplete="off">
+                            мгновенное подтверждение</label>
+                                            </div>
+                </td>
+                                    <td colspan="2">
+                        <div class="header">
+                            <span class="left">Акции</span>
+                        </div>
+                        <div class="checklistbox UFILTER" name="UFILTER">
+                                                                                    </div>
+                    </td>
+                            </tr>
+            <tr>
+                <td colspan="7" class="footer">
+                    <button class="load right" disabled="disabled">Искать</button>
+                    
+                        <label class="right hotelgroup"><input type="checkbox" class="PARTITION_PRICE" name="PARTITION_PRICE"
+														value="224">группировать по гостинице</label>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="price_legend">
+        <tr>
+            <td><span class="places"></span><span>- есть места / нет мест / по запросу / мало мест</span></td>
+            <td><span class="confirm_now_img green_row"></span> - гарантированное подтверждение</td>
+            <td><span class="stop_sale_img red_row"></span> - остановка продаж</td>
+        </tr>
+        <tr>
+            <td><span class="hotel_availability_img"></span> - наличие мест в отеле: по запросу / нет / мало / есть</td>
+            <td><span class="price_stats_img"></span> - Динамика цены, наличие мест</td>
+            <td><span class="best_price_img"></span> - Лучшее предложение</td>
+        </tr>
+    </table>
+
+    <div class="resultset">&nbsp;</div>
+    <div class="resultsetGrouped hidden"></div>
+</div>
+<script type="text/javascript" charset="utf-8" src="js/pack.main.js"></script><script type="text/javascript" charset="utf-8" src="js/rus.js"></script><script type="text/javascript" charset="utf-8" src="js/page_callback.js"></script><script charset="utf-8" type="text/javascript">(function(){if (typeof samo === "undefined") { samo = {}; }samo.ROOT_URL = "\/search_tour?";samo.CROSS_RATES = {"1":{"Inc":1,"Name":"KZT","Date":"13.03.2023","1":1,"2":0.00215983,"3":0.00201613},"2":{"Inc":2,"Name":"USD","Date":"13.03.2023","1":463,"2":1,"3":0.93346774,"7":88.32,"10":11625,"11":40.55,"12":2.9,"13":1.706},"3":{"Inc":3,"Name":"EUR","Date":"13.03.2023","1":496,"2":1.0712743,"3":1,"7":95,"10":12400,"11":42.89,"12":3.07,"13":1.837},"7":{"Inc":7,"Name":"KGS","Date":"13.03.2023","2":0.01132246,"3":0.01052632,"7":1},"10":{"Inc":10,"Name":"UZS","Date":"13.03.2023","2":8.602e-5,"3":8.065e-5,"10":1},"11":{"Inc":11,"Name":"UAH","Date":"13.03.2023","2":0.02466091,"3":0.02331546,"11":1},"12":{"Inc":12,"Name":"BYN","Date":"13.03.2023","2":0.34482759,"3":0.3257329,"12":1},"13":{"Inc":13,"Name":"AZN","Date":"13.03.2023","2":0.58616647,"3":0.54436581,"13":1}};samo.roundConfig = {"precision":0,"type":true};if (typeof samo.dateFormat == "undefined") {samo.dateFormat = "dd.mm.yyyy";};if (typeof samo.dateMask == "undefined") {samo.dateMask = "39.19.2099";};samo.MODULE = "search_tour";var __TEMP__ = {"menu":{"url":"\/","title":"\u041e\u043d\u043b\u0430\u0439\u043d-\u0411\u0440\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435","public":false},"passport":{"url":"\/passport?","title":"\u041f\u0430\u0441\u043f\u043e\u0440\u0442","public":false},"profile":{"url":"\/profile?","title":"\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0430\u0440\u043e\u043b\u044f","public":false},"profile_person":{"url":"\/profile_person?","title":"\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0430\u0440\u043e\u043b\u044f \u0434\u043b\u044f \u0447\u0430\u0441\u0442\u043d\u044b\u0445 \u043b\u0438\u0446","public":false},"search_tour":{"url":"\/search_tour?","title":"\u041f\u043e\u0438\u0441\u043a \u0442\u0443\u0440\u0430","public":true},"search_hotel":{"url":"\/search_hotel?","title":"\u041f\u043e\u0438\u0441\u043a \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u0438\u044f","public":false},"tickets":{"url":"\/tickets?","title":"\u041f\u0440\u043e\u0434\u0430\u0436\u0430 \u0430\u0432\u0438\u0430\u0431\u0438\u043b\u0435\u0442\u043e\u0432","public":true},"modern_search":{"url":"\/modern_search?","title":"\u041d\u043e\u0432\u044b\u0439 \u043f\u043e\u0438\u0441\u043a","public":false},"search_excursion":{"url":"\/search_excursion?","title":"\u042d\u043a\u0441\u043a\u0443\u0440\u0441\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0443\u0440\u044b","public":false},"search_wohotel":{"url":"\/search_wohotel?","title":"\u0411\u0435\u0437 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u043d\u0438\u044f","public":false},"search_crosstour":{"url":"\/search_crosstour?","title":"\u041f\u0435\u0440\u0435\u0435\u0437\u0434\u043d\u044b\u0435 \u0442\u0443\u0440\u044b","public":false},"hotel_stopsale":{"url":"\/hotel_stopsale?","title":"\u041e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u043f\u0440\u043e\u0434\u0430\u0436 \u0432 \u0433\u043e\u0441\u0442\u0438\u043d\u0438\u0446\u0430\u0445","public":true},"freight_monitor":{"url":"\/freight_monitor?","title":"\u041d\u0430\u043b\u0438\u0447\u0438\u0435 \u043c\u0435\u0441\u0442 \u043d\u0430 \u0440\u0435\u0439\u0441\u0430\u0445","public":true},"freight_time":{"url":"\/freight_time?","title":"\u0420\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0440\u0435\u0439\u0441\u043e\u0432","public":false},"check_confirm":{"url":"\/check_confirm?","title":"\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0441\u0442\u0430\u0442\u0443\u0441\u0430 \u0437\u0430\u044f\u0432\u043a\u0438","public":true},"all_prices":{"url":"\/all_prices?","title":"\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u043d\u044b\u0439 \u043f\u0440\u0430\u0439\u0441-\u043b\u0438\u0441\u0442","public":false},"fast_search":{"url":"\/fast_search?","title":"\u0424\u043e\u0440\u043c\u0430 \u0431\u044b\u0441\u0442\u0440\u043e\u0433\u043e \u043f\u043e\u0438\u0441\u043a\u0430","public":false},"cl_refer":{"url":"\/cl_refer?","title":"\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u0437\u0430\u044f\u0432\u043e\u043a","public":true},"messages":{"url":"\/messages?","title":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f","public":false},"claim_edit":{"url":"\/claim_edit?","title":"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u044f\u0432\u043a\u0438","public":false},"visa_status":{"url":"\/visa_status?","title":"\u0421\u0442\u0430\u0442\u0443\u0441 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u0432 \u043d\u0430 \u0432\u0438\u0437\u0443","public":false},"edit_tourist":{"url":"\/edit_tourist?","title":"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0442\u0443\u0440\u0438\u0441\u0442\u0430","public":false},"registration":{"url":"\/registration?","title":"\u0412\u044b\u0434\u0430\u0447\u0430 \u043b\u043e\u0433\u0438\u043d\u0430 \u0438 \u043f\u0430\u0440\u043e\u043b\u044f","public":true},"edit_agency":{"url":"\/edit_agency?","title":"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043f\u0430\u0440\u0442\u043d\u0435\u0440\u0430","public":true},"rating_position":{"url":"\/rating_position?","title":"\u0420\u0435\u0439\u0442\u0438\u043d\u0433\u0438 \u0430\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u0430","public":false},"bron":{"url":"\/bron?","title":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e \u0437\u0430\u044f\u0432\u043a\u0435","public":false},"invoice":{"url":"\/invoice?","title":"\u0421\u0447\u0451\u0442 \u043d\u0430 \u0431\u0435\u0437\u043d\u0430\u043b\u0438\u0447\u043d\u0443\u044e \u043e\u043f\u043b\u0430\u0442\u0443","public":false},"pay_variant":{"url":"\/pay_variant?","title":"\u041e\u043f\u043b\u0430\u0442\u0430 \u0437\u0430\u044f\u0432\u043a\u0438","public":false},"sale":{"url":"\/sale?","title":"\u0413\u0434\u0435 \u043a\u0443\u043f\u0438\u0442\u044c","public":true},"register_agency":{"url":"\/register_agency?","title":"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0430\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u0430","public":true},"currency":{"url":"\/currency?","title":"\u041a\u0443\u0440\u0441 \u0432\u0430\u043b\u044e\u0442","public":false},"agreement":{"url":"\/agreement?","title":"\u041f\u0435\u0447\u0430\u0442\u044c \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u0430","public":true},"claim_unpaid":{"url":"\/claim_unpaid?","title":"\u041d\u0435\u043e\u043f\u043b\u0430\u0447\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u044f\u0432\u043a\u0438","public":true},"the_best":{"url":"\/the_best?","title":"\u041b\u0443\u0447\u0448\u0438\u0435 \u0441\u043f\u0435\u0446\u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u044f","public":false},"cl_refer_person":{"url":"\/cl_refer_person?","title":"\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u0437\u0430\u044f\u0432\u043a\u0438 \u0447\u0430\u0441\u0442\u043d\u044b\u043c \u043b\u0438\u0446\u043e\u043c","public":true},"claim_act":{"url":"\/claim_act?","title":"\u0410\u043a\u0442 \u043e\u0431 \u043e\u043f\u043b\u0430\u0442\u0435 \u0437\u0430\u044f\u0432\u043e\u043a","public":false},"andromeda":{"url":"\/andromeda?","title":"\u041f\u043e\u0438\u0441\u043a\u043e\u0432\u0430\u044f \u0441\u0438\u0441\u0442\u0435\u043c\u0430 \u0410\u043d\u0434\u0440\u043e\u043c\u0435\u0434\u0430","public":false},"visa":{"url":"\/visa?","title":"\u041f\u0435\u0447\u0430\u0442\u044c \u0432\u0438\u0437\u044b","public":false},"freight_changes":{"url":"\/freight_changes?","title":"\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0432 \u0440\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0438 \u0440\u0435\u0439\u0441\u043e\u0432","public":true},"export":{"url":"\/export?","title":"Xml-gate","public":false},"reports":{"url":"\/reports?","title":"\u041e\u0442\u0447\u0435\u0442\u044b","public":true},"check_passport":{"url":"\/check_passport?","title":"\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0441\u0440\u043e\u043a\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f \u0437\u0430\u0433\u0440\u0430\u043d\u043f\u0430\u0441\u043f\u043e\u0440\u0442\u043e\u0432","public":true},"insures":{"url":"\/insures?","title":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435","public":false},"services":{"url":"\/services?","title":"\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0443\u0441\u043b\u0443\u0433\u0438","public":false},"visa_schedule":{"url":"\/visa_schedule?","title":"\u041a\u0440\u0430\u0439\u043d\u0438\u0435 \u0441\u0440\u043e\u043a\u0438","public":false},"partner_discount":{"url":"\/partner_discount?","title":"\u041a\u043e\u043c\u0438\u0441\u0441\u0438\u044f","public":true},"partner_curator":{"url":"\/partner_curator?","title":"\u041a\u0443\u0440\u0430\u0442\u043e\u0440\u044b","public":true},"employees":{"url":"\/employees?","title":"\u0421\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0438","public":true},"transfers":{"url":"\/transfers?","title":"\u0422\u0440\u0430\u043d\u0441\u0444\u0435\u0440\u044b","public":false},"xml_report":{"url":"\/xml_report?","title":"XML ------","public":false},"WWWROOT":"\/"}; samo.ROUTES = (typeof samo.ROUTES == "undefined") ? __TEMP__ : samo.jQuery.extend(true,samo.ROUTES,__TEMP__);samo.PROGRESS_TIMEOUT = 120; if (typeof samo != "undefined" && typeof samo.link_to_page != "undefined") {samo.link_to_page("https:\/\/online.kompastour.com.ua\/search_tour");};if (typeof samo.onready == "undefined") { samo.onready = [] ;};samo.onready.push({"func":"samo.page_callback","args":["search_tour","default_action",{"TOWNFROMINC":12,"STATEINC":6}]});})();</script>
+<script type="text/javascript" charset="utf-8" src="js/favorites.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="js/search_tour.js"></script>
+
+    <br>
+</div>
+<noscript><h1 class="error">Для дальнейшей работы необходимо включить javascript.</h1></noscript>    <div class="samosoft"><a href="http://www.samo.ru" target="_blank">&copy; САМО-Софт</a></div>
+</body>
+</html>
